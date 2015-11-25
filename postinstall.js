@@ -15,11 +15,14 @@ var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
 copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
 
-var execSync = require('child_process').execSync;
+var template = require('lodash/template');
 
-execSync('cd ' + appRoot.path + '; npm install digitalinnovation/fear-core-tasks#' + fearDependencies.tasks + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + fearDependencies.serve + ' --save;', {
-    stdio: 'inherit'
-});
+
+//var execSync = require('child_process').execSync;
+//
+//execSync('cd ' + appRoot.path + '; npm install digitalinnovation/fear-core-tasks#' + fearDependencies.tasks + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + fearDependencies.serve + ' --save;', {
+//    stdio: 'inherit'
+//});
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
 
@@ -29,7 +32,8 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
 
         // clobber: false means fs-extra will throw an error if the dst exists
-        fs.copySync(src, dst, { clobber: false });
+        var ws = fs.createOutputStream(dst);
+        ws.write(template( src, { version: '1.0.0' }));
 
         logCopyOk(dstFilename);
 

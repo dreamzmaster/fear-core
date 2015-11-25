@@ -72,7 +72,7 @@ System.config({
         "lib/jquery": "github:DigitalInnovation/fear-core-app@development/scripts/lib/jquery",
         "lib/utils": "github:DigitalInnovation/fear-core-app@development/scripts/lib/utils",
         "moment": "github:moment/moment@2.10.6",
-        "packages/angular.package": "github:DigitalInnovation/fear-core-app@development/scripts/packages/angular.package",
+        "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= version %>/scripts/packages/angular.package",
         "traceur": "github:jmcriffey/bower-traceur@0.0.91",
         "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
         "underscore": "github:jashkenas/underscore@1.8.2",
