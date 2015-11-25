@@ -3,6 +3,7 @@
 'use strict';
 
 var appRoot = require('app-root-path');
+console.log('appRoot', appRoot);
 var moduleRoot = process.cwd();
 
 var fs = require('fs-extra');
@@ -16,7 +17,7 @@ copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
 
 var execSync = require('child_process').execSync;
 
-execSync('npm install digitalinnovation/fear-core-tasks#' + version + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + version + ' --save', {
+execSync('cd ' + appRoot + '; npm install digitalinnovation/fear-core-tasks#' + version + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + version + ' --save;', {
     stdio: 'inherit'
 });
 
