@@ -15,6 +15,7 @@ var fearDependencies = require('../../package.json').fearDependencies;
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
 copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
+copyDefaultToAppRoot('scripts.html', 'views/default/modules/scripts.html');
 
 var execSync = require('child_process').execSync;
 
