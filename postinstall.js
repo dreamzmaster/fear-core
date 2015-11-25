@@ -15,7 +15,7 @@ var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
 copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
 
-var template = require('lodash/template');
+var template = require('lodash/string/template');
 
 
 //var execSync = require('child_process').execSync;
