@@ -3,21 +3,21 @@
 'use strict';
 
 var appRoot = require('app-root-path');
-console.log('appRoot', appRoot);
+
 var moduleRoot = process.cwd();
 
 var fs = require('fs-extra');
 var chalk = require('chalk');
 
-var version = require('../../package.json').version;
+var fearDependencies = require('../../package.json').fearDependencies;
 
-var fearCoreTasks = chalk.cyan('Installing FEAR Core app ' + version + ':');
+var fearCoreTasks = chalk.cyan('Installing FEAR ' + version + ':');
 
 copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
 
 var execSync = require('child_process').execSync;
 
-execSync('cd ' + appRoot.path + '; npm install digitalinnovation/fear-core-tasks#' + version + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + version + ' --save;', {
+execSync('cd ' + appRoot.path + '; npm install digitalinnovation/fear-core-tasks#' + fearDependencies.tasks + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + fearDependencies.serve + ' --save;', {
     stdio: 'inherit'
 });
 
