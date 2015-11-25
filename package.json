@@ -25,7 +25,6 @@
     "chai": "3.4.1",
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
-    "fs": "0.24.0",
     "lodash": "3.10.1",
     "mocha": "2.3.3"
   },
