@@ -30,7 +30,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
         var templateContent = fs.readFileSync(src).toString();
         var toCompile = template(templateContent);
-        fs.writeFileSync(dst, toCompile({ version: '1.0.0' }));
+        fs.writeFileSync(dst, toCompile({ version: fearDependencies.app }));
 
         logCopyOk(dstFilename);
 
