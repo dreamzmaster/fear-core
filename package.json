@@ -1,7 +1,7 @@
 {
-  "name": "fear-core-app",
+  "name": "fear-core",
   "version": "1.0.0",
-  "description": "FEAR Core app",
+  "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint test/ scripts/",
@@ -13,20 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DigitalInnovation/fear-core-app.git"
+    "url": "https://github.com/DigitalInnovation/fear-core.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DigitalInnovation/fear-core-app/issues"
+    "url": "https://github.com/DigitalInnovation/fear-core/issues"
   },
-  "homepage": "https://github.com/DigitalInnovation/fear-core-app",
+  "homepage": "https://github.com/DigitalInnovation/fear-core",
   "dependencies": {
     "app-root-path": "1.0.0",
     "chai": "3.4.1",
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
-    "fs-extra": "0.24.0",
-    "lodash": "^3.10.1",
+    "fs": "0.24.0",
+    "lodash": "3.10.1",
     "mocha": "2.3.3"
   },
   "devDependencies": {
