@@ -62,7 +62,7 @@ function logCopyError (filename, err) {
  */
 var execSync = require('child_process').execSync;
 
-execSync('npm cache clean; cd ' + appRoot.path);
+execSync('cd ' + appRoot.path);
 
 var installModules = require('npm-install-modules');
 
@@ -71,4 +71,4 @@ var opts = {
     devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks]
 };
 
-installModules(opts);
+installModules(opts, function () {});
