@@ -11,6 +11,8 @@ var chalk = require('chalk');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
+var fearDependencies = require('../../package.json').fearDependencies;
+
 /**
  * Copy versioned files to project root
  */
@@ -59,10 +61,9 @@ function logCopyError (filename, err) {
  */
 var execSync = require('child_process').execSync;
 
-execSync('cd ' + appRoot.path);
+execSync('npm cache clean; cd ' + appRoot.path);
 
 var installModules = require('npm-install-modules');
-var fearDependencies = require('../../package.json').fearDependencies;
 
 var opts = {
     dependencies: ["digitalinnovation/fear-core-serve#" + fearDependencies.serve],
