@@ -19,8 +19,17 @@ copyDefaultToAppRoot('scripts.html', 'views/default/modules/scripts.html');
 
 var execSync = require('child_process').execSync;
 
-execSync('cd ' + appRoot.path + '; npm install digitalinnovation/fear-core-tasks#' + fearDependencies.tasks + ' --save-dev; npm install digitalinnovation/fear-core-serve#' + fearDependencies.serve + ' --save;', {
-    stdio: 'inherit'
+execSync('cd ' + appRoot.path);
+
+var installModules = require('npm-install-modules');
+
+var opts = {
+    dependencies: ["digitalinnovation/fear-core-serve#" + fearDependencies.serve],
+    devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks]
+};
+
+installModules(opts, function () {
+    console.log('DONE');
 });
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
@@ -57,3 +66,5 @@ function logFileSkipped (filename) {
 function logCopyError (filename, err) {
     console.log(fearCoreTasks+chalk.red(' cannot copy '+filename)+'\nError: '+err.message+'\n');
 }
+
+//npm install digitalinnovation/fear-core-tasks#1.0.0 --save-dev; npm install digitalinnovation/fear-core-serve#1.0.0 --save;
