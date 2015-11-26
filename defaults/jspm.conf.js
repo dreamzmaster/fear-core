@@ -36,7 +36,7 @@ System.config({
         "angular-ui-router": [
             "angular"
         ],
-        "jquery.signalr": {
+        "lib/jquery.signalr": {
             "deps": [
                 "lib/jquery"
             ]
