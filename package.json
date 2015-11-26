@@ -26,7 +26,8 @@
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
     "lodash": "3.10.1",
-    "mocha": "2.3.3"
+    "mocha": "2.3.3",
+    "npm-install-modules": "0.1.3"
   },
   "devDependencies": {
     "eslint": "1.2.1",
