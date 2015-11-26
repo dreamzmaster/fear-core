@@ -4,7 +4,7 @@
   "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint test/ scripts/",
+    "eslint": "eslint test/",
     "test": "mocha 'test/**/*.spec.js'",
     "pretest": "npm run eslint",
     "postinstall": "node postinstall",
@@ -14,6 +14,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/DigitalInnovation/fear-core.git"
+  },
+  "author": {
+    "name": "Alex Bowen",
+    "email": "marton.hipszki@mnscorp.net"
   },
   "license": "ISC",
   "bugs": {
@@ -32,5 +36,7 @@
   "devDependencies": {
     "eslint": "1.2.1",
     "onchange": "2.0.0"
-  }
+  },
+  "readme": "# fear-core-app\n\nCore application for FEAR SDK",
+  "readmeFilename": "README.md"
 }
