@@ -70,4 +70,4 @@ var opts = {
     devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks]
 };
 
-installModules(opts);
+installModules(opts, function () {});
