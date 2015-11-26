@@ -61,7 +61,7 @@ function logCopyError (filename, err) {
  */
 var execSync = require('child_process').execSync;
 
-execSync('cd ' + appRoot.path + '; npm cache clean');
+execSync('cd ' + appRoot.path);
 
 var installModules = require('npm-install-modules');
 
