@@ -46,15 +46,15 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
 }
 
 function logCopyOk (filename) {
-    console.log(fearCoreTasks+' copied default '+chalk.green(filename)+' to project root\n');
+    console.log(fearCoreTasks + ' copied default ' + chalk.green(filename) + ' to project\n');
 }
 
 function logFileSkipped (filename) {
-    console.log(fearCoreTasks+' skipped copying default '+chalk.green(filename)+'\nFile already exists in project root\n');
+    console.log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + '\nFile already exists in project\n');
 }
 
 function logCopyError (filename, err) {
-    console.log(fearCoreTasks+chalk.red(' cannot copy '+filename)+'\nError: '+err.message+'\n');
+    console.log(fearCoreTasks + chalk.red(' cannot copy ' + filename) + '\nError: ' + err.message + '\n');
 }
 
 /**
