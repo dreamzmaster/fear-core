@@ -63,11 +63,12 @@ function logCopyError (filename, err) {
 var installModules = require('npm-install-modules');
 
 var opts = {
-    devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks]
+    devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks],
+    dependencies : []
 };
 
 if (!process.env.NODE_ENV) {
-    opts.dependencies = ["digitalinnovation/fear-core-serve#" + fearDependencies.serve]
+    opts.dependencies.push("digitalinnovation/fear-core-serve#" + fearDependencies.serve);
 }
 
 installModules(opts, function () {});
