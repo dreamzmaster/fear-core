@@ -60,7 +60,7 @@ function logCopyError (filename, err) {
 /**
  * Install Fear core versioned modules
  */
- console.log('env', process.argv.production);
+ console.log('env', process.argv);
 var installModules = require('npm-install-modules');
 
 var opts = {
