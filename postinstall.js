@@ -60,10 +60,6 @@ function logCopyError (filename, err) {
 /**
  * Install Fear core versioned modules
  */
-//var execSync = require('child_process').execSync;
-//
-//execSync('cd ' + appRoot.path);
-
 var installModules = require('npm-install-modules');
 
 var opts = {
