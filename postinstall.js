@@ -60,12 +60,14 @@ function logCopyError (filename, err) {
 /**
  * Install Fear core versioned modules
  */
- console.log('env', process.env.NODE_ENV);
 var installModules = require('npm-install-modules');
 
 var opts = {
-    dependencies: ["digitalinnovation/fear-core-serve#" + fearDependencies.serve],
     devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks]
 };
+
+if (!process.env.NODE_ENV) {
+    opts.dependencies = ["digitalinnovation/fear-core-serve#" + fearDependencies.serve]
+}
 
 installModules(opts, function () {});
