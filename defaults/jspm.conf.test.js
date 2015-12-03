@@ -13,7 +13,8 @@ System.config({
         "node_modules*": "/base/node_modules*",
         "github:*": "/base/app/jspm_components/github/*",
         "scripts/lib/*": "fear-core-app/scripts/lib/*",
-        "npm:*": "/base/app/jspm_components/npm/*"
+        "npm:*": "/base/app/jspm_components/npm/*",
+        "views/*": "/base/app/views/*"
     },
     shim: {
         'chai' : {'exports' : 'chai'},
@@ -101,6 +102,7 @@ System.config({
         "lib/jquery": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery",
         'lib/jquery.signalr': 'github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery.signalr-1.1.2',
         "signalr.hubs": "test/stubs/signalHubs",
+        "text": "github:systemjs/plugin-text@0.0.3",
         "traceur": "github:jmcriffey/bower-traceur@0.0.91",
         "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
         "underscore": "github:jashkenas/underscore@1.8.2",
