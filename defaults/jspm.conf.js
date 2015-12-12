@@ -75,6 +75,7 @@ System.config({
         "lib/utils": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/utils",
         "moment": "github:moment/moment@2.10.6",
         "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular.package",
+        "text": "github:systemjs/plugin-text@0.0.3",
         "traceur": "github:jmcriffey/bower-traceur@0.0.91",
         "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
         "underscore": "github:jashkenas/underscore@1.8.2",
