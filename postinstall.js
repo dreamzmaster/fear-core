@@ -20,7 +20,6 @@ var template = require('lodash/string/template');
 
 copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
 copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
-copyDefaultToAppRoot('scripts.html', 'app/common/views/default/modules/scripts.html');
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
 
