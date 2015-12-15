@@ -18,7 +18,7 @@ var fearDependencies = require('../../package.json').fearDependencies;
  */
 var template = require('lodash/string/template');
 
-copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
+copyDefaultToAppRoot('jspm.conf.js', 'app/common/scripts/jspm.conf.js');
 copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
