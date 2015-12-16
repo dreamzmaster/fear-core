@@ -62,7 +62,10 @@ function logCopyError (filename, err) {
 var installModules = require('npm-install-modules');
 
 var opts = {
-    devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks],
+    devDependencies: [
+        "digitalinnovation/fear-core-tasks#" + fearDependencies.tasks,
+        "digitalinnovation/fear-core-ui#" + fearDependencies.ui
+    ],
     dependencies : []
 };
 
