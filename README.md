@@ -15,8 +15,8 @@ Parent module responsible currently for installing child modules from applicatio
 ```
 fearDependencies currently available are:
 
-*[fear-core-app](https://github.com/DigitalInnovation/fear-core-app)
-*[fear-core-ui](https://github.com/DigitalInnovation/fear-core-ui)
-*[fear-core-serve](https://github.com/DigitalInnovation/fear-core-serve)
-*[fear-core-tasks](https://github.com/DigitalInnovation/fear-core-tasks)
-*[fear-core-eslint-config](https://github.com/DigitalInnovation/fear-core-eslint-config)
+* [fear-core-app](https://github.com/DigitalInnovation/fear-core-app)
+* [fear-core-ui](https://github.com/DigitalInnovation/fear-core-ui)
+* [fear-core-serve](https://github.com/DigitalInnovation/fear-core-serve)
+* [fear-core-tasks](https://github.com/DigitalInnovation/fear-core-tasks)
+* [fear-core-eslint-config](https://github.com/DigitalInnovation/fear-core-eslint-config)
