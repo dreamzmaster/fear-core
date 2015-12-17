@@ -66,7 +66,7 @@ var opts = {
         "digitalinnovation/fear-core-tasks#" + fearDependencies.tasks,
         "digitalinnovation/fear-core-ui#" + fearDependencies.ui
     ],
-    dependencies : []
+    dependencies : ["gulp@3.9.0"]
 };
 
 if (!process.env.NODE_ENV) {
