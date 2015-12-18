@@ -63,7 +63,7 @@ var installModules = require('npm-install-modules');
 
 var opts = {
     devDependencies: [
-        "fear-core-tasks",
+        "digitalinnovation/fear-core-tasks#" + fearDependencies.tasks,
         "digitalinnovation/fear-core-ui#" + fearDependencies.ui
     ],
     dependencies : []
