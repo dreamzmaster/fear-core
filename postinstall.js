@@ -11,7 +11,7 @@ var chalk = require('chalk');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
-var fearDependencies = require('../../package.json').fearDependencies;
+var fearDeps = require('../../package.json').fear;
 
 /**
  * Copy versioned files to project root
@@ -29,7 +29,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
         var templateContent = fs.readFileSync(src).toString();
         var toCompile = template(templateContent);
-        fs.writeFileSync(dst, toCompile({ appVersion: fearDependencies.app }));
+        fs.writeFileSync(dst, toCompile({ appVersion: fearDeps.jspm.app }));
 
         logCopyOk(dstFilename);
 
@@ -62,15 +62,24 @@ function logCopyError (filename, err) {
 var installModules = require('npm-install-modules');
 
 var opts = {
-    devDependencies: [
-        "digitalinnovation/fear-core-tasks#" + fearDependencies.tasks,
-        "digitalinnovation/fear-core-ui#" + fearDependencies.ui
-    ],
+    devDependencies: [],
     dependencies : []
 };
 
+var d;
+
+for (d in fearDeps.dependencies) {
+    if (fearDeps.dependencies.hasOwnProperty(d)) {
+        opts.dependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps[d]);
+    }
+}
+
 if (!process.env.NODE_ENV) {
-    opts.dependencies.push("digitalinnovation/fear-core-serve#" + fearDependencies.serve);
+    for (d in fearDeps.devDependencies) {
+        if (fearDeps.devDependencies.hasOwnProperty(d)) {
+            opts.devDependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps[d]);
+        }
+    }
 }
 
 installModules(opts, function () {});

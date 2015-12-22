@@ -8,6 +8,7 @@
     "test": "mocha 'test/**/*.spec.js'",
     "pretest": "npm run eslint",
     "postinstall": "node postinstall",
+    "preinstall": "node preinstall",
     "watch:test": "onchange test/**/*.js tasks/**/*.js -- npm run test -s",
     "dev": "npm run watch:test -s"
   },
@@ -17,7 +18,7 @@
   },
   "author": {
     "name": "Alex Bowen",
-    "email": "marton.hipszki@mnscorp.net"
+    "email": "alexbowen@marks-and-spencer.co.uk"
   },
   "license": "ISC",
   "bugs": {
@@ -29,6 +30,7 @@
     "chai": "3.4.1",
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
+    "fs-extra": "0.24.0",
     "lodash": "3.10.1",
     "mocha": "2.3.3",
     "npm-install-modules": "0.1.3"
