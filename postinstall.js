@@ -70,14 +70,14 @@ var d;
 
 for (d in fearDeps.dependencies) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
-        opts.dependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps[d]);
+        opts.dependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps.dependencies[d]);
     }
 }
 
 if (!process.env.NODE_ENV) {
     for (d in fearDeps.devDependencies) {
         if (fearDeps.devDependencies.hasOwnProperty(d)) {
-            opts.devDependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps[d]);
+            opts.devDependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps.devDependencies[d]);
         }
     }
 }
