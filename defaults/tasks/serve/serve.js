@@ -13,8 +13,7 @@ module.exports = function () {
     var staticPaths = [
         config.get('paths.' + baseFolder + '.base'),
         config.get('paths.temp.base'),
-        config.get('paths.core.base'),
-        'docs'
+        config.get('paths.core.base')
     ];
 
     function isDev() {
@@ -29,7 +28,7 @@ module.exports = function () {
         return isDev() && !isTestsRunning();
     }
 
-    gulp.task('start-server', ['copy-mocks'], function () {
+    gulp.task('start-server', function () {
 
         connectServer = serve.startServer(
             config.get('webserver.host'),
