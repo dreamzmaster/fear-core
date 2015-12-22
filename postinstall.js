@@ -14,6 +14,33 @@ var fearCoreTasks = chalk.cyan('Installing FEAR:');
 var fearDeps = require('../../package.json').fear;
 
 /**
+ * load paths
+ */
+var paths = require('./defaults/config/default/paths');
+
+/**
+ * create folder structure
+ * -app
+ * -config
+ * -tasks
+ * -test
+ */
+function createDirectory (dir) {
+
+    var fs = require('fs-extra');
+
+    if (!fs.existsSync(dir)) {
+        fs.mkdirs(dir);
+    }
+}
+
+createDirectory(paths.app.base);
+createDirectory('test');
+
+fs.copySync('./config', 'config', {clobber : false});
+fs.copySync('./tasks', 'tasks', {clobber : false});
+
+/**
  * Copy versioned files to project root
  */
 var template = require('lodash/string/template');
