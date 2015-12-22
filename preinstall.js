@@ -3,7 +3,7 @@
 /**
  * load paths
  */
-var paths = require('./defaults/config/paths');
+var paths = require('./defaults/config/default/paths');
 console.log('paths', paths);
 
 /**
