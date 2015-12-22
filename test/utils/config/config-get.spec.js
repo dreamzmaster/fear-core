@@ -29,6 +29,12 @@ var data = {
                 views: '{{folder}}/common/views'
             }
         },
+        'paths2': {
+            'number': 10,
+            'boolean': true,
+            'string': 'stringvalue:{{base}}',
+            'null': null
+        },
         'development': {
             'karma': { 'root' : 'app' }
         }
@@ -113,9 +119,31 @@ describe('config object', function(){
             expect(css).to.equal(data.development.paths.team1.css);
         });
 
+        it('should return undefined when requesting a key that is not present', function() {
+            var doNotExist = config.get('paths.doNotExist');
+            expect(doNotExist).to.be.undefined;
+        });
+
+        it('should return an empty object when requesting a non existing config file', function() {
+            var fileNotExist = config.get('doNotExist');
+            expect(fileNotExist).to.deep.equal({});
+        });
+
+        it('should return undefined when requesting a key form a non existing config file', function() {
+            var keyOnNonExistingFile = config.get('doNotExist.nokey');
+            expect(keyOnNonExistingFile).to.be.undefined;
+        });
+
         it('should correctly template a requested key given a context object', function() {
             var css = config.get('paths.team2.css', { folder: '.tmp' });
             expect(css).to.equal('.tmp/common/css');
+        });
+
+        it('should only template when a context object is given', function() {
+            var css = config.get('paths.team2.css');
+            var number = config.get('paths2.number');
+            expect(css).to.equal(data.development.paths.team2.css);
+            expect(number).to.equal(data.development.paths2.number);
         });
 
         it('should correctly template all the keys in a config object given a certain context', function(){
@@ -128,6 +156,27 @@ describe('config object', function(){
                 scripts: '.tmp/common/scripts',
                 views: '.tmp/common/views'
             });
+        });
+
+        it('should only template a returned value if it is a string', function() {
+            var number = config.get('paths2.number', { base: 'app' });
+            var boolean = config.get('paths2.boolean', { base: 'app' });
+            var vNull = config.get('paths2.null', { base: 'app' });
+            var vUndef = config.get('paths2.undefined', { base: 'app'});
+
+            expect(number).to.equal(10);
+            expect(boolean).to.be.true;
+            expect(vNull).to.be.null;
+            expect(vUndef).to.be.undefined;
+        });
+
+        it('should only template strings in a returned config object', function () {
+            var paths2 = config.get('paths2', { base: 'app'});
+            expect(paths2.number).to.equal(10);
+            expect(paths2.string).to.equal('stringvalue:app');
+            expect(paths2.boolean).to.be.true;
+            expect(paths2.null).to.be.null;
+            expect(paths2.undefined).to.be.undefined;
         });
 
         it('should be possible to override the target directory with a parameter', function () {

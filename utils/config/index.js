@@ -10,6 +10,10 @@ var template = require('lodash/string/template');
 var every = require('lodash/collection/every');
 var each = require('lodash/collection/each');
 
+var isObject = require('lodash/lang/isobject');
+var isNull = require('lodash/lang/isNull');
+var isUndefined = require('lodash/lang/isUndefined');
+
 /*eslint-disable */
 /**
  * @name Config
@@ -291,17 +295,28 @@ Config.prototype = {
             }else {
                 result = result[key];
             }
+
             //Stop loop when there are no more keys or next result returns undefined
-            return (typeof result === 'object') || !!props[index +1] || result[props[index + 1]];
+            if(isNull(result) || isUndefined(result)) {
+                return false;
+            }else {
+                return (typeof result === 'object') || !!props[index +1] || result[props[index + 1]];
+            }
         });
 
         if(context) {
             if(typeof result === 'string') {
                 result = template(result, { interpolate: config._options.delimeters })(context);
-            } else {
+            } else if(isObject(result)){
                 temp = {};
-                each(Object.keys(result),function(key) {
-                    temp[key] = template(result[key], { interpolate: config._options.delimeters })(context);
+                each(Object.keys(result), function(key) {
+                    var keyValue = result[key];
+
+                    if(typeof keyValue === 'string') {
+                        temp[key] = template(keyValue, { interpolate: config._options.delimeters })(context);
+                    }else {
+                        temp[key] = keyValue;
+                    }
                 });
                 result = temp;
             }
@@ -323,6 +338,10 @@ Config.prototype = {
      */
     env: function () {
         return this._env;
+    },
+
+    getAppConfigTpl: function () {
+        return '/*jshint quotmark:true */ \"use strict\"; define(function () { return __JSON_CONFIG__; });';
     }
 
 };
