@@ -37,8 +37,8 @@ function createDirectory (dir) {
 createDirectory(paths.app.base);
 createDirectory('test');
 
-fs.copySync('./config', 'config', {clobber : false});
-fs.copySync('./tasks', 'tasks', {clobber : false});
+fs.copySync('./defaults/config', 'config', {clobber : false});
+fs.copySync('./defaults/tasks', 'tasks', {clobber : false});
 
 /**
  * Copy versioned files to project root
