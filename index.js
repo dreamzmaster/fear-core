@@ -1,6 +1,8 @@
 'use strict';
 
-var fearDeps = require('./package.json').fear;
+var appRoot = require('app-root-path');
+
+var fearDeps = require(appRoot + '/package.json').fear;
 
 var fearModules = {};
 
