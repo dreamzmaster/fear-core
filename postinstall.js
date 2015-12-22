@@ -6,7 +6,7 @@ var appRoot = require('app-root-path');
 
 var moduleRoot = process.cwd();
 
-var fs = require('fs');
+var fs = require('fs-extra');
 var chalk = require('chalk');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
