@@ -4,6 +4,8 @@
 
 var appRoot = require('app-root-path');
 
+console.log(appRoot)
+
 var moduleRoot = process.cwd();
 
 var fs = require('fs-extra');
