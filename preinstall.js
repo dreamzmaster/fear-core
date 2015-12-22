@@ -13,11 +13,17 @@ console.log('paths', paths);
  * -tasks
  * -test
  */
+function createDirectory (dir) {
 
-/**
- * copy paths config
- */
+    var fs = require('fs-extra');
 
-/**
- * copy serve task
- */
+    if (!fs.existsSync(dir)) {
+        fs.mkdirs(dir);
+    }
+}
+
+createDirectory(paths.app.base);
+createDirectory('test');
+
+fs.copySync('./config', 'config', {clobber : false});
+fs.copySync('./tasks', 'tasks', {clobber : false});
