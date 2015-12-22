@@ -8,6 +8,7 @@ var moduleRoot = process.cwd();
 
 var fs = require('fs-extra');
 var chalk = require('chalk');
+var path = require('path');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
@@ -34,11 +35,11 @@ function createDirectory (dir) {
     }
 }
 
-createDirectory(paths.app.base);
-createDirectory('test');
+createDirectory(path.join(appRoot, paths.app.base));
+createDirectory(path.join(appRoot, 'test'));
 
-fs.copySync('./defaults/config', 'config', {clobber : false});
-fs.copySync('./defaults/tasks', 'tasks', {clobber : false});
+fs.copySync('./defaults/config', path.join(appRoot, 'config'), {clobber : false});
+fs.copySync('./defaults/tasks', path.join(appRoot, 'tasks'), {clobber : false});
 
 /**
  * Copy versioned files to project root
