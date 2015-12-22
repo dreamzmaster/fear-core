@@ -4,8 +4,6 @@
 
 var appRoot = require('app-root-path');
 
-console.log(appRoot)
-
 var moduleRoot = process.cwd();
 
 var fs = require('fs-extra');
@@ -32,16 +30,18 @@ function createDirectory (dir) {
 
     var fs = require('fs-extra');
 
-    if (!fs.existsSync(dir)) {
-        fs.mkdirs(dir);
+    var fullPath = path.join(appRoot.path, dir);
+
+    if (!fs.existsSync(fullPath)) {
+        fs.mkdirs(fullPath);
     }
 }
 
-createDirectory(path.join(appRoot, paths.app.base));
-createDirectory(path.join(appRoot, 'test'));
+createDirectory(paths.app.base);
+createDirectory('test');
 
-fs.copySync('./defaults/config', path.join(appRoot, 'config'), {clobber : false});
-fs.copySync('./defaults/tasks', path.join(appRoot, 'tasks'), {clobber : false});
+fs.copySync('./defaults/config', path.join(appRoot.path, 'config'), {clobber : false});
+fs.copySync('./defaults/tasks', path.join(appRoot.path, 'tasks'), {clobber : false});
 
 /**
  * Copy versioned files to project root
