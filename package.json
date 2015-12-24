@@ -33,7 +33,8 @@
     "fs-extra": "0.24.0",
     "lodash": "3.10.1",
     "mocha": "2.3.3",
-    "npm-install-modules": "0.1.3"
+    "npm-install-modules": "0.1.3",
+    "yargs": "3.31.0"
   },
   "devDependencies": {
     "eslint": "1.2.1",

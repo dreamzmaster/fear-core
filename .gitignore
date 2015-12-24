@@ -8,6 +8,8 @@ app/css
 docs/generated
 .DS_Store
 .idea
+.vscode
+typings
 *.log
 *.iml
 *.orig

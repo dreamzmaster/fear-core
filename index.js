@@ -4,7 +4,9 @@ var appRoot = require('app-root-path');
 
 var fearDeps = require(appRoot + '/package.json').fear;
 
-var fearModules = {};
+var fearModules = {
+    config  : require('./utils/config')
+};
 
 var d;
 
