@@ -4,10 +4,6 @@ var appRoot = require('app-root-path');
 
 var fearDeps = require(appRoot + '/package.json').fear;
 
-var fearModules = {
-    config  : require('./utils/config')
-};
-
 var d;
 
 for (d in fearDeps.dependencies) {
@@ -22,4 +18,13 @@ for (d in fearDeps.devDependencies) {
     }
 }
 
+/**
+ * @module fear-core
+ */
 module.exports = fearModules;
+
+/**
+ * utils
+ * @see module:utils
+ */
+module.exports.utils = require('./utils');

@@ -10,6 +10,8 @@ var fs = require('fs-extra');
 var chalk = require('chalk');
 var path = require('path');
 
+var utils = require('./utils');
+
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
 var fearDeps = require('../../package.json').fear;
@@ -19,29 +21,12 @@ var fearDeps = require('../../package.json').fear;
  */
 var paths = require('./defaults/config/default/paths');
 
-/**
- * create folder structure
- * -app
- * -config
- * -tasks
- * -test
- */
-function createDirectory (dir) {
 
-    var fs = require('fs-extra');
+utils.directory.create(paths.app.base);
+utils.directory.create('test');
 
-    var fullPath = path.join(appRoot.path, dir);
-
-    if (!fs.existsSync(fullPath)) {
-        fs.mkdirs(fullPath);
-    }
-}
-
-createDirectory(paths.app.base);
-createDirectory('test');
-
-fs.copySync('./defaults/config', path.join(appRoot.path, 'config'), {clobber : false});
-fs.copySync('./defaults/tasks', path.join(appRoot.path, 'tasks'), {clobber : false});
+utils.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
+utils.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
 
 /**
  * Copy versioned files to project root
@@ -58,9 +43,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     var dst = appRoot + '/' + dstFilename;
 
     try {
-        var templateContent = fs.readFileSync(src).toString();
-        var toCompile = template(templateContent);
-        fs.writeFileSync(dst, toCompile({ appVersion: fearDeps.jspm.app }));
+        fs.writeFileSync(dst, utils.file.template(srcFilename, { appVersion: fearDeps.jspm.app }));
 
         logCopyOk(dstFilename);
 

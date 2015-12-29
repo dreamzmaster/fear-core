@@ -3,7 +3,7 @@
 module.exports = function () {
 
     var serve = require('fear-core').serve;
-    var config = require('fear-core').config();
+    var config = require('fear-core').utils.config();
     var gulp = require('gulp');
     var connectServer;
 

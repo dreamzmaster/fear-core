@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require('fear-core').config();
+var config = require('fear-core').utils.config();
 
 module.exports = function () {
 
