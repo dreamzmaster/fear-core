@@ -22,11 +22,11 @@ var fearDeps = require('../../package.json').fear;
 var paths = require('./defaults/config/default/paths');
 
 
-utils.directory.create(paths.app.base);
-utils.directory.create('test');
+utils.fs.directory.create(paths.app.base);
+utils.fs.directory.create('test');
 
-utils.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
-utils.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
+utils.fs.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
+utils.fs.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
 
 /**
  * Copy versioned files to project root
