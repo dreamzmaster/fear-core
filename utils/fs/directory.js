@@ -1,6 +1,7 @@
 'use strict';
 
 var path = require('path');
+var appRoot = require('app-root-path');
 
 module.exports = {
     create : function createDirectory (dir) {
