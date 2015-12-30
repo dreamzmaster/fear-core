@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs-extra');
+var messages = require('./messages');
 
 module.exports = {
     copy : function (source, destination, replace) {
@@ -10,14 +11,14 @@ module.exports = {
             // clobber: false means fs-extra will throw an error if the dst exists
             fs.copySync(source, destination, {clobber : replace});
 
-            logCopyOk(dstFilename);
+            messages.copyOk(dstFilename);
 
         } catch (err) {
 
             if (err.message === 'EEXIST') {
-                logFileSkipped(dstFilename);
+                messages.fileSkipped(dstFilename);
             } else {
-                logCopyError(dstFilename, err);
+                messages.copyError(dstFilename, err);
             }
 
         }
