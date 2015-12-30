@@ -15,5 +15,11 @@ module.exports = {
      * file system utils
      * @see module:utils/fs
      */
-    fs: require('./fs')
+    fs: require('./fs'),
+
+    /**
+     * notify user with messages to console
+     * @see module:utils/notify
+     */
+    notify: require('./notify')
 };

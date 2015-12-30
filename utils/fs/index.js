@@ -15,5 +15,11 @@ module.exports = {
      * file system utils
      * @see module:utils/fs/file
      */
-    file: require('./file')
+    file: require('./file'),
+
+    /**
+     * user messages
+     * @see module:utils/fs/messages
+     */
+    messages: require('./messages')
 };

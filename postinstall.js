@@ -1,19 +1,10 @@
-/* eslint no-console: 0 */
-
 'use strict';
 
 var appRoot = require('app-root-path');
-
 var moduleRoot = process.cwd();
-
 var fs = require('fs-extra');
-var chalk = require('chalk');
 var path = require('path');
-
 var utils = require('./utils');
-
-var fearCoreTasks = chalk.cyan('Installing FEAR:');
-
 var fearDeps = require('../../package.json').fear;
 
 /**
@@ -45,29 +36,17 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
         fs.writeFileSync(dst, utils.file.template(srcFilename, { appVersion: fearDeps.jspm.app }));
 
-        logCopyOk(dstFilename);
+        utils.fs.messages.copyOk(dstFilename);
 
     } catch (err) {
 
         if (err.message === 'EEXIST') {
-            logFileSkipped(dstFilename);
+            utils.fs.messages.fileSkipped(dstFilename);
         } else {
-            logCopyError(dstFilename, err);
+            utils.fs.messages.copyError(dstFilename, err);
         }
 
     }
-}
-
-function logCopyOk (filename) {
-    console.log(fearCoreTasks + ' copied default ' + chalk.green(filename) + ' to project\n');
-}
-
-function logFileSkipped (filename) {
-    console.log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + '\nFile already exists in project\n');
-}
-
-function logCopyError (filename, err) {
-    console.log(fearCoreTasks + chalk.red(' cannot copy ' + filename) + '\nError: ' + err.message + '\n');
 }
 
 /**

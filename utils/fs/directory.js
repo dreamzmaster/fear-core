@@ -2,11 +2,10 @@
 
 var path = require('path');
 var appRoot = require('app-root-path');
+var fs = require('fs-extra');
 
 module.exports = {
     create : function createDirectory (dir) {
-
-        var fs = require('fs-extra');
 
         var fullPath = path.join(appRoot.path, dir);
 
@@ -14,4 +13,4 @@ module.exports = {
             fs.mkdirs(fullPath);
         }
     }
-}
+};
