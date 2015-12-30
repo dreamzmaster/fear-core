@@ -12,10 +12,10 @@ var fearDeps = require('../../package.json').fear;
  */
 var paths = require('./defaults/config/default/paths');
 
-
 utils.fs.directory.create(paths.app.base);
 utils.fs.directory.create('test');
 
+utils.fs.file.copy('./defaults/app', path.join(appRoot.path, paths.app.base), false);
 utils.fs.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
 utils.fs.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
 
@@ -24,7 +24,7 @@ utils.fs.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
  */
 var template = require('lodash/string/template');
 
-copyDefaultToAppRoot('jspm.conf.js', 'app/common/scripts/jspm.conf.js');
+copyDefaultToAppRoot('jspm.conf.js', paths.app.base + '/common/scripts/jspm.conf.js');
 copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
 copyDefaultToAppRoot('gulpfile.js', 'gulpfile.js');
 
@@ -34,7 +34,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     var dst = appRoot + '/' + dstFilename;
 
     try {
-        fs.writeFileSync(dst, utils.fs.file.template(srcFilename, { appVersion: fearDeps.jspm.app }));
+        fs.writeFileSync(dst, utils.fs.file.template(src, { appVersion: fearDeps.jspm.app }));
 
         utils.fs.messages.copyOk(dstFilename);
 
