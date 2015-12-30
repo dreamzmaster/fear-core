@@ -11,14 +11,14 @@ module.exports = {
             // clobber: false means fs-extra will throw an error if the dst exists
             fs.copySync(source, destination, {clobber : replace});
 
-            messages.copyOk(dstFilename);
+            messages.copyOk(destination);
 
         } catch (err) {
 
             if (err.message === 'EEXIST') {
-                messages.fileSkipped(dstFilename);
+                messages.fileSkipped(destination);
             } else {
-                messages.copyError(dstFilename, err);
+                messages.copyError(destination, err);
             }
 
         }
