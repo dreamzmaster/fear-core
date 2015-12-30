@@ -34,7 +34,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     var dst = appRoot + '/' + dstFilename;
 
     try {
-        fs.writeFileSync(dst, utils.file.template(srcFilename, { appVersion: fearDeps.jspm.app }));
+        fs.writeFileSync(dst, utils.fs.file.template(srcFilename, { appVersion: fearDeps.jspm.app }));
 
         utils.fs.messages.copyOk(dstFilename);
 
