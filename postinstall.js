@@ -11,7 +11,7 @@ var chalk = require('chalk');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
-var fearDependencies = require('../../package.json').fearDependencies;
+var fearDeps = require('../../package.json').fear;
 
 /**
  * Copy versioned files to project root
@@ -29,7 +29,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
         var templateContent = fs.readFileSync(src).toString();
         var toCompile = template(templateContent);
-        fs.writeFileSync(dst, toCompile({ appVersion: fearDependencies.app }));
+        fs.writeFileSync(dst, toCompile({ appVersion: fearDeps.jspm.app }));
 
         logCopyOk(dstFilename);
 
