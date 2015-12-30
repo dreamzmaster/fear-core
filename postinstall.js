@@ -6,42 +6,12 @@ var appRoot = require('app-root-path');
 
 var moduleRoot = process.cwd();
 
-var fs = require('fs-extra');
+var fs = require('fs');
 var chalk = require('chalk');
-var path = require('path');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
-var fearDeps = require('../../package.json').fear;
-
-/**
- * load paths
- */
-var paths = require('./defaults/config/default/paths');
-
-/**
- * create folder structure
- * -app
- * -config
- * -tasks
- * -test
- */
-function createDirectory (dir) {
-
-    var fs = require('fs-extra');
-
-    var fullPath = path.join(appRoot.path, dir);
-
-    if (!fs.existsSync(fullPath)) {
-        fs.mkdirs(fullPath);
-    }
-}
-
-createDirectory(paths.app.base);
-createDirectory('test');
-
-fs.copySync('./defaults/config', path.join(appRoot.path, 'config'), {clobber : false});
-fs.copySync('./defaults/tasks', path.join(appRoot.path, 'tasks'), {clobber : false});
+var fearDependencies = require('../../package.json').fearDependencies;
 
 /**
  * Copy versioned files to project root
@@ -50,7 +20,6 @@ var template = require('lodash/string/template');
 
 copyDefaultToAppRoot('jspm.conf.js', 'app/common/scripts/jspm.conf.js');
 copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
-copyDefaultToAppRoot('gulpfile.js', 'gulpfile.js');
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
 
@@ -60,7 +29,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
         var templateContent = fs.readFileSync(src).toString();
         var toCompile = template(templateContent);
-        fs.writeFileSync(dst, toCompile({ appVersion: fearDeps.jspm.app }));
+        fs.writeFileSync(dst, toCompile({ appVersion: fearDependencies.app }));
 
         logCopyOk(dstFilename);
 

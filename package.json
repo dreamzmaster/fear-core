@@ -8,7 +8,6 @@
     "test": "mocha 'test/**/*.spec.js'",
     "pretest": "npm run eslint",
     "postinstall": "node postinstall",
-    "preinstall": "node preinstall",
     "watch:test": "onchange test/**/*.js tasks/**/*.js -- npm run test -s",
     "dev": "npm run watch:test -s"
   },
