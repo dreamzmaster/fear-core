@@ -76,7 +76,7 @@ System.config({
         "lib/jquery": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery",
         "lib/jquery.signalr": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery.signalr-1.1.2",
         "lib/utils": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/utils",
-        "lib/chart": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/chart",
+        "lib/chart": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/Chart",
         "moment": "github:moment/moment@2.10.6",
         "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular.package",
         "signalr.hubs": "http://localhost:9100/signalr/hubs?",
