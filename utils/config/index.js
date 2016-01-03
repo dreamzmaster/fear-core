@@ -10,7 +10,7 @@ var template = require('lodash/string/template');
 var every = require('lodash/collection/every');
 var each = require('lodash/collection/each');
 
-var isObject = require('lodash/lang/isobject');
+var isObject = require('lodash/lang/isObject');
 var isNull = require('lodash/lang/isNull');
 var isUndefined = require('lodash/lang/isUndefined');
 
