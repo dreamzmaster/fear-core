@@ -97,6 +97,7 @@ System.config({
         "lib/domQ": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/domQ",
         "lib/hd": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/hd",
         "lib/utils": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/utils",
+        "lib/chart": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/chart",
         "moment": "github:moment/moment@2.10.6",
         "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular.package",
         "lib/jquery": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery",
