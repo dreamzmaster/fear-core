@@ -67,18 +67,20 @@ var opts = {
     dependencies : []
 };
 
-var d;
+var d, dep = null;
 
 for (d in fearDeps.dependencies) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
-        opts.dependencies.push("fear-core-" + d + "@" + fearDeps.dependencies[d]);
+        dep = fearDeps.dependencies[d];
+        opts.dependencies.push('fear-core-' + d + (dep ? '@' + dep : ''));
     }
 }
 
 if (!process.env.NODE_ENV) {
     for (d in fearDeps.devDependencies) {
         if (fearDeps.devDependencies.hasOwnProperty(d)) {
-            opts.devDependencies.push("fear-core-" + d + "@" + fearDeps.devDependencies[d]);
+            dep = fearDeps.devDependencies[d];
+            opts.devDependencies.push('fear-core-' + d + (dep ? '@' + dep : ''));
         }
     }
 }
