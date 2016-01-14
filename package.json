@@ -1,6 +1,6 @@
 {
   "name": "fear-core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,6 @@
     "test": "mocha 'test/**/*.spec.js'",
     "pretest": "npm run eslint",
     "postinstall": "node postinstall",
-    "preinstall": "node preinstall",
     "watch:test": "onchange test/**/*.js tasks/**/*.js -- npm run test -s",
     "dev": "npm run watch:test -s",
     "docs": "./node_modules/.bin/jsdoc ./utils index.js --recurse --destination docs --readme README.md"

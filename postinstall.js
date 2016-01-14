@@ -26,6 +26,7 @@ var template = require('lodash/string/template');
 
 copyDefaultToAppRoot('jspm.conf.js', paths.app.base + '/common/scripts/jspm.conf.js');
 copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
+
 copyDefaultToAppRoot('gulpfile.js', 'gulpfile.js');
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
@@ -76,3 +77,4 @@ if (!process.env.NODE_ENV) {
 }
 
 installModules(opts, function () {});
+

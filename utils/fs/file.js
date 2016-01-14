@@ -3,7 +3,18 @@
 var fs = require('fs-extra');
 var messages = require('./messages');
 
+/**
+ * @module utils/fs/file
+ */
 module.exports = {
+
+    /**
+     * copy
+     * @param source {String}
+     * @param destination {Object}
+     * @param replace {Boolean}
+     * @returns {void}
+     */
     copy : function (source, destination, replace) {
 
         try {
@@ -23,6 +34,13 @@ module.exports = {
 
         }
     },
+
+    /**
+     * template
+     * @param source {String}
+     * @param templateVars {Object}
+     * @returns {String}
+     */
     template : function (source, templateVars) {
 
         var template = require('lodash/string/template');

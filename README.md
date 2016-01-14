@@ -1,2 +1,2 @@
-# fear-core-app
-Core application for FEAR SDK
+# fear-core
+Core application installer for FEAR SDK

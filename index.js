@@ -28,3 +28,9 @@ module.exports = fearModules;
  * @see module:utils
  */
 module.exports.utils = require('./utils');
+
+/**
+ * core
+ * @see module:core
+ */
+module.exports.core = require('./core');
