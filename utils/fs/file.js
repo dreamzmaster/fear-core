@@ -36,6 +36,30 @@ module.exports = {
     },
 
     /**
+     * write
+     * @param content
+     * @param destination
+     * @returns {void}
+     */
+    write : function (content, destination) {
+
+        try {
+            fs.writeFileSync(destination, content);
+
+            messages.copyOk(destination);
+
+        } catch (err) {
+
+            if (err.message === 'EEXIST') {
+                messages.fileSkipped(destination);
+            } else {
+                messages.copyError(destination, err);
+            }
+
+        }
+    },
+
+    /**
      * template
      * @param source {String}
      * @param templateVars {Object}

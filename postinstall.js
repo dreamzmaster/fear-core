@@ -18,37 +18,15 @@ utils.fs.directory.create('test');
 utils.fs.file.copy('./defaults/app', path.join(appRoot.path, paths.app.base), false);
 utils.fs.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
 utils.fs.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
+utils.fs.file.copy('./defaults/gulpfile.js', path.join(appRoot.path, 'gulpfile.js'), false);
 
 /**
- * Copy versioned files to project root
+ * Write versioned files to project root
  */
-var template = require('lodash/string/template');
+utils.fs.file.write(utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.js', { appVersion: fearDeps.jspm.app }), appRoot + '/' + paths.app.base + '/common/scripts/jspm.conf.js');
+utils.fs.file.write(utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.test.js', { appVersion: fearDeps.jspm.app }), appRoot + '/' + 'test/jspm.conf.test.js');
+utils.fs.file.write(utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.prod.js', { appVersion: fearDeps.jspm.app }), appRoot + '/' + 'config/integrated/jspm.conf.js');
 
-copyDefaultToAppRoot('jspm.conf.js', paths.app.base + '/common/scripts/jspm.conf.js');
-copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
-
-copyDefaultToAppRoot('gulpfile.js', 'gulpfile.js');
-
-function copyDefaultToAppRoot (srcFilename, dstFilename) {
-
-    var src = moduleRoot + '/defaults/' + srcFilename;
-    var dst = appRoot + '/' + dstFilename;
-
-    try {
-        fs.writeFileSync(dst, utils.fs.file.template(src, { appVersion: fearDeps.jspm.app }));
-
-        utils.fs.messages.copyOk(dstFilename);
-
-    } catch (err) {
-
-        if (err.message === 'EEXIST') {
-            utils.fs.messages.fileSkipped(dstFilename);
-        } else {
-            utils.fs.messages.copyError(dstFilename, err);
-        }
-
-    }
-}
 
 /**
  * Install Fear core versioned modules
@@ -64,14 +42,14 @@ var d;
 
 for (d in fearDeps.dependencies) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
-        opts.dependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps.dependencies[d]);
+        opts.dependencies.push("DigitalInnovation/fear-core-" + d + "#" + fearDeps.dependencies[d]);
     }
 }
 
 if (!process.env.NODE_ENV) {
     for (d in fearDeps.devDependencies) {
         if (fearDeps.devDependencies.hasOwnProperty(d)) {
-            opts.devDependencies.push("digitalinnovation/fear-core-" + d + "#" + fearDeps.devDependencies[d]);
+            opts.devDependencies.push("DigitalInnovation/fear-core-" + d + "#" + fearDeps.devDependencies[d]);
         }
     }
 }

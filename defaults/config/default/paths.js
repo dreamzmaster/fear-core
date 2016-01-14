@@ -2,6 +2,7 @@
 
 module.exports = {
     gulp: {
+        tasks: 'core/tasks',
         specs: 'test/tasks'
     },
     app: {
@@ -17,11 +18,12 @@ module.exports = {
         base: '.tmp'
     },
     core: {
-        base: 'app/jspm_components/github/DigitalInnovation/fear-core-app@<%= appVersion %>',
-        sass: 'app/jspm_components/github/DigitalInnovation/fear-core-app@<%= appVersion %>/sass',
-        scripts: 'app/jspm_components/github/DigitalInnovation/fear-core-app@<%= appVersion %>/scripts',
-        views: 'app/jspm_components/github/DigitalInnovation/fear-core-app@<%= appVersion %>/views',
-        packages: '{{base}}/github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages'
+        base: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0',
+        css: 'core/css',
+        sass: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/sass',
+        scripts: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/scripts',
+        views: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/views',
+        packages: '{{base}}/github:DigitalInnovation/fear-core-app@1.0.0/scripts/packages'
     },
     common: {
         base: '{{base}}/common',
@@ -33,14 +35,23 @@ module.exports = {
         views: '{{base}}/common/views'
     },
     teams: {
-        fear: {
-            base: '{{base}}/fear',
-            images: '{{base}}/fear/assets/images',
-            font: '{{base}}/fear/assets/fonts',
-            css: '{{base}}/fear/css',
-            sass: '{{base}}/fear/sass',
-            scripts: '{{base}}/fear/scripts',
-            views: '{{base}}/fear/views'
+        bandc: {
+            base: '{{base}}/bandc',
+            images: '{{base}}/bandc/assets/images',
+            font: '{{base}}/bandc/assets/fonts',
+            css: '{{base}}/bandc/css',
+            sass: '{{base}}/bandc/sass',
+            scripts: '{{base}}/bandc/scripts',
+            views: '{{base}}/bandc/views'
+        },
+        browse: {
+            base: '{{base}}/browse',
+            images: '{{base}}/browse/assets/images',
+            font: '{{base}}/browse/assets/fonts',
+            css: '{{base}}/browse/css',
+            sass: '{{base}}/browse/sass',
+            scripts: '{{base}}/browse/scripts',
+            views: '{{base}}/browse/views'
         }
     },
     glob: {
