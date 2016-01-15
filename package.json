@@ -23,7 +23,11 @@
   "bugs": {
     "url": "https://github.com/DigitalInnovation/fear-core/issues"
   },
-  "homepage": "https://github.com/DigitalInnovation/fear-core",
+  "homepage": "http://digitalinnovation.github.io/fear-core",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/DigitalInnovation/fear-core"
+  },
   "dependencies": {
     "app-root-path": "1.0.0",
     "chai": "3.4.1",
