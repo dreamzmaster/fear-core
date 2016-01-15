@@ -1,5 +1,5 @@
 System.config({
-    baseURL: "/base/app/scripts",
+    baseURL: "/base/app/",
     defaultJSExtensions: true,
     transpiler: "babel",
     babelOptions: {
@@ -13,7 +13,8 @@ System.config({
         "node_modules*": "/base/node_modules*",
         "github:*": "/base/app/jspm_components/github/*",
         "scripts/lib/*": "fear-core-app/scripts/lib/*",
-        "npm:*": "/base/app/jspm_components/npm/*"
+        "npm:*": "/base/app/jspm_components/npm/*",
+        "views/*": "/base/app/views/*"
     },
     shim: {
         'chai' : {'exports' : 'chai'},
@@ -46,13 +47,15 @@ System.config({
         "angular-ui-router": [
             "angular"
         ],
-        "lib/jquery.signalr": {
-            deps: ['lib/jquery']
+        "bandc/scripts/lib/jquery.signalr": {
+            "deps": [
+                "bandc/scripts/lib/jquery"
+            ]
         }
     },
 
     meta: {
-        "lib/jquery": {
+        "bandc/scripts/lib/jquery": {
             "format": "global"
         }
     },
@@ -93,14 +96,10 @@ System.config({
         "babel-runtime": "npm:babel-runtime@5.8.24",
         "core-js": "npm:core-js@1.1.4",
         "fastclick": "github:ftlabs/fastclick@1.0.3",
-        "lib/domQ": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/domQ",
-        "lib/hd": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/hd",
-        "lib/utils": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/utils",
         "moment": "github:moment/moment@2.10.6",
         "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular.package",
-        "lib/jquery": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery",
-        'lib/jquery.signalr': 'github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/lib/jquery.signalr-1.1.2',
         "signalr.hubs": "test/stubs/signalHubs",
+        "text": "github:systemjs/plugin-text@0.0.3",
         "traceur": "github:jmcriffey/bower-traceur@0.0.91",
         "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
         "underscore": "github:jashkenas/underscore@1.8.2",

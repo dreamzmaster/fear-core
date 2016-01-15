@@ -11,16 +11,16 @@ var chalk = require('chalk');
 
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
 
-var fearDependencies = require('../../package.json').fearDependencies;
+var fearDeps = require('../../package.json').fear;
 
 /**
  * Copy versioned files to project root
  */
 var template = require('lodash/string/template');
 
-copyDefaultToAppRoot('jspm.conf.js', 'app/scripts/jspm.conf.js');
+copyDefaultToAppRoot('jspm.conf.js', 'app/common/scripts/jspm.conf.js');
 copyDefaultToAppRoot('jspm.conf.test.js', 'test/jspm.conf.test.js');
-copyDefaultToAppRoot('scripts.html', 'app/views/default/modules/scripts.html');
+copyDefaultToAppRoot('jspm.conf.prod.js', 'config/integrated/jspm.conf.js');
 
 function copyDefaultToAppRoot (srcFilename, dstFilename) {
 
@@ -30,7 +30,7 @@ function copyDefaultToAppRoot (srcFilename, dstFilename) {
     try {
         var templateContent = fs.readFileSync(src).toString();
         var toCompile = template(templateContent);
-        fs.writeFileSync(dst, toCompile({ appVersion: fearDependencies.app }));
+        fs.writeFileSync(dst, toCompile({ appVersion: fearDeps.jspm.app }));
 
         logCopyOk(dstFilename);
 
@@ -60,15 +60,27 @@ function logCopyError (filename, err) {
 /**
  * Install Fear core versioned modules
  */
-var execSync = require('child_process').execSync;
-
-execSync('cd ' + appRoot.path);
-
 var installModules = require('npm-install-modules');
 
 var opts = {
-    dependencies: ["digitalinnovation/fear-core-serve#" + fearDependencies.serve],
-    devDependencies: ["digitalinnovation/fear-core-tasks#" + fearDependencies.tasks]
+    devDependencies: [],
+    dependencies : []
 };
+
+var d;
+
+for (d in fearDeps.dependencies) {
+    if (fearDeps.dependencies.hasOwnProperty(d)) {
+        opts.dependencies.push('fear-core-' + d + (fearDeps.dependencies[d] !== 'latest' ? '@' + fearDeps.dependencies[d] : ''));
+    }
+}
+
+if (!process.env.NODE_ENV) {
+    for (d in fearDeps.devDependencies) {
+        if (fearDeps.devDependencies.hasOwnProperty(d)) {
+            opts.devDependencies.push('fear-core-' + d + (fearDeps.devDependencies[d] !== 'latest' ? '@' + fearDeps.devDependencies[d] : ''));
+        }
+    }
+}
 
 installModules(opts, function () {});
