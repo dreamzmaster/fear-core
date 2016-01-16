@@ -1,6 +1,6 @@
 {
   "name": "fear-core",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
@@ -12,10 +12,6 @@
     "dev": "npm run watch:test -s",
     "docs": "./node_modules/.bin/jsdoc ./utils index.js --recurse --destination docs --readme README.md"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DigitalInnovation/fear-core.git"
-  },
   "author": {
     "name": "Alex Bowen",
     "email": "alexbowen@marks-and-spencer.co.uk"
@@ -24,7 +20,11 @@
   "bugs": {
     "url": "https://github.com/DigitalInnovation/fear-core/issues"
   },
-  "homepage": "https://github.com/DigitalInnovation/fear-core",
+  "homepage": "http://digitalinnovation.github.io/fear-core",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/DigitalInnovation/fear-core"
+  },
   "dependencies": {
     "app-root-path": "1.0.0",
     "chai": "3.4.1",
@@ -41,6 +41,6 @@
     "onchange": "2.0.0",
     "jsdoc": "3.4.0"
   },
-  "readme": "# fear-core-app\n\nCore application for FEAR SDK",
+  "readme": "# fear-core\n\nCore application for FEAR SDK",
   "readmeFilename": "README.md"
 }
