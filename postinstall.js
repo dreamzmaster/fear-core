@@ -26,15 +26,15 @@ var templateData = { appVersion: fearDeps.jspm.app };
 Promise.all([
     utils.fs.file.write(
         utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.js', templateData),
-        path.join(appRoot, paths.app.base + '/common/scripts/jspm.conf.js')
+        path.join(appRoot.path, paths.app.base + '/common/scripts/jspm.conf.js')
     ),
     utils.fs.file.write(
         utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.test.js', templateData),
-        path.join(appRoot, 'test/jspm.conf.test.js')
+        path.join(appRoot.path, 'test/jspm.conf.test.js')
     ),
     utils.fs.file.write(
         utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
-        path.join(appRoot, 'config/integrated/jspm.conf.js')
+        path.join(appRoot.path, 'config/integrated/jspm.conf.js')
     )
 ]).then(function () {
 
