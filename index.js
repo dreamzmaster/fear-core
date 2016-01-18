@@ -5,6 +5,7 @@ var appRoot = require('app-root-path');
 var fearDeps = require(appRoot + '/package.json').fear;
 
 var d;
+var fearModules = [];
 
 for (d in fearDeps.dependencies) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
@@ -28,9 +29,3 @@ module.exports = fearModules;
  * @see module:utils
  */
 module.exports.utils = require('./utils');
-
-/**
- * core
- * @see module:core
- */
-module.exports.core = require('./core');
