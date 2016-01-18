@@ -18,20 +18,15 @@ module.exports = {
     copy : function (source, destination, replace) {
 
         try {
-
             // clobber: false means fs-extra will throw an error if the dst exists
             fs.copySync(source, destination, {clobber : replace});
-
             messages.copyOk(destination);
-
         } catch (err) {
-
             if (err.message === 'EEXIST') {
                 messages.fileSkipped(destination);
             } else {
                 messages.copyError(destination, err);
             }
-
         }
     },
 
@@ -39,24 +34,28 @@ module.exports = {
      * write
      * @param content
      * @param destination
-     * @returns {void}
+     * @returns {Object}
      */
     write : function (content, destination) {
 
-        try {
-            fs.writeFileSync(destination, content);
+        return new Promise(function(resolve) {
 
-            messages.copyOk(destination);
+            fs.ensureFile(destination, function () {
 
-        } catch (err) {
+                try {
+                    fs.writeFileSync(destination, content);
+                    messages.copyOk(destination);
+                } catch (err) {
+                    if (err.message === 'EEXIST') {
+                        messages.fileSkipped(destination);
+                    } else {
+                        messages.copyError(destination, err);
+                    }
+                }
 
-            if (err.message === 'EEXIST') {
-                messages.fileSkipped(destination);
-            } else {
-                messages.copyError(destination, err);
-            }
-
-        }
+                resolve();
+            });
+        });
     },
 
     /**
@@ -72,6 +71,6 @@ module.exports = {
         var templateContent = fs.readFileSync(source).toString();
         var toCompile = template(templateContent);
 
-        return toCompile(templateVars)
+        return toCompile(templateVars);
     }
 };

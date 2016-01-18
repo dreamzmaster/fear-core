@@ -23,7 +23,7 @@ module.exports = {
         var map = {};
         var files;
         var stat;
-        
+
         try {
             stat = fs.statSync(dir);
         }catch(ex) {

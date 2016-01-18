@@ -1,3 +1,4 @@
+/*eslint-disable */
 System.config({
     baseURL: "/",
     defaultJSExtensions: true,
@@ -118,3 +119,4 @@ System.config({
         }
     }
 });
+/*eslint-enable */

@@ -1,7 +1,5 @@
 'use strict';
 
-var config = require('fear-core').utils.config();
-
 module.exports = function () {
 
     var gulp = require('gulp');
