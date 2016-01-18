@@ -2,15 +2,23 @@ Parent module responsible currently for installing child modules from applicatio
 
 ```
 {
-  "fearDependencies": {
-    "tasks": "1.0.0",
-    "serve": "1.0.0",
-    "app": "1.0.0"
+  "fear": {
+    "jspm": {
+      "app": "1.0.0"
+    },
+    "dependencies": {
+      "tasks": "latest",
+      "ui": "latest"
+    },
+    "devDependencies": {
+      "serve": "latest"
+    }
   },
     "dependencies": {
-    "fear-core": "DigitalInnovation/fear-core#development"
+    "fear-core": "1.1.2"
   }
 }
+
 ```
 fearDependencies currently available are:
 
