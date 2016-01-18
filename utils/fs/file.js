@@ -32,6 +32,7 @@ module.exports = {
 
     /**
      * write
+     * write content to a file. Will create directory structure if it doesn't exist
      * @param content
      * @param destination
      * @returns {Object}

@@ -1,4 +1,3 @@
-# fear-core
 Parent module responsible currently for installing child modules from applications package.json fearDependencies property. Package.json would contain the following for example:
 
 ```
