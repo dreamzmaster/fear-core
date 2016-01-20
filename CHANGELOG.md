@@ -1,6 +1,6 @@
 # fear-core change log
 
-## 1.1.7
+## 1.1.8
 
 - corrected paths to fear-core-app
 
