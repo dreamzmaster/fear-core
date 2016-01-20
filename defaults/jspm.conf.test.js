@@ -63,15 +63,21 @@ System.config({
 
     "dependencies": {
         "angular": "github:angular/bower-angular@1.2.28",
+        "angular-1.4.8": "github:angular/bower-angular@1.4.8",
         "angular-animate": "github:angular/bower-angular-animate@1.2.28",
+        "angular-animate-1.4.8": "github:angular/bower-angular-animate@1.4.8",
         "angular-ipcookie": "github:ivpusic/angular-cookie@4.0.9",
         "angular-load": "github:urish/angular-load@0.3.0",
         "angular-mocks": "github:angular/bower-angular-mocks@1.2.28",
+        "angular-mocks-1.4.8": "github:angular/bower-angular-mocks@1.4.8",
         "angular-moment": "github:urish/angular-moment@0.10.2",
         "angular-resource": "github:angular/bower-angular-resource@1.2.28",
+        "angular-resource-1.4.8": "github:angular/bower-angular-resource@1.4.8",
         "angular-route": "github:angular/bower-angular-route@1.2.28",
+        "angular-route-1.4.8": "github:angular/bower-angular-route@1.4.8",
         "angular-sanitize": "github:angular/bower-angular-sanitize@1.2.28",
-        "angular-ui-router": "github:DigitalInnovation/ui-router@^0.2.15",
+        "angular-sanitize-1.4.8": "github:angular/bower-angular-sanitize@1.4.8",
+        "angular-ui-router": "github:DigitalInnovation/ui-router@0.2.15",
         "fastclick": "github:ftlabs/fastclick@1.0.3",
         "moment": "github:moment/moment@2.10.6",
         "underscore": "github:jashkenas/underscore@1.8.2",
@@ -83,22 +89,28 @@ System.config({
         'sinon': 'node_modules/sinon/pkg/sinon',
         'sinon-chai': 'node_modules/sinon-chai/lib/sinon-chai',
         "angular": "github:angular/bower-angular@1.2.28",
+        "angular-1.4.8": "github:angular/bower-angular@1.4.8",
         "angular-animate": "github:angular/bower-angular-animate@1.2.28",
+        "angular-animate-1.4.8": "github:angular/bower-angular-animate@1.4.8",
         "angular-ipcookie": "github:ivpusic/angular-cookie@4.0.9",
         "angular-load": "github:urish/angular-load@0.3.0",
         "angular-mocks": "github:angular/bower-angular-mocks@1.2.28",
+        "angular-mocks-1.4.8": "github:angular/bower-angular-mocks@1.4.8",
         "angular-moment": "github:urish/angular-moment@0.10.2",
         "angular-resource": "github:angular/bower-angular-resource@1.2.28",
+        "angular-resource-1.4.8": "github:angular/bower-angular-resource@1.4.8",
         "angular-route": "github:angular/bower-angular-route@1.2.28",
+        "angular-route-1.4.8": "github:angular/bower-angular-route@1.4.8",
         "angular-sanitize": "github:angular/bower-angular-sanitize@1.2.28",
+        "angular-sanitize-1.4.8": "github:angular/bower-angular-sanitize@1.4.8",
         "angular-ui-router": "github:DigitalInnovation/ui-router@0.2.15",
-        "app": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/app",
         "babel": "npm:babel-core@5.8.25",
         "babel-runtime": "npm:babel-runtime@5.8.24",
         "core-js": "npm:core-js@1.1.4",
         "fastclick": "github:ftlabs/fastclick@1.0.3",
         "moment": "github:moment/moment@2.10.6",
-        "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular.package",
+        "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular-1.2.28.package",
+        "packages/angular-1.4.8.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular-1.4.8.package",
         "signalr.hubs": "test/stubs/signalHubs",
         "text": "github:systemjs/plugin-text@0.0.3",
         "traceur": "github:jmcriffey/bower-traceur@0.0.91",
@@ -106,8 +118,23 @@ System.config({
         "underscore": "github:jashkenas/underscore@1.8.2",
         "usertiming": "github:nicjansma/usertiming.js@0.1.6",
         "fearServiceAPI": "test/stubs/fearAPIStub",
+        "github:angular/bower-angular-animate@1.4.8": {
+            "angular": "github:angular/bower-angular@1.4.8"
+        },
         "github:angular/bower-angular-mocks@1.2.28": {
             "angular": "github:angular/bower-angular@1.2.28"
+        },
+        "github:angular/bower-angular-mocks@1.4.8": {
+            "angular": "github:angular/bower-angular@1.4.8"
+        },
+        "github:angular/bower-angular-resource@1.4.8": {
+            "angular": "github:angular/bower-angular@1.4.8"
+        },
+        "github:angular/bower-angular-route@1.4.8": {
+            "angular": "github:angular/bower-angular@1.4.8"
+        },
+        "github:angular/bower-angular-sanitize@1.4.8": {
+            "angular": "github:angular/bower-angular@1.4.8"
         },
         "github:jspm/nodelibs-process@0.1.1": {
             "process": "npm:process@0.10.1"

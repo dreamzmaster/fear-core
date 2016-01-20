@@ -1,4 +1,8 @@
-# fear-core-tasks change log
+# fear-core change log
+
+## 1.1.7
+
+- update jspm configs with new angular package
 
 ## 1.1.6
 

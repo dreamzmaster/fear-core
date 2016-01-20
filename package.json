@@ -1,6 +1,6 @@
 {
   "name": "fear-core",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
