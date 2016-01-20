@@ -1,5 +1,9 @@
 # fear-core-tasks change log
 
+## 1.1.6
+
+- copies jspm test config as same file name as other jspm configs
+
 ## 1.1.5
 
 - fix bug where fearModules is not defined

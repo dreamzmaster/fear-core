@@ -30,7 +30,7 @@ Promise.all([
     ),
     utils.fs.file.write(
         utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.test.js', templateData),
-        path.join(appRoot.path, 'test/jspm.conf.test.js')
+        path.join(appRoot.path, 'test/jspm.conf.js')
     ),
     utils.fs.file.write(
         utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
