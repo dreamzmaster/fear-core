@@ -7,7 +7,7 @@ System.config({
         "common/*": "common/*.js",
         "browse/*": "browse/*.js",
         "bandc/*": "bandc/*.js",
-        "core/*": "jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/*.js",
+        "core/*": "jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/*.js",
         "github:*": "jspm_components/github/*",
         "npm:*": "jspm_components/npm/*"
     },

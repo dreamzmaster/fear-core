@@ -2,6 +2,10 @@
 
 ## 1.1.7
 
+- corrected paths to fear-core-app
+
+## 1.1.7
+
 - update jspm configs with new angular package
 
 ## 1.1.6

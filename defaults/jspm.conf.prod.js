@@ -13,7 +13,7 @@ System.config({
         "common/*": mnsScriptLocation + "common/*.js",
         "browse/*": mnsScriptLocation + "browse/*.js",
         "bandc/*": mnsScriptLocation + "bandc/*.js",
-        "core/*": mnsScriptLocation + "jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/*.js",
+        "core/*": mnsScriptLocation + "jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/*.js",
         "github:*": "jspm_components/github/*",
         "npm:*": "jspm_components/npm/*"
     },
