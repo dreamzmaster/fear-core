@@ -12,10 +12,9 @@ var fearDeps = require('../../package.json').fear;
  */
 var paths = require('./defaults/config/default/paths');
 
-//utils.fs.directory.create(paths.app.base);
-//utils.fs.directory.create('test');
 //utils.fs.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
 //utils.fs.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
+//utils.fs.file.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
 //utils.fs.file.copy('./defaults/gulpfile.js', path.join(appRoot.path, 'gulpfile.js'), false);
 
 /**

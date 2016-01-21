@@ -8,6 +8,7 @@ module.exports = {
     app: {
         base: 'app',
         sass: 'app/**/sass',
+        css: 'app/**/css',
         scripts: 'app/**/scripts',
         views: 'app/**/views'
     },
@@ -18,12 +19,12 @@ module.exports = {
         base: '.tmp'
     },
     core: {
-        base: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0',
+        base: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.1',
         css: 'core/css',
-        sass: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/sass',
-        scripts: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/scripts',
-        views: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.0/views',
-        packages: '{{base}}/github:DigitalInnovation/fear-core-app@1.0.0/scripts/packages'
+        sass: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/sass',
+        scripts: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/scripts',
+        views: 'app/jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/views',
+        packages: '{{base}}/jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/scripts/packages'
     },
     common: {
         base: '{{base}}/common',

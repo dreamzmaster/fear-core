@@ -3,4 +3,6 @@
 
 require('./tasks/base.js');
 require('./tasks/serve')();
+require('./tasks/application/config')();
+require('./tasks/sass/compile')();
 /*eslint-enable */

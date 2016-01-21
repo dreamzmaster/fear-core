@@ -5,6 +5,7 @@ module.exports = function () {
     var serve = require('fear-core').serve;
     var config = require('fear-core').utils.config();
     var gulp = require('gulp');
+    var mustacheConfig = config.get('mustache');
     var connectServer;
 
     var baseFolder = global.argv.folder || 'app';
@@ -15,6 +16,8 @@ module.exports = function () {
         config.get('paths.temp.base'),
         config.get('paths.core.base')
     ];
+
+    var channelDefaults = require(process.cwd() + '/mock/src/channel');
 
     function isDev() {
         return config.env() === 'development';
@@ -28,13 +31,15 @@ module.exports = function () {
         return isDev() && !isTestsRunning();
     }
 
-    gulp.task('start-server', function () {
+    gulp.task('start-server', ['compile-sass', 'create-app-config'], function () {
 
         connectServer = serve.startServer(
             config.get('webserver.host'),
             config.get('webserver.port'),
             staticPaths,
-            liveReloadConditions
+            liveReloadConditions,
+            mustacheConfig,
+            channelDefaults
         );
     });
 
