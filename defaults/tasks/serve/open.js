@@ -23,5 +23,5 @@ module.exports = function () {
         queryString : getChannelQueryString()
     };
 
-    return gulp.task('open-page', serve.openUrl(options));
+    return gulp.task('serve', ['start-server'], serve.openUrl(options));
 };
