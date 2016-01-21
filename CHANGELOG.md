@@ -1,5 +1,9 @@
 # fear-core change log
 
+## 1.1.9
+
+- implemented capability to install new application
+
 ## 1.1.8
 
 - corrected paths to fear-core-app
