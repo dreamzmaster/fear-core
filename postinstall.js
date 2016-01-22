@@ -12,10 +12,11 @@ var fearDeps = require('../../package.json').fear;
  */
 var paths = require('./defaults/config/default/paths');
 
-utils.fs.file.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
-utils.fs.file.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
-utils.fs.file.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
-utils.fs.file.copy('./defaults/gulpfile.js', path.join(appRoot.path, 'gulpfile.js'), false);
+utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
+utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
+utils.fs.copy('./defaults/tasks/core', path.join(appRoot.path, 'tasks/core'), true);
+utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
+utils.fs.copy('./defaults/gulpfile.js', path.join(appRoot.path, 'gulpfile.js'), false);
 
 /**
  * Write versioned files to project root
@@ -23,16 +24,16 @@ utils.fs.file.copy('./defaults/gulpfile.js', path.join(appRoot.path, 'gulpfile.j
 var templateData = { appVersion: fearDeps.jspm.app };
 
 Promise.all([
-    utils.fs.file.write(
-        utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.js', templateData),
+    utils.fs.write(
+        utils.fs.template(moduleRoot + '/defaults/jspm.conf.js', templateData),
         path.join(appRoot.path, paths.app.base + '/common/scripts/jspm.conf.js')
     ),
-    utils.fs.file.write(
-        utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.test.js', templateData),
+    utils.fs.write(
+        utils.fs.template(moduleRoot + '/defaults/jspm.conf.test.js', templateData),
         path.join(appRoot.path, 'test/jspm.conf.js')
     ),
-    utils.fs.file.write(
-        utils.fs.file.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
+    utils.fs.write(
+        utils.fs.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
         path.join(appRoot.path, 'config/integrated/jspm.conf.js')
     )
 ]).then(function () {

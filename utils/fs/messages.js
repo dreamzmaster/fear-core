@@ -2,7 +2,6 @@
 
 var chalk = require('chalk');
 var fearCoreTasks = chalk.cyan('Installing FEAR:');
-var notify = require('../notify');
 
 /**
  * @module utils/fs/messages
@@ -15,7 +14,7 @@ module.exports = {
      * @returns {void}
      */
     copyOk : function (filename) {
-        notify.log(fearCoreTasks + ' copied default ' + chalk.green(filename) + ' to project\n');
+        require('../notify').log(fearCoreTasks + ' copied default ' + chalk.green(filename) + ' to project\n');
     },
 
     /**
@@ -24,7 +23,7 @@ module.exports = {
      * @returns {void}
      */
     fileSkipped : function (filename) {
-        notify.log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + '\nFile already exists in project\n');
+        require('../notify').log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + ' - ' + chalk.orange('File already exists in project\n'));
     },
 
     /**
@@ -34,6 +33,6 @@ module.exports = {
      * @returns {void}
      */
     copyError : function (filename, error) {
-        notify.log(fearCoreTasks + chalk.red(' cannot copy ' + filename) + '\nError: ' + error.message + '\n');
+        require('../notify').log(fearCoreTasks + chalk.red(' cannot copy ' + filename) + '\nError: ' + error.message + '\n');
     }
 };

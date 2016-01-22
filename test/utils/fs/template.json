@@ -1,0 +1,3 @@
+{
+  "scripts": "<%= path1 %>/<%= path2 %>/<%= path3 %>"
+}
