@@ -32,30 +32,37 @@ module.exports = {
 
     /**
      * write
-     * write content to a file. Will create directory structure if it doesn't exist
-     * @param content
-     * @param destination
+     * @param content {String}
+     * @param destination {String}
+     * @param replace {Boolean}
      * @returns {Object}
      */
-    write : function (content, destination) {
+    write : function (content, destination, replace) {
+
+        function _write (content, destination) {
+            try {
+                fs.writeFileSync(destination, content);
+                messages.copyOk(destination);
+            } catch (err) {
+                if (err.message === 'EEXIST') {
+                    messages.fileSkipped(destination);
+                } else {
+                    messages.copyError(destination, err);
+                }
+            }
+        }
 
         return new Promise(function(resolve) {
 
-            fs.ensureFile(destination, function () {
-
-                try {
-                    fs.writeFileSync(destination, content);
-                    messages.copyOk(destination);
-                } catch (err) {
-                    if (err.message === 'EEXIST') {
-                        messages.fileSkipped(destination);
-                    } else {
-                        messages.copyError(destination, err);
-                    }
-                }
-
+            if (replace) {
+                fs.ensureFile(destination, function () {
+                    _write(content, destination);
+                    resolve();
+                });
+            } else {
+                _write(content, destination);
                 resolve();
-            });
+            }
         });
     },
 
