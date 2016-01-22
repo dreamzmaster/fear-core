@@ -23,7 +23,7 @@ module.exports = {
      * @returns {void}
      */
     fileSkipped : function (filename) {
-        require('../notify').log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + ' - ' + chalk.orange('File already exists in project\n'));
+        require('../notify').log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + ' - ' + chalk.yellow('File already exists in project\n'));
     },
 
     /**
