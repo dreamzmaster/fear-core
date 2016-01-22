@@ -19,7 +19,7 @@ module.exports = function () {
         tasks.sass.compile(
             path.join(config.get('paths.core.sass'), config.get('paths.glob.sass')),
             autoPrefixOptions,
-            config.get('paths.common.css', {base : config.get('paths.app.base')}),
+            config.get('paths.core.css', {base : config.get('paths.app.base')}),
             ui.sassPaths
         )
     );
