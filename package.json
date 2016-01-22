@@ -11,7 +11,7 @@
     "watch:test": "onchange test/**/*.js tasks/**/*.js -- npm run test -s",
     "dev": "npm run watch:test -s",
     "docs": "./node_modules/.bin/jsdoc ./tasks index.js --recurse --destination docs --readme README.md",
-    "prepublish" : "npm test",
+    "prepublish": "npm test",
     "postpublish": "git checkout gh-pages; git merge master --strategy-option theirs; npm run docs; git add .; git commit -m 'update jsdocs'; git push upstream gh-pages; git checkout master"
   },
   "author": {
@@ -23,25 +23,27 @@
     "url": "https://github.com/DigitalInnovation/fear-core/issues"
   },
   "homepage": "http://digitalinnovation.github.io/fear-core",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/DigitalInnovation/fear-core"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DigitalInnovation/fear-core"
   },
   "dependencies": {
     "app-root-path": "1.0.0",
-    "chai": "3.4.1",
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
     "fs-extra": "0.24.0",
     "lodash": "3.10.1",
-    "mocha": "2.3.3",
     "npm-install-modules": "0.1.3",
     "yargs": "3.31.0"
   },
   "devDependencies": {
+    "chai": "3.4.1",
     "eslint": "1.2.1",
+    "jsdoc": "3.4.0",
+    "mocha": "2.3.3",
     "onchange": "2.0.0",
-    "jsdoc": "3.4.0"
+    "sinon": "1.17.2",
+    "sinon-chai": "2.8.0"
   },
   "readme": "# fear-core\n\nCore application for FEAR SDK",
   "readmeFilename": "README.md"

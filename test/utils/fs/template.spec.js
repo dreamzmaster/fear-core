@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect;
 
-describe.only('file system template utility', function () {
+describe('file system template utility', function () {
 
     var utils;
 

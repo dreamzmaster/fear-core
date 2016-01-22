@@ -9,9 +9,15 @@ var utils;
 module.exports = utils = {
 
     /**
+     * user messages
+     * @see module:utils/fs/messages
+     */
+    messages: require('./messages'),
+
+    /**
      * copy
      * @param source {String}
-     * @param destination {Object}
+     * @param destination {String}
      * @param replace {Boolean}
      * @returns {void}
      */
@@ -88,11 +94,5 @@ module.exports = utils = {
         var toCompile = template(templateContent);
 
         return toCompile(templateVars);
-    },
-
-    /**
-     * user messages
-     * @see module:utils/fs/messages
-     */
-    messages: require('./messages')
+    }
 };
