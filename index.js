@@ -9,13 +9,13 @@ var fearModules = [];
 
 for (d in fearDeps.dependencies) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
-        fearModules[d] = require('fear-core-' + d);
+        fearModules[d] = require('fear-core-' + d + '-tasks');
     }
 }
 
 for (d in fearDeps.devDependencies) {
     if (fearDeps.devDependencies.hasOwnProperty(d)) {
-        fearModules[d] = require('fear-core-' + d);
+        fearModules[d] = require('fear-core-' + d + '-tasks');
     }
 }
 

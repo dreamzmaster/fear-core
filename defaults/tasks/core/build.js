@@ -6,7 +6,7 @@ var ui = require('fear-core').ui;
 module.exports = function () {
 
     var spawn = require('child_process').spawn,
-        tasks = require('fear-core').tasks,
+        tasks = require('fear-core').build,
         config = require('fear-core').utils.config(),
         gulp = require('gulp'),
         gutil = require('gulp-util');
