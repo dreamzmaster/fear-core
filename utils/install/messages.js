@@ -9,28 +9,28 @@ var notify = require('../notify');
 module.exports = {
 
     /**
-     * copyOk
+     * start
      * @returns {void}
      */
-    log : function () {
-        notify.log(chalk.green('Installing FEAR Dependencies:\n\n'));
+    start : function () {
+        notify.log(chalk.cyan('\nInstalling FEAR NPM dependencies:\n\n'));
     },
 
     /**
-     * fileSkipped
+     * module
      * @param module {String}
      * @returns {void}
      */
     module : function (module) {
-        notify.log(chalk.green('module: ' + module));
+        notify.log('module: ' + chalk.green(module + '\n'));
     },
 
     /**
-     * copyError
+     * error
      * @param error {Object}
      * @returns {void}
      */
-    copyError : function (error) {
+    error : function (error) {
         notify.log(chalk.red(error));
     }
 };

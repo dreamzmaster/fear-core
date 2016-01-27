@@ -24,7 +24,7 @@ module.exports = {
      * @returns {void}
      */
     fileSkipped : function (filename) {
-        notify.log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + ' - ' + chalk.yellow('File already exists in project\n'));
+        notify.log(fearCoreTasks + ' skipped copying default ' + chalk.green(filename) + chalk.yellow(' already exists in project\n'));
     },
 
     /**
