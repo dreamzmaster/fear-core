@@ -87,13 +87,19 @@ module.exports = utils = {
 
             return new Promise(function(resolve) {
 
-                if (empty) {
-                    utils.empty(folder);
+                function _remove (f) {
+                    fs.rmdir(f, function () {
+                        resolve();
+                    });
                 }
 
-                fs.rmdir(folder, function () {
-                    resolve();
-                });
+                if (empty) {
+                    utils.empty(folder).then(function () {
+                        _remove(folder);
+                    });
+                } else {
+                    _remove(folder);
+                }
             });
         },
         /**
