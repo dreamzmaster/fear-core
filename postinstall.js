@@ -55,7 +55,7 @@ fs.exists('../../package.json', function (parentAppExists) {
                 }
             }
 
-            utils.install(dependencies);
+            utils.install.npm(dependencies);
         });
     }
 });

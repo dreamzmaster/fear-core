@@ -2,25 +2,36 @@
 
 var exec       = require('child_process').exec;
 var concurrent = require('./concurrent');
-var gutil = require('gulp-util');
+var install;
 
-function install (dependencies) {
+module.exports = install = {
 
-    gutil.log('\nInstalling FEAR Dependencies:\n');
+    /**
+     * user messages
+     * @see module:utils/install/messages
+     */
+    messages: require('./messages'),
 
-    function installDependencies (cmd, packages) {
-        concurrent(packages, function (val) {
-            exec(cmd + val, function () {
-                gutil.log('module: ', val);
+    /**
+     * npm
+     * @param dependencies {Array}
+     */
+    npm : function (dependencies) {
+
+        install.messages.start();
+
+        function installDependencies(cmd, packages) {
+            concurrent(packages, function (module) {
+                exec(cmd + module, function () {
+                    install.messages.module(module);
+                });
+            }, function (error) {
+                if (error) {
+                    install.messages.error(error);
+                }
             });
-        }, function (error) {
-            if (error) {
-                gutil.log(error);
-            }
-        });
+        }
+
+        installDependencies('npm install ', dependencies, 'devDependencies');
     }
-
-    installDependencies('npm install ', dependencies, 'devDependencies');
-}
-
-module.exports = install;
+};
