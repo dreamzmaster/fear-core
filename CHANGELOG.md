@@ -1,5 +1,9 @@
 # fear-core change log
 
+## 1.1.10
+
+- add production routes for lyalty/account
+
 ## 1.1.9
 
 - implemented capability to install new application
