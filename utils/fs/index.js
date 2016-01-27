@@ -73,6 +73,47 @@ module.exports = utils = {
     },
 
     /**
+     * folder
+     */
+    folder : {
+
+        /**
+         * remove
+         * @param folder
+         * @param empty clear folder contents first
+         * @returns {Function} promise
+         */
+        remove : function (folder, empty) {
+
+            return new Promise(function(resolve) {
+
+                if (empty) {
+                    utils.empty(folder);
+                }
+
+                fs.rmdir(folder, function () {
+                    resolve();
+                });
+            });
+        },
+        /**
+         * empty
+         * @param folder
+         * @returns {Function} promise
+         */
+        empty : function (folder) {
+
+            return new Promise(function(resolve) {
+                fs.emptyDir(folder, function (err) {
+                    if (!err) {
+                        resolve();
+                    }
+                });
+            });
+        }
+    },
+
+    /**
      * template
      * @param source {String}
      * @param templateVars {Object}
