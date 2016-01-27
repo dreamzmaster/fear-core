@@ -46,31 +46,16 @@ fs.exists('../../package.json', function (parentAppExists) {
             /**
              * Install Fear core versioned modules
              */
-            var installModules = require('npm-install-modules');
-
-            var opts = {
-                devDependencies: [],
-                dependencies: []
-            };
-
+            var dependencies = [];
             var d;
 
             for (d in fearDeps.dependencies) {
                 if (fearDeps.dependencies.hasOwnProperty(d)) {
-                    opts.dependencies.push('fear-core-' + d + (fearDeps.dependencies[d] !== 'latest' ? '@' + fearDeps.dependencies[d] : ''));
+                    dependencies.push('fear-core-' + d + (fearDeps.dependencies[d] !== 'latest' ? '@' + fearDeps.dependencies[d] : ''));
                 }
             }
 
-            if (!process.env.NODE_ENV) {
-                for (d in fearDeps.devDependencies) {
-                    if (fearDeps.devDependencies.hasOwnProperty(d)) {
-                        opts.devDependencies.push('fear-core-' + d + (fearDeps.devDependencies[d] !== 'latest' ? '@' + fearDeps.devDependencies[d] : ''));
-                    }
-                }
-            }
-
-            installModules(opts, function () {
-            });
+            utils.install(dependencies);
         });
     }
 });

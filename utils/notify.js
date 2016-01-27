@@ -1,7 +1,5 @@
 'use strict';
 
-var gutil = require('gulp-util');
-
 /**
  * @module utils/notify
  */
@@ -13,6 +11,6 @@ module.exports = {
      * @returns {void}
      */
     log : function (message) {
-        gutil.log(message);
+        process.stdout.write(message);
     }
 };

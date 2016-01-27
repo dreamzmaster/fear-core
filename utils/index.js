@@ -21,5 +21,11 @@ module.exports = {
      * notify user with messages to console
      * @see module:utils/notify
      */
-    notify: require('./notify')
+    notify: require('./notify'),
+
+    /**
+     * install npm dependencies
+     * @see module:utils/install
+     */
+    install: require('./install')
 };
