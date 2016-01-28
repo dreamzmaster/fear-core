@@ -1,5 +1,9 @@
 # fear-core change log
 
+## 1.2.1
+
+- postinstall hook missing
+
 ## 1.2.0
 
 - updated to use new fear-core modules (aut/dev/build)

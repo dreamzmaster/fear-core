@@ -1,9 +1,10 @@
 {
   "name": "fear-core",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
+    "postinstall" : "node postinstall",
     "eslint": "eslint test/ utils/ defaults/",
     "test": "mocha 'test/**/*.spec.js'",
     "pretest": "npm run eslint",
