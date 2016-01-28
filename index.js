@@ -24,6 +24,8 @@ for (d in fearDeps.devDependencies) {
  */
 module.exports = fearModules;
 
+module.exports.serve = require('fear-core-serve');
+
 /**
  * utils
  * @see module:utils

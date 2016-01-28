@@ -32,6 +32,7 @@
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
     "fs-extra": "0.24.0",
+    "fear-core-serve" : "^1.1.4",
     "lodash": "3.10.1",
     "yargs": "3.31.0"
   },
