@@ -13,6 +13,9 @@ System.config({
         "common/*": mnsScriptLocation + "common/*.js",
         "browse/*": mnsScriptLocation + "browse/*.js",
         "bandc/*": mnsScriptLocation + "bandc/*.js",
+        "loyalty/*": mnsScriptLocation + "loyalty/*.js",
+        "myAccount/*": mnsScriptLocation + "myAccount/*.js",
+        "pdp/*": mnsScriptLocation + "pdp/*.js",
         "core/*": mnsScriptLocation + "jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/*.js",
         "github:*": "jspm_components/github/*",
         "npm:*": "jspm_components/npm/*"
