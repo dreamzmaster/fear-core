@@ -4,6 +4,14 @@
 
 - updated to use new fear-core modules (aut/dev/build)
 
+## 1.1.10
+
+- add production routes for loyalty/account
+
+## 1.1.9
+
+- implemented capability to install new application
+
 ## 1.1.8
 
 - corrected paths to fear-core-app
