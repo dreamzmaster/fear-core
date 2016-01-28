@@ -1,6 +1,6 @@
 /*eslint-disable */
 System.config({
-    baseURL: "/",
+    baseURL: mnsScriptLocation,
     defaultJSExtensions: true,
     transpiler: "babel",
     babelOptions: {
@@ -10,12 +10,6 @@ System.config({
         ]
     },
     paths: {
-        "common/*": mnsScriptLocation + "common/*.js",
-        "browse/*": mnsScriptLocation + "browse/*.js",
-        "bandc/*": mnsScriptLocation + "bandc/*.js",
-        "loyalty/*": mnsScriptLocation + "loyalty/*.js",
-        "myAccount/*": mnsScriptLocation + "myAccount/*.js",
-        "pdp/*": mnsScriptLocation + "pdp/*.js",
         "core/*": mnsScriptLocation + "jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/*.js",
         "github:*": "jspm_components/github/*",
         "npm:*": "jspm_components/npm/*"
@@ -77,8 +71,8 @@ System.config({
         "babel-runtime": "npm:babel-runtime@5.8.24",
         "core-js": "npm:core-js@1.1.4",
         "fastclick": "github:ftlabs/fastclick@1.0.3",
-        "packages/angular.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular-1.2.28.package",
-        "packages/angular-1.4.8.package": "github:DigitalInnovation/fear-core-app@<%= appVersion %>/scripts/packages/angular-1.4.8.package",
+        "packages/angular.package": "github:DigitalInnovation/fear-core-app@1.0.1/scripts/packages/angular-1.2.28.package",
+        "packages/angular-1.4.8.package": "github:DigitalInnovation/fear-core-app@1.0.1/scripts/packages/angular-1.4.8.package",
         "moment": "github:moment/moment@2.10.6",
         "signalr.hubs": "http://localhost:9100/signalr/hubs?",
         "traceur": "github:jmcriffey/bower-traceur@0.0.91",

@@ -1,5 +1,9 @@
 # fear-core change log
 
+## 1.2.0
+
+- updated to use new fear-core modules (aut/dev/build)
+
 ## 1.1.8
 
 - corrected paths to fear-core-app
