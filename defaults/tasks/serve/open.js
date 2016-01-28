@@ -1,7 +1,6 @@
 'use strict';
 
-var core = require('fear-core');
-var config = core.utils.config();
+var config = require('fear-core').utils.config();
 
 module.exports = function () {
 
@@ -24,5 +23,5 @@ module.exports = function () {
         queryString : getChannelQueryString()
     };
 
-    return gulp.task('open-page', serve.openUrl(options));
+    return gulp.task('serve', ['start-server'], serve.openUrl(options));
 };
