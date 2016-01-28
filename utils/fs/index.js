@@ -78,44 +78,12 @@ module.exports = utils = {
     folder : {
 
         /**
-         * remove
-         * @param folder
-         * @param empty clear folder contents first
-         * @returns {Function} promise
-         */
-        remove : function (folder, empty) {
-
-            return new Promise(function(resolve) {
-
-                function _remove (f) {
-                    fs.rmdir(f, function () {
-                        resolve();
-                    });
-                }
-
-                if (empty) {
-                    utils.empty(folder).then(function () {
-                        _remove(folder);
-                    });
-                } else {
-                    _remove(folder);
-                }
-            });
-        },
-        /**
          * empty
          * @param folder
          * @returns {Function} promise
          */
         empty : function (folder) {
-
-            return new Promise(function(resolve) {
-                fs.emptyDir(folder, function (err) {
-                    if (!err) {
-                        resolve();
-                    }
-                });
-            });
+            return fs.emptyDirSync(folder);
         }
     },
 
