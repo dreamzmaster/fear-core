@@ -14,7 +14,9 @@ fs.exists('../../package.json', function (parentAppExists) {
         var fearDeps = require('../../package.json').fear;
 
         /**
-         * workout which modules can be
+         * workout which modules can be installed
+         * based on command line flags. this will also
+         * be used to dynamically create the gulpfile.
          */
         var fearAvailableModules = {};
 
@@ -23,7 +25,7 @@ fs.exists('../../package.json', function (parentAppExists) {
         }
 
         /**
-         * load paths
+         * load paths configuration
          */
         var paths = require('./defaults/config/default/paths');
 
