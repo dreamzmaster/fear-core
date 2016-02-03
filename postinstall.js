@@ -8,9 +8,19 @@ fs.exists('../../package.json', function (parentAppExists) {
 
         var appRoot = require('app-root-path');
         var moduleRoot = process.cwd();
+        var args = require('yargs');
         var path = require('path');
         var utils = require('./utils');
         var fearDeps = require('../../package.json').fear;
+
+        /**
+         * workout which modules can be
+         */
+        var fearAvailableModules = {};
+
+        for (var d in fearDeps.dependencies) {
+            fearAvailableModules[d] = args.argv[d] || args.argv.all;
+        }
 
         /**
          * load paths
@@ -21,7 +31,6 @@ fs.exists('../../package.json', function (parentAppExists) {
         utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
         utils.fs.copy('./defaults/tasks/core', path.join(appRoot.path, 'tasks/core'), true);
         utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
-        utils.fs.copy('./defaults/gulpfile.js', path.join(appRoot.path, 'gulpfile.js'), false);
 
         /**
          * Write versioned files to project root
@@ -40,6 +49,10 @@ fs.exists('../../package.json', function (parentAppExists) {
             utils.fs.write(
                 utils.fs.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
                 path.join(appRoot.path, 'config/integrated/jspm.conf.js')
+            ),
+            utils.fs.write(
+                utils.fs.template(moduleRoot + '/defaults/gulpfile.tpl', fearAvailableModules),
+                path.join(appRoot.path, 'gulpfile.js')
             )
         ]).then(function () {
 
@@ -50,7 +63,7 @@ fs.exists('../../package.json', function (parentAppExists) {
             var d;
 
             for (d in fearDeps.dependencies) {
-                if (fearDeps.dependencies.hasOwnProperty(d)) {
+                if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d]) {
                     dependencies.push('fear-core-' + d + (fearDeps.dependencies[d] !== 'latest' ? '@' + fearDeps.dependencies[d] : ''));
                 }
             }
