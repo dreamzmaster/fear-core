@@ -1,5 +1,9 @@
 # fear-core change log
 
+## 1.2.2
+
+- new mapping for tsop endpoints
+
 ## 1.2.1
 
 - postinstall hook missing
