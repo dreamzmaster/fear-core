@@ -2,7 +2,6 @@
 
 var fs = require('fs');
 var appRoot = require('app-root-path');
-var args = require('yargs');
 var packagePath = '../../package.json';
 
 fs.exists(packagePath, function (parentAppExists) {
@@ -14,19 +13,7 @@ fs.exists(packagePath, function (parentAppExists) {
         var utils = require('./utils');
         var fearDeps = require(packagePath).fear;
 
-        /**
-         * workout which modules can be installed
-         * based on command line flags. this will also
-         * be used to dynamically create the gulpfile.
-         */
-        var fearAvailableModules = {};
-
-        for (var d in fearDeps.dependencies) {
-            fearAvailableModules[d] = {
-                'install' : process.env.npm_config_fear === d || !process.env.npm_config_fear,
-                'tasks': fearDeps.dependencies[d].tasks
-            }
-        }
+        var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps);
 
         /**
          * load paths configuration

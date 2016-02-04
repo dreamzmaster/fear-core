@@ -1,20 +1,15 @@
 'use strict';
 
 var appRoot = require('app-root-path');
-
+var utils = require('./utils');
 var fearDeps = require(appRoot + '/package.json').fear;
 
-var d;
-var fearModules = [];
+var d, fearModules = [];
 
-for (d in fearDeps.dependencies) {
-    if (fearDeps.dependencies.hasOwnProperty(d)) {
-        fearModules[d] = require('fear-core-' + d);
-    }
-}
+var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps);
 
-for (d in fearDeps.devDependencies) {
-    if (fearDeps.devDependencies.hasOwnProperty(d)) {
+for (d in fearAvailableModules) {
+    if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
         fearModules[d] = require('fear-core-' + d);
     }
 }
