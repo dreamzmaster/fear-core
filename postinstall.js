@@ -1,17 +1,18 @@
 'use strict';
 
 var fs = require('fs');
+var appRoot = require('app-root-path');
+var packagePath = appRoot.path + '/package.json';
 
-fs.exists('../../package.json', function (parentAppExists) {
+fs.exists(packagePath, function (parentAppExists) {
 
     if (parentAppExists) {
 
-        var appRoot = require('app-root-path');
         var moduleRoot = process.cwd();
         var args = require('yargs');
         var path = require('path');
         var utils = require('./utils');
-        var fearDeps = require('../../package.json').fear;
+        var fearDeps = require(packagePath).fear;
 
         /**
          * workout which modules can be installed
@@ -21,7 +22,10 @@ fs.exists('../../package.json', function (parentAppExists) {
         var fearAvailableModules = {};
 
         for (var d in fearDeps.dependencies) {
-            fearAvailableModules[d] = args.argv[d] || args.argv.all;
+            fearAvailableModules[d] = {
+                'install' : args.argv[d] || args.argv.all,
+                'tasks': fearDeps.dependencies[d].tasks
+            }
         }
 
         /**
@@ -53,7 +57,10 @@ fs.exists('../../package.json', function (parentAppExists) {
                 path.join(appRoot.path, 'config/integrated/jspm.conf.js')
             ),
             utils.fs.write(
-                utils.fs.template(moduleRoot + '/defaults/gulpfile.tpl', fearAvailableModules),
+                utils.fs.template(moduleRoot + '/defaults/gulpfile.tpl', {
+                    'modules' : fearAvailableModules,
+                    'each' : require('lodash/collection/each')
+                }),
                 path.join(appRoot.path, 'gulpfile.js')
             )
         ]).then(function () {
@@ -65,8 +72,13 @@ fs.exists('../../package.json', function (parentAppExists) {
             var d;
 
             for (d in fearDeps.dependencies) {
-                if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d]) {
-                    dependencies.push('fear-core-' + d + (fearDeps.dependencies[d] !== 'latest' ? '@' + fearDeps.dependencies[d] : ''));
+                if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
+                    dependencies.push(
+                        'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
+                                ? '@' + fearDeps.dependencies[d].version
+                                : ''
+                        )
+                    );
                 }
             }
 

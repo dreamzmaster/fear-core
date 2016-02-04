@@ -3,9 +3,10 @@
 
 require('./tasks/base.js');
 
-<% if(build) { %>require('./tasks/<%= 'build' %>')();<% } %>
-<% if(dev) { %>require('./tasks/<%= 'dev' %>')();<% } %>
-<% if(aut) { %>require('./tasks/<%= 'aut' %>')();<% } %>
+//tasks
+<% each(modules, function(attrs, module) { %><% if(attrs.tasks) { %>require('./tasks/<%= module %>')();<% } else { %>//<%= module %> is not task based<% } %>
+<% }); %>
+//core tasks
 require('./tasks/core')();
 require('./tasks/serve')();
 
