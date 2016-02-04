@@ -1,5 +1,10 @@
 # fear-core change log
 
+## 1.2.3
+
+- implemented dynamic module loading based on cli args
+- implemented dynamic gulpfile based on cli args
+
 ## 1.2.2
 
 - new mapping for tsop endpoints

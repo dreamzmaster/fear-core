@@ -2,14 +2,14 @@
 
 var fs = require('fs');
 var appRoot = require('app-root-path');
-var packagePath = appRoot.path + '/package.json';
+var args = require('yargs');
+var packagePath = '../../package.json';
 
 fs.exists(packagePath, function (parentAppExists) {
 
     if (parentAppExists) {
 
         var moduleRoot = process.cwd();
-        var args = require('yargs');
         var path = require('path');
         var utils = require('./utils');
         var fearDeps = require(packagePath).fear;
@@ -23,7 +23,7 @@ fs.exists(packagePath, function (parentAppExists) {
 
         for (var d in fearDeps.dependencies) {
             fearAvailableModules[d] = {
-                'install' : args.argv[d] || args.argv.all,
+                'install' : process.env.npm_config_fear === d || !process.env.npm_config_fear,
                 'tasks': fearDeps.dependencies[d].tasks
             }
         }
@@ -86,4 +86,3 @@ fs.exists(packagePath, function (parentAppExists) {
         });
     }
 });
-
