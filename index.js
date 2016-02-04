@@ -11,7 +11,8 @@ var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps);
 for (d in fearAvailableModules) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
         try {
-            fearModules[d] = require('fear-core-' + d);
+            var module = require('fear-core-' + d);
+            fearModules[d] = module;
         } catch (err) {}
     }
 }
