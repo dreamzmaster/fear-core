@@ -7,7 +7,7 @@ var sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
 
-describe.only('file system copy utility', function () {
+describe('file system write utility', function () {
 
     var utils;
     var tempDir = 'test/utils/fs/.tmp';
