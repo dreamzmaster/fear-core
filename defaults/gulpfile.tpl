@@ -4,7 +4,7 @@
 require('./tasks/base.js');
 
 //tasks
-<% each(modules, function(attrs, module) { %><% if(attrs.tasks) { %>require('./tasks/<%= module %>')();<% } else { %>//<%= module %> is not task based<% } %>
+<% each(modules, function(attrs, module) { %><% if(attrs.tasks && attrs.install) { %>require('./tasks/<%= module %>')();<% } else { %>//<%= module %> has not been installed<% } %>
 <% }); %>
 //core tasks
 require('./tasks/core')();

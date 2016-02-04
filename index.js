@@ -4,23 +4,16 @@ var appRoot = require('app-root-path');
 var utils = require('./utils');
 var fearDeps = require(appRoot + '/package.json').fear;
 
-var d, fearModules = [];
+var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps, process.env.npm_config_fear);
 
-var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps);
-
-for (d in fearAvailableModules) {
+for (var d in fearAvailableModules) {
     if (fearDeps.dependencies.hasOwnProperty(d)) {
         try {
-            var module = require('fear-core-' + d);
-            fearModules[d] = module;
+            var fearModule = require('fear-core-' + d);
+            module.exports[d] = fearModule;
         } catch (err) {}
     }
 }
-
-/**
- * @module fear-core
- */
-module.exports = fearModules;
 
 module.exports.serve = require('fear-core-serve');
 

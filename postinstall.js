@@ -13,7 +13,7 @@ fs.exists(packagePath, function (parentAppExists) {
         var utils = require('./utils');
         var fearDeps = require(packagePath).fear;
 
-        var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps);
+        var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps, process.env.npm_config_fear);
 
         /**
          * load paths configuration
@@ -56,9 +56,8 @@ fs.exists(packagePath, function (parentAppExists) {
              * Install Fear core versioned modules
              */
             var dependencies = [];
-            var d;
 
-            for (d in fearDeps.dependencies) {
+            for (var d in fearDeps.dependencies) {
                 if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
                     dependencies.push(
                         'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'

@@ -41,14 +41,14 @@ module.exports = install = {
      * @param fearDeps {Object}
      * @returns fearAvailableModules {Object}
      */
-    getAvailableFearModules : function (fearDeps) {
+    getAvailableFearModules : function (fearDeps, requestedModule) {
 
         var fearAvailableModules = {};
 
         for (var d in fearDeps.dependencies) {
             if (fearDeps.dependencies.hasOwnProperty(d)) {
                 fearAvailableModules[d] = {
-                    'install' : process.env.npm_config_fear === d || !process.env.npm_config_fear,
+                    'install' : requestedModule === d || !requestedModule,
                     'tasks': fearDeps.dependencies[d].tasks
                 };
             }
