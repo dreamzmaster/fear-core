@@ -2,13 +2,6 @@
 System.config({
     baseURL: mnsScriptLocation,
     defaultJSExtensions: true,
-    transpiler: "babel",
-    babelOptions: {
-        "optional": [
-            "runtime",
-            "optimisation.modules.system"
-        ]
-    },
     paths: {
         "core/*": mnsScriptLocation + "jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/*.js",
         "github:*": "jspm_components/github/*",
@@ -67,8 +60,6 @@ System.config({
         "angular-sanitize": "github:angular/bower-angular-sanitize@1.2.28",
         "angular-sanitize-1.4.8": "github:angular/bower-angular-sanitize@1.4.8",
         "angular-ui-router": "github:DigitalInnovation/ui-router@0.2.15",
-        "babel": "npm:babel-core@5.8.25",
-        "babel-runtime": "npm:babel-runtime@5.8.24",
         "core-js": "npm:core-js@1.1.4",
         "fastclick": "github:ftlabs/fastclick@1.0.3",
         "packages/angular.package": "github:DigitalInnovation/fear-core-app@1.0.1/scripts/packages/angular-1.2.28.package",
@@ -78,8 +69,6 @@ System.config({
         "jquery.signalr": "bandc/scripts/lib/jquery.signalr-1.1.2",
         "signalr.hubs": "bandc/scripts/lib/signalRHubs",
         "fearServiceAPI": "bandc/scripts/lib/FearServiceBrokerAPI",
-        "traceur": "github:jmcriffey/bower-traceur@0.0.91",
-        "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
         "underscore": "github:jashkenas/underscore@1.8.2",
         "usertiming": "github:nicjansma/usertiming.js@0.1.6",
         "github:angular/bower-angular-animate@1.4.8": {
@@ -102,9 +91,6 @@ System.config({
         },
         "github:jspm/nodelibs-process@0.1.1": {
             "process": "npm:process@0.10.1"
-        },
-        "npm:babel-runtime@5.8.24": {
-            "process": "github:jspm/nodelibs-process@0.1.1"
         },
         "npm:core-js@1.1.4": {
             "fs": "github:jspm/nodelibs-fs@0.1.2",

@@ -1,5 +1,9 @@
 # fear-core change log
 
+## 1.2.3
+
+- add babel 2015 preset
+
 ## 1.2.2
 
 - new mapping for tsop endpoints

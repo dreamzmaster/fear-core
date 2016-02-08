@@ -2,7 +2,14 @@
 System.config({
     baseURL: "/",
     defaultJSExtensions: true,
-    transpiler: "traceur",
+    transpiler: "babel",
+    babelOptions: {
+        "optional": [
+            "runtime",
+            "optimisation.modules.system"
+        ],
+        "presets": ["es2015"]
+    },
     paths: {
         "core/*": "jspm_components/github/DigitalInnovation/fear-core-app@1.0.1/*.js",
         "github:*": "jspm_components/github/*",
