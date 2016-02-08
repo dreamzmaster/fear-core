@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var appRoot = require('app-root-path');
-var packagePath = '../../package.json';
+var packagePath = appRoot.path + '/package.json';
 
 fs.exists(packagePath, function (parentAppExists) {
 
