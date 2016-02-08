@@ -1,6 +1,6 @@
 # fear-core change log
 
-## 1.2.3
+## 1.3.0
 
 - implemented dynamic module loading based on cli args
 - implemented dynamic gulpfile based on cli args
