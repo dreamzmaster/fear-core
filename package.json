@@ -36,6 +36,7 @@
     "gulp-flatten": "0.0.4",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.3",
+    "lazypipe": "0.2.4",
     "lodash": "3.10.1",
     "yargs": "3.31.0"
   },
