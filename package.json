@@ -33,6 +33,9 @@
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
     "fs-extra": "0.24.0",
     "fear-core-serve" : "^1.1.4",
+    "gulp-flatten": "0.0.4",
+    "gulp-rename": "1.2.2",
+    "gulp-replace": "0.5.3",
     "lodash": "3.10.1",
     "yargs": "3.31.0"
   },

@@ -4,6 +4,7 @@
 
 - implemented dynamic module loading based on cli args
 - implemented dynamic gulpfile based on cli args
+- added mock data tasks
 
 ## 1.2.2
 
