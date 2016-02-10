@@ -6,35 +6,41 @@ var packagePath = appRoot.path + '/package.json';
 
 fs.exists(packagePath, function (parentAppExists) {
 
-    if (parentAppExists) {
+    var moduleRoot = process.cwd();
+    var path = require('path');
+    var utils = require('./utils');
+    var fearDeps = require(packagePath).fear;
 
-        var moduleRoot = process.cwd();
-        var path = require('path');
-        var utils = require('./utils');
-        var fearDeps = require(packagePath).fear;
+    var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps, process.env.npm_config_fear);
 
-        var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps, process.env.npm_config_fear);
+    /**
+     * load paths configuration
+     */
+    var paths = require('./defaults/config/default/paths');
 
-        /**
-         * load paths configuration
-         */
-        var paths = require('./defaults/config/default/paths');
+    /**
+     * create parent app folder structure if doesn't exist
+     */
+    function createApp() {
 
-        /**
-         * create parent app folder structure if doesnt exist
-         */
-        fs.exists(paths.app.base, function (parentAppCreated) {
-            if (!parentAppCreated) {
-                utils.fs.folder.create(paths.app.base);
-                utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
-                utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
-                utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
+        return new Promise(function(resolve) {
+            fs.exists(paths.app.base, function (parentAppCreated) {
+                if (!parentAppCreated) {
+                    utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
+                    utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
+                    utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
 
-                //temp
-                utils.fs.copy('./defaults/app/common', path.join(appRoot.path, 'app/common'), false);
-                utils.fs.folder.create(path.join(paths.app.base, 'scripts'));
-            }
+                    //temp
+                    utils.fs.folder.create(path.join(appRoot.path, paths.app.base, 'common/scripts'));
+                    utils.fs.copy('./defaults/app/common', path.join(appRoot.path, 'app/common'), false);
+                }
+
+                resolve();
+            });
         });
+    }
+
+    if (parentAppExists) {
 
         /**
          * Write versioned files to project root
@@ -42,6 +48,7 @@ fs.exists(packagePath, function (parentAppExists) {
         var templateData = {appVersion: fearDeps.jspm.app};
 
         Promise.all([
+            createApp(),
             utils.fs.write(
                 utils.fs.template(moduleRoot + '/defaults/jspm.conf.js', templateData),
                 path.join(appRoot.path, paths.app.base + '/common/scripts/jspm.conf.js')

@@ -66,17 +66,8 @@ module.exports = utils = {
                     resolve();
                 });
             } else {
-
-                var parts = destination.split('/');
-
-                //remove file from path
-                parts.pop();
-
-                //ensure directory exists
-                fs.ensureDir(path.join(parts), function () {
-                    _write(content, destination);
-                    resolve();
-                });
+                _write(content, destination);
+                resolve();
             }
         });
     },
