@@ -3,7 +3,7 @@
 exports.config = {
     defaultPage: 'hub',
     pages: {
-        'application': require('./pages/application')(),
+        'applications': require('./pages/application')(),
         'documentation': require('./pages/core')()
     }
 };
