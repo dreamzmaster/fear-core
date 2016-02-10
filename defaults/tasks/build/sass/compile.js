@@ -3,10 +3,10 @@
 module.exports = function () {
 
     var gulp = require('gulp');
-    var tasks = require('fear-core').tasks;
+    var tasks = require('fear-core').build;
     var config = require('fear-core').utils.config();
 
-    var ui = require('fear-core').ui;
+    var ui = require('fear-core-ui');
     var path = require('path');
 
     var autoPrefixOptions = {
