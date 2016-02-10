@@ -22,7 +22,6 @@ fs.exists(packagePath, function (parentAppExists) {
 
         utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
         utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
-        utils.fs.copy('./defaults/tasks/core', path.join(appRoot.path, 'tasks/core'), false);
         utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
 
         /**
