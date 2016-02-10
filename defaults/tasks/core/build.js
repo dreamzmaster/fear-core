@@ -1,7 +1,7 @@
 'use strict';
 
 require('../base.js');
-var ui = require('fear-core').ui;
+var ui = require('fear-core-ui');
 
 module.exports = function () {
 
