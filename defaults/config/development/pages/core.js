@@ -10,5 +10,5 @@ module.exports = function () {
         { 'name': 'UI', 'url': 'http://digitalinnovation.github.io/fear-core-ui' },
         { 'name': 'Pattern Library', 'url': 'http://patternlibrary.auto.devops.mnscorp.net' },
         { 'name': 'Demo Application', 'url': 'https://confluence.devops.mnscorp.net/display/FEAR/FEAR+SDK' }
-    ]
+    ];
 };

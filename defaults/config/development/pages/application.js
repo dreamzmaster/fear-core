@@ -8,5 +8,5 @@ module.exports = function () {
                 { 'name': 'Demo Page', 'url': '/demo' }
             ]
         }
-    ]
+    ];
 };
