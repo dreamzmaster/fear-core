@@ -35,7 +35,17 @@ module.exports = {
         scripts: '{{base}}/common/scripts',
         views: '{{base}}/common/views'
     },
-    teams: {},
+    teams: {
+        example: {
+            base: '{{base}}/bandc',
+            images: '{{base}}/bandc/assets/images',
+            font: '{{base}}/bandc/assets/fonts',
+            css: '{{base}}/bandc/css',
+            sass: '{{base}}/bandc/sass',
+            scripts: '{{base}}/bandc/scripts',
+            views: '{{base}}/bandc/views'
+        }
+    },
     glob: {
         css : '**/*.css',
         sass : '**/*.scss',
