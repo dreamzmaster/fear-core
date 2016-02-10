@@ -66,24 +66,40 @@ module.exports = utils = {
                     resolve();
                 });
             } else {
-                _write(content, destination);
-                resolve();
+
+                var parts = destination.split('/');
+
+                //remove file from path
+                parts.pop();
+
+                //ensure directory exists
+                fs.ensureDir(path.join(parts), function () {
+                    _write(content, destination);
+                    resolve();
+                });
             }
         });
     },
 
     /**
-     * folder
+     * folder utilities
      */
     folder : {
 
         /**
-         * empty
+         * empty folder
          * @param folder
-         * @returns {Function} promise
          */
         empty : function (folder) {
             return fs.emptyDirSync(folder);
+        },
+
+        /**
+         * create folder (and structure if doesn't exist)
+         * @param path
+         */
+        create : function (folderPath) {
+            return fs.ensureDirSync(folderPath);
         }
     },
 

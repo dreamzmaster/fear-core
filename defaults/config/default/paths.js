@@ -35,26 +35,7 @@ module.exports = {
         scripts: '{{base}}/common/scripts',
         views: '{{base}}/common/views'
     },
-    teams: {
-        bandc: {
-            base: '{{base}}/bandc',
-            images: '{{base}}/bandc/assets/images',
-            font: '{{base}}/bandc/assets/fonts',
-            css: '{{base}}/bandc/css',
-            sass: '{{base}}/bandc/sass',
-            scripts: '{{base}}/bandc/scripts',
-            views: '{{base}}/bandc/views'
-        },
-        browse: {
-            base: '{{base}}/browse',
-            images: '{{base}}/browse/assets/images',
-            font: '{{base}}/browse/assets/fonts',
-            css: '{{base}}/browse/css',
-            sass: '{{base}}/browse/sass',
-            scripts: '{{base}}/browse/scripts',
-            views: '{{base}}/browse/views'
-        }
-    },
+    teams: {},
     glob: {
         css : '**/*.css',
         sass : '**/*.scss',

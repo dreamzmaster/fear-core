@@ -20,9 +20,21 @@ fs.exists(packagePath, function (parentAppExists) {
          */
         var paths = require('./defaults/config/default/paths');
 
-        utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
-        utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
-        utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
+        /**
+         * create parent app folder structure if doesnt exist
+         */
+        fs.exists(paths.app.base, function (parentAppCreated) {
+            if (!parentAppCreated) {
+                utils.fs.folder.create(paths.app.base);
+                utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
+                utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
+                utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
+
+                //temp
+                utils.fs.copy('./defaults/app/common', path.join(appRoot.path, 'app/common'), false);
+                utils.fs.folder.create(path.join(paths.app.base, 'scripts'));
+            }
+        });
 
         /**
          * Write versioned files to project root
