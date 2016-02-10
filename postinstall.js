@@ -47,46 +47,49 @@ fs.exists(packagePath, function (parentAppExists) {
          */
         var templateData = {appVersion: fearDeps.jspm.app};
 
-        Promise.all([
-            createApp(),
-            utils.fs.write(
-                utils.fs.template(moduleRoot + '/defaults/jspm.conf.js', templateData),
-                path.join(appRoot.path, paths.app.base + '/common/scripts/jspm.conf.js')
-            ),
-            utils.fs.write(
-                utils.fs.template(moduleRoot + '/defaults/jspm.conf.test.js', templateData),
-                path.join(appRoot.path, 'test/jspm.conf.js')
-            ),
-            utils.fs.write(
-                utils.fs.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
-                path.join(appRoot.path, 'config/integrated/jspm.conf.js')
-            ),
-            utils.fs.write(
-                utils.fs.template(moduleRoot + '/defaults/gulpfile.tpl', {
-                    'modules' : fearAvailableModules,
-                    'each' : require('lodash/collection/each')
-                }),
-                path.join(appRoot.path, 'gulpfile.js')
-            )
-        ]).then(function () {
+        createApp().then(function () {
 
-            /**
-             * Install Fear core versioned modules
-             */
-            var dependencies = [];
+            Promise.all([
+                utils.fs.write(
+                    utils.fs.template(moduleRoot + '/defaults/jspm.conf.js', templateData),
+                    path.join(appRoot.path, paths.app.base + '/common/scripts/jspm.conf.js')
+                ),
+                utils.fs.write(
+                    utils.fs.template(moduleRoot + '/defaults/jspm.conf.test.js', templateData),
+                    path.join(appRoot.path, 'test/jspm.conf.js')
+                ),
+                utils.fs.write(
+                    utils.fs.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
+                    path.join(appRoot.path, 'config/integrated/jspm.conf.js')
+                ),
+                utils.fs.write(
+                    utils.fs.template(moduleRoot + '/defaults/gulpfile.tpl', {
+                        'modules' : fearAvailableModules,
+                        'each' : require('lodash/collection/each')
+                    }),
+                    path.join(appRoot.path, 'gulpfile.js')
+                )
+            ]).then(function () {
 
-            for (var d in fearDeps.dependencies) {
-                if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
-                    dependencies.push(
-                        'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
-                                ? '@' + fearDeps.dependencies[d].version
-                                : ''
-                        )
-                    );
+                /**
+                 * Install Fear core versioned modules
+                 */
+                var dependencies = [];
+
+                for (var d in fearDeps.dependencies) {
+                    if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
+                        dependencies.push(
+                            'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
+                                    ? '@' + fearDeps.dependencies[d].version
+                                    : ''
+                            )
+                        );
+                    }
                 }
-            }
 
-            utils.install.npm(dependencies);
+                utils.install.npm(dependencies);
+            });
+
         });
     }
 });
