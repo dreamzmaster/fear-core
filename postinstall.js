@@ -4,7 +4,7 @@ var fs = require('fs');
 var appRoot = require('app-root-path');
 var packagePath = appRoot.path + '/package.json';
 
-fs.exists(packagePath, function (parentAppExists) {
+fs.exists(packagePath, function (parentModuleExists) {
 
     var moduleRoot = process.cwd();
     var path = require('path');
@@ -27,11 +27,16 @@ fs.exists(packagePath, function (parentAppExists) {
             fs.exists(paths.app.base, function (parentAppCreated) {
                 if (!parentAppCreated) {
                     utils.fs.copy('./defaults/config', path.join(appRoot.path, 'config'), false);
+                    utils.fs.copy(
+                        './defaults/config/development/pages/core.js',
+                        path.join(appRoot.path, 'config/development/pages/core.js'
+                    ), true);
                     utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
                     utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
 
-                    //temp
+                    //temp untill scss used in hub is part of core-ui
                     utils.fs.folder.create(path.join(appRoot.path, paths.app.base, 'common/scripts'));
+
                     utils.fs.copy('./defaults/app/common', path.join(appRoot.path, 'app/common'), false);
                 }
 
@@ -40,11 +45,32 @@ fs.exists(packagePath, function (parentAppExists) {
         });
     }
 
-    if (parentAppExists) {
+    /**
+     * Install Fear core versioned modules
+     */
+    function installFearNpmDependencies () {
 
-        /**
-         * Write versioned files to project root
-         */
+        var dependencies = [];
+
+        for (var d in fearDeps.dependencies) {
+            if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
+                dependencies.push(
+                    'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
+                            ? '@' + fearDeps.dependencies[d].version
+                            : ''
+                    )
+                );
+            }
+        }
+
+        utils.install.npm(dependencies);
+    }
+
+    /**
+     * Main installation procedure
+     */
+    if (parentModuleExists) {
+
         var templateData = {appVersion: fearDeps.jspm.app};
 
         createApp().then(function () {
@@ -70,24 +96,7 @@ fs.exists(packagePath, function (parentAppExists) {
                     path.join(appRoot.path, 'gulpfile.js')
                 )
             ]).then(function () {
-
-                /**
-                 * Install Fear core versioned modules
-                 */
-                var dependencies = [];
-
-                for (var d in fearDeps.dependencies) {
-                    if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
-                        dependencies.push(
-                            'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
-                                    ? '@' + fearDeps.dependencies[d].version
-                                    : ''
-                            )
-                        );
-                    }
-                }
-
-                utils.install.npm(dependencies);
+                installFearNpmDependencies();
             });
 
         });
