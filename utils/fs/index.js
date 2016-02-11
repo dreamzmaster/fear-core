@@ -73,17 +73,24 @@ module.exports = utils = {
     },
 
     /**
-     * folder
+     * folder utilities
      */
     folder : {
 
         /**
-         * empty
+         * empty folder
          * @param folder
-         * @returns {Function} promise
          */
         empty : function (folder) {
             return fs.emptyDirSync(folder);
+        },
+
+        /**
+         * create folder (and structure if doesn't exist)
+         * @param path
+         */
+        create : function (folderPath) {
+            return fs.ensureDirSync(folderPath);
         }
     },
 

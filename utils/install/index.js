@@ -39,16 +39,26 @@ module.exports = install = {
      * getAvailableFearModules
      * @description workout which modules can be installed  based on command line flags.
      * @param fearDeps {Object}
-     * @returns fearAvailableModules {Object}
+     * @param requestedModules {String}
+     * @returns fearAvailableModules {Object|Boolean}
      */
-    getAvailableFearModules : function (fearDeps, requestedModule) {
+    getAvailableFearModules : function (fearDeps, requestedModules) {
 
+        var requestedModulesArray = [];
         var fearAvailableModules = {};
+
+        if (!fearDeps) {
+            return false;
+        }
+
+        if (requestedModules) {
+            requestedModulesArray = requestedModules.split(',');
+        }
 
         for (var d in fearDeps.dependencies) {
             if (fearDeps.dependencies.hasOwnProperty(d)) {
                 fearAvailableModules[d] = {
-                    'install' : requestedModule === d || !requestedModule,
+                    'install' : requestedModulesArray.indexOf(d) > -1 || !requestedModules,
                     'tasks': fearDeps.dependencies[d].tasks
                 };
             }
