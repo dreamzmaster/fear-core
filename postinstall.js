@@ -20,6 +20,7 @@ fs.exists(packagePath, function (parentModuleExists) {
 
     /**
      * create parent app folder structure if doesn't exist
+     * @returns {Promise}
      */
     function createApp() {
 
@@ -47,6 +48,8 @@ fs.exists(packagePath, function (parentModuleExists) {
 
     /**
      * Install Fear core versioned modules
+     * @param toInstall
+     * @returns {boolean}
      */
     function installFearNpmDependencies (toInstall) {
 
