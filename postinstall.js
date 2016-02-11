@@ -48,12 +48,16 @@ fs.exists(packagePath, function (parentModuleExists) {
     /**
      * Install Fear core versioned modules
      */
-    function installFearNpmDependencies () {
+    function installFearNpmDependencies (toInstall) {
 
         var dependencies = [];
 
+        if (!toInstall) {
+            return false;
+        }
+
         for (var d in fearDeps.dependencies) {
-            if (fearDeps.dependencies.hasOwnProperty(d) && fearAvailableModules[d].install) {
+            if (fearDeps.dependencies.hasOwnProperty(d) && toInstall[d].install) {
                 dependencies.push(
                     'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
                             ? '@' + fearDeps.dependencies[d].version
@@ -96,7 +100,7 @@ fs.exists(packagePath, function (parentModuleExists) {
                     path.join(appRoot.path, 'gulpfile.js')
                 )
             ]).then(function () {
-                installFearNpmDependencies();
+                installFearNpmDependencies(fearAvailableModules);
             });
 
         });
