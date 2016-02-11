@@ -44,7 +44,7 @@ module.exports = install = {
      */
     getAvailableFearModules : function (fearDeps, requestedModules) {
 
-        var requestedModulesArray;
+        var requestedModulesArray = [];
         var fearAvailableModules = {};
 
         if (requestedModules) {
