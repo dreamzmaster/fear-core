@@ -4,7 +4,6 @@
   "description": "FEAR Core",
   "main": "index.js",
   "scripts": {
-    "preinstall" : "node preinstall",
     "postinstall" : "node postinstall",
     "eslint": "eslint test/ utils/ defaults/",
     "test": "mocha 'test/**/*.spec.js'",
