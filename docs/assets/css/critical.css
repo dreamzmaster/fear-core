@@ -489,7 +489,7 @@ h5,
 h6,
 .zeta-text {
   color: #333333;
-  display: inline-block;
+  display: block;
   font-weight: normal;
   margin: 0;
 }
@@ -549,7 +549,7 @@ h2,
 /* line 57, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
 strong {
   font-family: "helvetica-medium", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   color: #000000;
 }
 
