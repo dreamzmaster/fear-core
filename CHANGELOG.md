@@ -5,6 +5,7 @@
 - implemented dynamic module loading based on cli args
 - implemented dynamic gulpfile based on cli args
 - added mock data tasks
+- improved auto generation of git hub pages from markdown files
 
 #### **1.2.2**
 - new mapping for tsop endpoints
