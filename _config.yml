@@ -1,9 +1,5 @@
 # Dependencies
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+markdown: redcarpet
 
 # Permalinks
 permalink:        pretty
