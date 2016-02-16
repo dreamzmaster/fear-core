@@ -53,7 +53,6 @@ require('./tasks/dev')();
 require('./tasks/core')();
 require('./tasks/serve')();
 ```
-
 This means that it is possible to have CI load only the module that contains the tasks it needs to run and can run these independently making these processes run as fast as possible.
 
 ###**Available modules**
