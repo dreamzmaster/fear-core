@@ -1,0 +1,2132 @@
+/* Base */
+/* offer backgrounds */
+/* page backgrounds */
+/* overlay backgrounds */
+/* lines/borders */
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+Functions
+-------- */
+/* line 3, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/layout/positioning/_extends.scss */
+.footer__inner::before, .global-footer__inner::before, .footer__inner::after, .global-footer__inner::after {
+  content: ' ';
+  display: table;
+}
+
+/* line 9, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/layout/positioning/_extends.scss */
+.footer__inner::after, .global-footer__inner::after {
+  clear: both;
+}
+
+/* offer backgrounds */
+/* page backgrounds */
+/* overlay backgrounds */
+/* lines/borders */
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+Functions
+-------- */
+/* line 5, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+h1,
+.alpha-text, h2,
+.beta-text, h3,
+.gamma-text,
+h4,
+.delta-text,
+h5,
+.epsilon-text,
+h6,
+.zeta-text {
+  color: #333333;
+  display: block;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 21, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+h1,
+.alpha-text {
+  margin-top: -0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 21, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+  h1,
+  .alpha-text {
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* line 32, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+h3,
+.gamma-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 32, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+  h3,
+  .gamma-text {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* line 41, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+h2,
+.beta-text {
+  margin-top: -0.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 41, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+  h2,
+  .beta-text {
+    margin-top: -0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* line 57, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_extends.scss */
+strong {
+  font-family: "helvetica-medium", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #000000;
+}
+
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* line 16, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends.scss */
+.btn__icon::before, .checkbox-accordion + .checkbox-accordion__section .checkbox-accordion__heading::before, .icon,
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  font-family: "mns-icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 1, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--edit::before, .icon--arrow-toggle::before {
+  content: '\e608';
+}
+
+/* line 5, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.btn__icon--calendar::before {
+  content: '\e60a';
+}
+
+/* line 9, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--delivery-store::before {
+  content: '\e60b';
+}
+
+/* line 13, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--delivery-sdd::before, .icon--delivery-ndd::before, .icon--delivery-international::before, .icon--delivery-expressinternational::before {
+  content: '\e60c';
+}
+
+/* line 17, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.btn__icon--edit::before {
+  content: '\e60d';
+}
+
+/* line 21, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--gift::before, .btn__icon--gift::before {
+  content: '\e616';
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--toilet::before {
+  content: '\e628';
+}
+
+/* line 29, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--no-toilet::before {
+  content: '\e629';
+}
+
+/* line 33, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--no-car-collect::before {
+  content: '\e62a';
+}
+
+/* line 37, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--no-park::before {
+  content: '\e62b';
+}
+
+/* line 41, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--no-baby-chng::before {
+  content: '\e62c';
+}
+
+/* line 45, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--car-collect::before {
+  content: '\e62d';
+}
+
+/* line 49, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--park::before {
+  content: '\e62e';
+}
+
+/* line 53, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--baby-chng::before {
+  content: '\e62f';
+}
+
+/* line 57, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--arrow-left::before {
+  content: '\e630';
+}
+
+/* line 61, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--arrow-down::before {
+  content: '\e625';
+}
+
+/* line 65, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--arrow-right::before, .checkbox-accordion + .checkbox-accordion__section .checkbox-accordion__heading::before {
+  content: '\e626';
+}
+
+/* line 69, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--locator-pin::before {
+  content: '\e627';
+}
+
+/* line 73, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--email::before {
+  content: '\e61b';
+}
+
+/* line 77, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--facebook::before {
+  content: '\e61c';
+}
+
+/* line 81, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--googleplus::before {
+  content: '\e61d';
+}
+
+/* line 85, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--instagram::before {
+  content: '\e61e';
+}
+
+/* line 89, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--pintrest::before {
+  content: '\e61f';
+}
+
+/* line 93, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--mobile::before {
+  content: '\e620';
+}
+
+/* line 97, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--twitter::before {
+  content: '\e621';
+}
+
+/* line 101, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--youtube::before {
+  content: '\e622';
+}
+
+/* line 105, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--checkout::before {
+  content: '\e614';
+}
+
+/* line 109, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--fave::before {
+  content: '\e615';
+}
+
+/* line 113, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--my-account::before {
+  content: '\e610';
+}
+
+/* line 117, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--arrow-light::before {
+  content: '\e60f';
+}
+
+/* line 121, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--disposal::before {
+  content: '\e60e';
+}
+
+/* line 125, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--tick::before {
+  content: '\e609';
+}
+
+/* line 129, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--bag::before {
+  content: '\e607';
+}
+
+/* line 133, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--close::before, .btn__icon--close::before {
+  content: '\e603';
+}
+
+/* line 137, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--confirmation::before,
+.icon--success::before {
+  content: '\e604';
+}
+
+/* line 142, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--error::before {
+  content: '\e605';
+}
+
+/* line 146, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--tooltip-info::before, .icon--information::before, .btn__icon--info::before {
+  content: '\e606';
+}
+
+/* line 154, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--logo::before {
+  content: '\e601';
+}
+
+/* line 162, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--location::before {
+  content: '\e613';
+}
+
+/* line 166, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--menu::before {
+  content: '\e611';
+}
+
+/* line 170, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--search::before, .btn__icon--search::before {
+  content: '\e612';
+}
+
+/* line 190, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--fave-plus::before {
+  content: '\e623';
+}
+
+/* line 194, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--sign-in::before, .btn__icon--lock::before {
+  content: '\e624';
+}
+
+/* line 198, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.btn__icon--cancel-order::before {
+  content: '\e631';
+}
+
+/* line 202, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--print::before {
+  content: '\e632';
+}
+
+/* line 206, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--sparks::before {
+  content: '\e633';
+}
+
+/* line 210, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_extends_content.scss */
+.icon--delivery-ed::before {
+  content: '\e634';
+}
+
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+Functions
+-------- */
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+  Fonts
+  -------- */
+/* -------- Icons -------- */
+@font-face {
+  font-family: "mns-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/mns-icons.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/mns-icons.woff") format("woff"), url("/assets/fonts/mns-icons.ttf") format("truetype"), url("/assets/fonts/mns-icons.svg#mns-icons") format("svg");
+}
+
+/* -------- Typographic -------- */
+@font-face {
+  font-family: "helvetica-ultra";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/helvetica-ultra-light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/helvetica-ultra-light.woff") format("woff"), url("/assets/fonts/helvetica-ultra-light.ttf") format("truetype"), url("/assets/fonts/helvetica-ultra-light.svg#helvetica-ultra") format("svg");
+}
+
+@font-face {
+  font-family: "helvetica-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/helvetica-light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/helvetica-light.woff") format("woff"), url("/assets/fonts/helvetica-light.ttf") format("truetype"), url("/assets/fonts/helvetica-light.svg#helvetica-light") format("svg");
+}
+
+@font-face {
+  font-family: "helvetica-roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/helvetica-roman.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/helvetica-roman.woff") format("woff"), url("/assets/fonts/helvetica-roman.ttf") format("truetype"), url("/assets/fonts/helvetica-roman.svg#helvetica-roman") format("svg");
+}
+
+@font-face {
+  font-family: "helvetica-medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/helvetica-medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/helvetica-medium.woff") format("woff"), url("/assets/fonts/helvetica-medium.ttf") format("truetype"), url("/assets/fonts/helvetica-medium.svg#helvetica-medium") format("svg");
+}
+
+@font-face {
+  font-family: "helvetica-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/helvetica-bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/helvetica-bold.woff") format("woff"), url("/assets/fonts/helvetica-bold.ttf") format("truetype"), url("/assets/fonts/helvetica-bold.svg#helvetica-bold") format("svg");
+}
+
+@font-face {
+  font-family: "london-semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/MSLondonW03Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/MSLondonW03Semibold.woff") format("woff"), url("/assets/fonts/MSLondonW03Semibold.ttf") format("truetype"), url("/assets/fonts/MSLondonW03Semibold.svg#london-semibold") format("svg");
+}
+
+@font-face {
+  font-family: "london-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/MandSLondonW03Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/MandSLondonW03Bold.woff") format("woff"), url("/assets/fonts/MandSLondonW03Bold.ttf") format("truetype"), url("/assets/fonts/MandSLondonW03Bold.svg#london-bold") format("svg");
+}
+
+@font-face {
+  font-family: "leeds-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/MandSLeedsW03Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/MandSLeedsW03Light.woff") format("woff"), url("/assets/fonts/MandSLeedsW03Light.ttf") format("truetype"), url("/assets/fonts/MandSLeedsW03Light.svg#leeds-light") format("svg");
+}
+
+@font-face {
+  font-family: "didot-roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/didot-roman.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/didot-roman.woff") format("woff"), url("/assets/fonts/didot-roman.ttf") format("truetype"), url("/assets/fonts/didot-roman.svg#didot-roman") format("svg");
+}
+
+@font-face {
+  font-family: "didot-italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/didot-italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/didot-italic.woff") format("woff"), url("/assets/fonts/didot-italic.ttf") format("truetype"), url("/assets/fonts/didot-italic.svg#didot-italic") format("svg");
+}
+
+@font-face {
+  font-family: "didot-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/didot-bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/didot-bold.woff") format("woff"), url("/assets/fonts/didot-bold.ttf") format("truetype"), url("/assets/fonts/didot-bold.svg#didot-bold") format("svg");
+}
+
+@font-face {
+  font-family: "didot-bold-italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/didot-bold-italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/didot-bold-italic.woff") format("woff"), url("/assets/fonts/didot-bold-italic.ttf") format("truetype"), url("/assets/fonts/didot-bold-italic.svg#didot-bold-italic") format("svg");
+}
+
+/* line 1, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+p {
+  margin: 0 0 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 1, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+  p {
+    margin: 0 0 1.5rem;
+  }
+}
+
+/* line 9, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+i {
+  font-style: normal;
+}
+
+/* line 23, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+h3,
+.gamma-text {
+  font-family: "helvetica-medium", Helvetica, Arial, sans-serif;
+}
+
+/* line 29, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+.base-text {
+  font-size: 1.5rem;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 29, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+  .base-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 54, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+h1,
+.alpha-text,
+h2,
+.beta-text {
+  font-family: "helvetica-light", Helvetica, Arial, sans-serif;
+}
+
+/* line 61, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_typography.scss */
+.small-text {
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+/* line 2, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_quote.scss */
+.pseudo-quote {
+  quotes: '\201c' '\201d';
+}
+
+/* line 6, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_quote.scss */
+.pseudo-quote::before {
+  content: open-quote;
+}
+
+/* line 10, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_quote.scss */
+.pseudo-quote::after {
+  content: close-quote;
+}
+
+/* line 14, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/typography/_module_quote.scss */
+.pseudo--break::after,
+.pseudo--break::before {
+  content: '\A';
+  white-space: pre;
+}
+
+/* line 60, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+.icon-cards {
+  background-image: url("/common/assets/images/sprites/sprite-cards.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 65, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-cards {
+    background-image: url("/common/assets/images/sprites/sprite-cards@2x.png");
+    -webkit-background-size: 82px 410px;
+    background-size: 82px 410px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 2.6041666666666665), (min-resolution: 250dpi) {
+  /* line 72, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-cards {
+    background-image: url("/common/assets/images/sprites/sprite-cards@3x.png");
+    -webkit-background-size: 82px 410px;
+    background-size: 82px 410px;
+  }
+}
+
+/* line 77, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+.icon-cards-mini {
+  background-image: url("/common/assets/images/sprites/sprite-cards-mini.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 82, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-cards-mini {
+    background-image: url("/common/assets/images/sprites/sprite-cards-mini@2x.png");
+    -webkit-background-size: 42px 252px;
+    background-size: 42px 252px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 2.6041666666666665), (min-resolution: 250dpi) {
+  /* line 89, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-cards-mini {
+    background-image: url("/common/assets/images/sprites/sprite-cards-mini@3x.png");
+    -webkit-background-size: 42px 252px;
+    background-size: 42px 252px;
+  }
+}
+
+/* line 94, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+.icon-cards-xs {
+  background-image: url("/common/assets/images/sprites/sprite-cards-xs.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 99, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-cards-xs {
+    background-image: url("/common/assets/images/sprites/sprite-cards-xs@2x.png");
+    -webkit-background-size: 36px 160px;
+    background-size: 36px 160px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 2.6041666666666665), (min-resolution: 250dpi) {
+  /* line 106, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-cards-xs {
+    background-image: url("/common/assets/images/sprites/sprite-cards-xs@3x.png");
+    -webkit-background-size: 36px 160px;
+    background-size: 36px 160px;
+  }
+}
+
+/* line 111, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+.icon-global {
+  background-image: url("/common/assets/images/sprites/sprite-global.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 116, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-global {
+    background-image: url("/common/assets/images/sprites/sprite-global@2x.png");
+    -webkit-background-size: 260px 51px;
+    background-size: 260px 51px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 2.6041666666666665), (min-resolution: 250dpi) {
+  /* line 123, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/_sprites.scss */
+  .icon-global {
+    background-image: url("/common/assets/images/sprites/sprite-global@3x.png");
+    -webkit-background-size: 260px 51px;
+    background-size: 260px 51px;
+  }
+}
+
+/* Components */
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+  M&S font icons
+  -------- */
+/* -------- Icons -------- */
+/* M&S font icon instructions
+--------------------------------------------------
+To add icons to the mns-icons font, follow the steps below:
+   - inside the FEAR project, go to the /app/assets/fonts/
+   - unzip the file mns-icons.zip
+   - go to https://icomoon.io/app/
+   - click on the hamburger menu
+   - click on New Project
+   - click Import Icons
+   - from the unzipped folder, select file 'selection.json'
+   - click Import Icons
+   - select your new SVG files to add to the font file
+   - make sure all icons are selected
+   - click on Generate Font
+   - rename new icons if necessary
+   - click Download and save .zip file
+   - unzip the newly created file
+   - copy all font files from /mns-icons/fonts/ (eot, svg, ttf, woff) to FEAR folder /app/assets/fonts/
+   - copy-paste the '.icon-.....' css rules from style.css into FEAR folder /sass/components/_icons.scss
+*/
+/* -------- Icon elements -------- */
+/* line 131, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_module_icons.scss */
+.icon__label {
+  font-style: normal;
+}
+
+/* -------- Icon modifiers -------- */
+/* line 138, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_module_icons.scss */
+.icon--button {
+  background: transparent;
+  border: none;
+}
+
+/* line 144, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_module_icons.scss */
+.icon--link {
+  text-decoration: none;
+}
+
+/* line 147, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/icons/_module_icons.scss */
+.icon--link span {
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
+}
+
+/* offer backgrounds */
+/* page backgrounds */
+/* overlay backgrounds */
+/* lines/borders */
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+Functions
+-------- */
+/* --------
+  Buttons
+  -------- */
+/* line 8, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn {
+  line-height: 2.3rem;
+  max-width: 44rem;
+  padding: 0.9rem 2rem;
+  margin: 0 0 0.1rem 0;
+  border: 0;
+  color: #333333;
+  font-family: "helvetica-medium", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 8, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn {
+    max-width: none;
+    width: auto;
+  }
+}
+
+/* -------- Button variations -------- */
+/* line 29, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--primary {
+  color: #333333;
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #BDD755;
+  border-color: #aac24d;
+}
+
+/* line 19, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.no-touch .btn--primary:hover, .btn--primary:focus {
+  background: #b4cc51;
+  border-color: #a1b748;
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--primary:active {
+  background: #aac24d;
+  border-color: #97ac44;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--primary.is-disabled {
+  color: #CCCCCC;
+  background: #F8F8F8;
+  border-color: #dfdfdf;
+}
+
+/* line 33, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--secondary {
+  color: #333333;
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #E0E0E0;
+  border-color: #cacaca;
+}
+
+/* line 19, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.no-touch .btn--secondary:hover, .btn--secondary:focus {
+  background: #d5d5d5;
+  border-color: #bebebe;
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--secondary:active {
+  background: #cacaca;
+  border-color: #b3b3b3;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--secondary.is-disabled {
+  color: #CCCCCC;
+  background: #F8F8F8;
+  border-color: #dfdfdf;
+}
+
+/* line 37, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--tertiary {
+  color: #333333;
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #FFFFFF;
+  border-color: #e6e6e6;
+  border: 1px solid #333333;
+}
+
+/* line 19, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.no-touch .btn--tertiary:hover, .btn--tertiary:focus {
+  background: #f2f2f2;
+  border-color: #d9d9d9;
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--tertiary:active {
+  background: #e6e6e6;
+  border-color: #cccccc;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--tertiary.is-disabled {
+  color: #CCCCCC;
+  background: #FFFFFF;
+  border-color: #e6e6e6;
+}
+
+/* sof 10 June 15 - new button for north */
+/* line 44, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--disabled,
+.btn--disabled:hover,
+.btn--disabled:focus,
+.btn--disabled:active {
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #EEEEEE;
+  color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+/* -------- Button modifiers -------- */
+@media only screen and (max-width: 47.9375em) {
+  /* line 58, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--xs-medium {
+    max-width: 14rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 47.9375em) {
+  /* line 65, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--lightbox--half {
+    display: inline;
+    margin: 0;
+    width: 46.5%;
+  }
+  /* line 71, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--lightbox--half:last-child {
+    margin-left: 5.5%;
+  }
+}
+
+/* line 78, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--half {
+  float: left;
+  width: 48%;
+}
+
+/* line 82, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--half:first-child {
+  margin-right: 4%;
+}
+
+/* line 88, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--right {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 88, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--right {
+    display: inline-block;
+    float: right !important;
+  }
+}
+
+/* line 100, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--r-space {
+  margin-right: 2rem;
+}
+
+/* line 104, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--xs {
+  padding: 0.5rem 2rem;
+  height: 3rem;
+}
+
+/* line 109, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--sm {
+  padding: 0.6rem 1.8rem;
+  height: 3.5rem;
+}
+
+/* line 114, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border {
+  background: none;
+  border: 0;
+  font-family: "helvetica-roman", Helvetica, Arial, sans-serif;
+}
+
+/* line 119, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border span {
+  text-decoration: underline;
+}
+
+/* line 123, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border .btn--disabled:focus,
+.btn--no-border .btn--disabled:active,
+.no-touch .btn--no-border:hover {
+  background: none;
+}
+
+/* line 128, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border .btn--disabled:focus span,
+.btn--no-border .btn--disabled:active span,
+.no-touch .btn--no-border:hover span {
+  text-decoration: none;
+}
+
+/* line 134, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--full-width {
+  max-width: 100%;
+}
+
+/** * @group Font size */
+/**
+* Body font size for large devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for tsop devices (desktop)
+* @group Font size
+*/
+/**
+* Body font size for small devices (desktop)
+* @group Font size
+ */
+/**
+* Body font size for small devices (mobile/tablet)
+* @group Font families
+*/
+/* --------
+Functions
+-------- */
+/* --------
+  Buttons
+  -------- */
+/* line 8, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn {
+  line-height: 2.3rem;
+  max-width: 44rem;
+  padding: 0.9rem 2rem;
+  margin: 0 0 0.1rem 0;
+  border: 0;
+  color: #333333;
+  font-family: "helvetica-medium", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 8, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn {
+    max-width: none;
+    width: auto;
+  }
+}
+
+/* -------- Button variations -------- */
+/* line 29, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--primary {
+  color: #333333;
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #BDD755;
+  border-color: #aac24d;
+}
+
+/* line 19, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.no-touch .btn--primary:hover, .btn--primary:focus {
+  background: #b4cc51;
+  border-color: #a1b748;
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--primary:active {
+  background: #aac24d;
+  border-color: #97ac44;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--primary.is-disabled {
+  color: #CCCCCC;
+  background: #F8F8F8;
+  border-color: #dfdfdf;
+}
+
+/* line 33, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--secondary {
+  color: #333333;
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #E0E0E0;
+  border-color: #cacaca;
+}
+
+/* line 19, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.no-touch .btn--secondary:hover, .btn--secondary:focus {
+  background: #d5d5d5;
+  border-color: #bebebe;
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--secondary:active {
+  background: #cacaca;
+  border-color: #b3b3b3;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--secondary.is-disabled {
+  color: #CCCCCC;
+  background: #F8F8F8;
+  border-color: #dfdfdf;
+}
+
+/* line 37, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--tertiary {
+  color: #333333;
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #FFFFFF;
+  border-color: #e6e6e6;
+  border: 1px solid #333333;
+}
+
+/* line 19, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.no-touch .btn--tertiary:hover, .btn--tertiary:focus {
+  background: #f2f2f2;
+  border-color: #d9d9d9;
+}
+
+/* line 25, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--tertiary:active {
+  background: #e6e6e6;
+  border-color: #cccccc;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_mixins.scss */
+.btn--tertiary.is-disabled {
+  color: #CCCCCC;
+  background: #FFFFFF;
+  border-color: #e6e6e6;
+}
+
+/* sof 10 June 15 - new button for north */
+/* line 44, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--disabled,
+.btn--disabled:hover,
+.btn--disabled:focus,
+.btn--disabled:active {
+  height: 4rem;
+  font-size: 1.5rem;
+  background: #EEEEEE;
+  color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+/* -------- Button modifiers -------- */
+@media only screen and (max-width: 47.9375em) {
+  /* line 58, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--xs-medium {
+    max-width: 14rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 47.9375em) {
+  /* line 65, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--lightbox--half {
+    display: inline;
+    margin: 0;
+    width: 46.5%;
+  }
+  /* line 71, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--lightbox--half:last-child {
+    margin-left: 5.5%;
+  }
+}
+
+/* line 78, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--half {
+  float: left;
+  width: 48%;
+}
+
+/* line 82, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--half:first-child {
+  margin-right: 4%;
+}
+
+/* line 88, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--right {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 88, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+  .btn--right {
+    display: inline-block;
+    float: right !important;
+  }
+}
+
+/* line 100, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--r-space {
+  margin-right: 2rem;
+}
+
+/* line 104, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--xs {
+  padding: 0.5rem 2rem;
+  height: 3rem;
+}
+
+/* line 109, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--sm {
+  padding: 0.6rem 1.8rem;
+  height: 3.5rem;
+}
+
+/* line 114, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border {
+  background: none;
+  border: 0;
+  font-family: "helvetica-roman", Helvetica, Arial, sans-serif;
+}
+
+/* line 119, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border span {
+  text-decoration: underline;
+}
+
+/* line 123, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border .btn--disabled:focus,
+.btn--no-border .btn--disabled:active,
+.no-touch .btn--no-border:hover {
+  background: none;
+}
+
+/* line 128, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--no-border .btn--disabled:focus span,
+.btn--no-border .btn--disabled:active span,
+.no-touch .btn--no-border:hover span {
+  text-decoration: none;
+}
+
+/* line 134, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_buttons.scss */
+.btn--full-width {
+  max-width: 100%;
+}
+
+/* --------
+  Buttons with icons
+  -------- */
+/* line 5, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon {
+  position: relative;
+}
+
+/* line 10, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon.btn--xs::before {
+  font-size: 1rem;
+}
+
+/* line 17, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--gift {
+  padding-left: 4.6rem;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 17, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+  .btn__icon--gift {
+    padding-left: 4.8rem;
+  }
+}
+
+/* line 24, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--gift::before {
+  font-size: 1.8rem;
+  margin-left: -2.8rem;
+  top: 0.8rem;
+  position: absolute;
+}
+
+/* line 33, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--edit {
+  padding-left: 4.6rem;
+  margin: 0 0 2rem 0;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 33, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+  .btn__icon--edit {
+    padding-left: 4.8rem;
+  }
+}
+
+/* line 41, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--edit::before {
+  font-size: 1.8rem;
+  margin-left: -2.8rem;
+  top: 0.9rem;
+  position: absolute;
+}
+
+/* line 50, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--close {
+  padding-left: 4rem;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 50, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+  .btn__icon--close {
+    padding-left: 4.5rem;
+  }
+}
+
+/* line 57, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--close::before {
+  font-size: 1.5rem;
+  margin-left: -2.5rem;
+  top: 1.2rem;
+  position: absolute;
+}
+
+/* line 65, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--close.btn--no-border {
+  padding-left: 2.3rem;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 65, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+  .btn__icon--close.btn--no-border {
+    padding-left: 2.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+/* line 76, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn--no-border::before {
+  top: 1.4rem;
+  font-size: 1.3rem;
+}
+
+/* line 82, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--info {
+  padding-left: 4.5rem;
+  position: relative;
+}
+
+/* line 86, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--info::before {
+  font-size: 1.5rem;
+  left: 1.5rem;
+  top: 1.1rem;
+  position: absolute;
+}
+
+/* line 95, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--cancel-order {
+  padding-left: 4.5rem;
+  position: relative;
+}
+
+/* line 99, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--cancel-order::before {
+  font-size: 1.5rem;
+  left: 1.5rem;
+  top: 1.1rem;
+  position: absolute;
+}
+
+/* line 108, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--search {
+  padding-left: 2.6rem;
+  position: relative;
+}
+
+/* line 112, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--search::before {
+  font-size: 1.5rem;
+  left: 1.5rem;
+  top: 1.1rem;
+  position: absolute;
+}
+
+/* line 121, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--calendar {
+  padding-left: 4rem;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 121, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+  .btn__icon--calendar {
+    padding-left: 4.5rem;
+  }
+}
+
+/* line 128, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--calendar::before {
+  font-size: 1.6rem;
+  margin-left: -2.5rem;
+  top: 1.1rem;
+  position: absolute;
+}
+
+/* line 138, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__icon--lock::before {
+  font-size: 2rem;
+  left: -0.3rem;
+  position: relative;
+  top: 0;
+}
+
+/* line 147, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/buttons/_module_icons-buttons.scss */
+.btn__text {
+  position: relative;
+  top: -3px;
+}
+
+/* offer backgrounds */
+/* page backgrounds */
+/* overlay backgrounds */
+/* lines/borders */
+/* line 2, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_borders.scss */
+.border-btm--drk {
+  border-bottom: 1px solid #333333;
+}
+
+/* line 6, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_borders.scss */
+.border-top--drk {
+  border-top: 1px solid #333333;
+}
+
+/* line 10, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_borders.scss */
+.border-btm--lgt {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+/* line 14, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_borders.scss */
+.border-top--lgt {
+  border-top: 1px solid #CCCCCC;
+}
+
+/* line 2, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_pipe.scss */
+.pipe--left::after,
+.pipe--right::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 2px;
+  border-right: solid 1px #CCCCCC;
+}
+
+/* line 12, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_pipe.scss */
+.pipe--left::after {
+  left: 0;
+}
+
+/* line 16, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_pipe.scss */
+.pipe--right::after {
+  right: 0;
+}
+
+/* line 20, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/borders/_module_pipe.scss */
+.pipe--rel::after {
+  position: relative;
+}
+
+/* line 2, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/_list.scss */
+.list--no-bullets {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* line 9, /Users/c2159749/Projects/mands/shop-UX/src/fear/node_modules/fear-core/node_modules/fear-core-ui/lib/sass/fear-core-ui/ui-pattern/_list.scss */
+.horizontal-list li {
+  float: left;
+}
+
+/* --------
+Help menu
+-------- */
+/* line 5, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__list {
+  padding: 1.5rem 1rem;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 5, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+  .help-menu__list {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+}
+
+/* line 17, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__item {
+  padding: 0.3rem 0;
+  display: inline-block;
+}
+
+/* line 22, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__link {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: "helvetica-roman", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* line 31, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__link:hover {
+  text-decoration: underline;
+}
+
+/* line 35, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__item:last-child .help-menu__link {
+  border-right: 0;
+}
+
+/* line 40, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__text {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: "helvetica-roman", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+/* line 48, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_help-menu.scss */
+.help-menu__item:last-child .help-menu__text {
+  border-right: 0;
+}
+
+/* line 1, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion {
+  height: 6rem;
+  min-height: 6rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  min-width: 100%;
+}
+
+/* line 18, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion + .checkbox-accordion__section {
+  height: 6rem;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 18, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+  .checkbox-accordion + .checkbox-accordion__section {
+    padding-left: 2.6rem;
+  }
+}
+
+/* line 26, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion + .checkbox-accordion__section .checkbox-accordion__header {
+  height: 6.2rem;
+}
+
+/* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion + .checkbox-accordion__section .checkbox-accordion__heading {
+  padding-left: 2.6rem;
+  top: 3rem;
+  position: relative;
+  max-width: 70%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 30, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+  .checkbox-accordion + .checkbox-accordion__section .checkbox-accordion__heading {
+    left: -2.6rem;
+  }
+}
+
+/* line 43, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion + .checkbox-accordion__section .checkbox-accordion__heading::before {
+  font-size: 1.6rem;
+  margin-top: -0.8rem;
+  top: 50%;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  position: absolute;
+}
+
+/* line 62, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion:checked + .checkbox-accordion__section {
+  height: 100%;
+  display: block;
+}
+
+/* line 68, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/bandc/sass/layout/modules/_checkbox-accordion.scss */
+.checkbox-accordion:checked + .checkbox-accordion__section .checkbox-accordion__heading:before {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* --------
+Footer
+-------- */
+@media only screen and (min-width: 48em) {
+  /* line 4, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .footer {
+    padding-bottom: 5.6rem;
+  }
+}
+
+/* line 10, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.footer__inner {
+  margin: 0 auto;
+  max-width: 120rem;
+  background-color: #333333;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 16, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer {
+    padding-bottom: 7rem;
+  }
+}
+
+/* line 22, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__inner {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 10px;
+}
+
+/* line 28, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu {
+  margin-top: 2rem;
+}
+
+/* line 32, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--list {
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 32, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__toolbar-social--list {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+/* line 44, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--facebook {
+  display: inline-block;
+}
+
+/* line 47, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--facebook a:hover {
+  color: #2C4386;
+}
+
+/* line 52, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--twitter {
+  display: inline-block;
+}
+
+/* line 55, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--twitter a:hover {
+  color: #0097EF;
+}
+
+/* line 60, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--pintrest {
+  display: inline-block;
+}
+
+/* line 63, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--pintrest a:hover {
+  color: #D9001B;
+}
+
+/* line 68, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--youtube {
+  display: inline-block;
+}
+
+/* line 71, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--youtube a:hover {
+  color: #D9001B;
+}
+
+/* line 76, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--instagram {
+  display: inline-block;
+}
+
+/* line 79, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--instagram a:hover {
+  color: #2C4386;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 84, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--second-row {
+    padding-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  /* line 84, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--second-row {
+    padding: 0;
+  }
+}
+
+/* line 94, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--googleplus {
+  display: inline-block;
+}
+
+/* line 97, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--googleplus a:hover {
+  color: #D9001B;
+}
+
+/* line 102, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar {
+  font-family: "helvetica-light", Helvetica, Arial, sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 102, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__toolbar {
+    height: 5.5rem;
+  }
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 112, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .flexbox .row.global-footer__toolbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+
+/* line 121, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.email-signup__global-footer {
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 121, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .email-signup__global-footer {
+    padding-right: 2rem;
+    margin: 0;
+    text-align: right;
+    width: 50%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 121, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .email-signup__global-footer {
+    width: 33.33%;
+  }
+}
+
+/* line 138, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.email-signup__global-footer ::before {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 144, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .flexbox .email-signup__global-footer a {
+    padding-left: 0.5rem;
+  }
+}
+
+/* line 150, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-sms {
+  display: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 150, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__toolbar-sms {
+    display: block;
+    width: 33.33%;
+  }
+}
+
+/* line 159, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-sms ::before {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 165, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .flexbox .global-footer__toolbar-sms > span {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 173, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .flexbox .global-footer__toolbar-sms a {
+    padding-left: 0.5rem;
+  }
+}
+
+/* line 179, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social--icon {
+  margin-right: 1rem;
+}
+
+/* line 183, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 183, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__toolbar-social {
+    padding-left: 2rem;
+    text-align: left;
+    width: 50%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 183, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__toolbar-social {
+    width: 33%;
+  }
+}
+
+/* line 197, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__toolbar-social a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 202, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .flexbox .global-footer__toolbar-social {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* line 208, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__copyright--text {
+  margin-top: 0.5rem;
+  padding: 1.2rem;
+  border-top: 1px solid #CCCCCC;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+/* line 217, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__copyright {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* line 222, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--buisness {
+  display: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 222, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--buisness {
+    display: block;
+  }
+}
+
+/* line 231, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--buisness li:last-child {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+/* line 235, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--buisness li {
+  height: 4rem;
+  line-height: 4rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  list-style-type: none;
+  font-family: "helvetica-light", Helvetica, Arial, sans-serif;
+  border-top: 1px solid #CCCCCC;
+}
+
+/* line 244, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--buisness li a {
+  text-decoration: none;
+}
+
+/* line 250, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--item {
+  padding: 0.5rem;
+  font-family: "helvetica-light", Helvetica, Arial, sans-serif;
+}
+
+/* line 255, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--title {
+  padding: 0.5rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 75em) {
+  /* line 255, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--title {
+    padding-top: 0;
+  }
+}
+
+/* line 264, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 269, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--list a {
+  text-decoration: none;
+}
+
+/* line 274, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--col8 {
+  padding-left: 2rem;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 274, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--col8 {
+    width: 80%;
+  }
+}
+
+/* line 285, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--cols {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 285, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--cols {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 285, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--cols {
+    padding-top: 0;
+  }
+}
+
+/* line 299, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__menu--col2 {
+  padding-right: 2rem;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 299, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--col2 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 299, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__menu--col2 {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 29.9375em) {
+  /* line 314, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__newsletter {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 314, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__newsletter {
+    padding-right: 2rem;
+    width: 50%;
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  /* line 314, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__newsletter {
+    text-align: right;
+    width: 33.333%;
+  }
+}
+
+/* line 334, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__newsletter-wrap {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 339, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__newsletter-icon {
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  vertical-align: middle;
+}
+
+/* line 345, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__newsletter-email {
+  height: 3rem;
+  width: 18.5rem;
+  padding: 0 1rem;
+  border: 1px solid #CCCCCC;
+  color: #333333;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 345, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+  .global-footer__newsletter-email {
+    width: 67%;
+  }
+}
+
+/* line 357, /Users/c2159749/Projects/mands/shop-UX/src/fear/app/common/sass/layout/modules/_footer.scss */
+.global-footer__newsletter-save-btn {
+  height: 3rem;
+  border: 1px solid #CCCCCC;
+  background: #F8F8F8;
+  color: #999999;
+}
+
+/*# sourceMappingURL=non-critical.css.map */
