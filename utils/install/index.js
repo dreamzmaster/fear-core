@@ -13,10 +13,41 @@ module.exports = install = {
     messages: require('./messages'),
 
     /**
+     * Install Fear core versioned modules
+     * @param toInstall
+     * @returns {boolean}
+     */
+    installFearDependencies : function (fearDeps, toInstall) {
+
+        var dependencies = [];
+
+        if (!toInstall) {
+            return false;
+        }
+
+        for (var d in fearDeps.dependencies) {
+            if (fearDeps.dependencies.hasOwnProperty(d) && toInstall[d].install) {
+                dependencies.push(
+                    'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
+                            ? '@' + fearDeps.dependencies[d].version
+                            : ''
+                    )
+                );
+            }
+        }
+
+        install.npmInstall(dependencies);
+    },
+
+    /**
      * npm
      * @param dependencies {Array}
      */
-    npm : function (dependencies) {
+    npmInstall : function (dependencies) {
+
+        var installPath = path.normalize(path.join(__dirname, '../../'));
+
+        process.chdir(installPath);
 
         install.messages.start();
 
@@ -32,7 +63,7 @@ module.exports = install = {
             });
         }
 
-        installDependencies('npm install ', dependencies, 'devDependencies');
+        installDependencies('npm install ', dependencies);
     },
 
     /**
