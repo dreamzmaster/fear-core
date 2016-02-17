@@ -1,7 +1,7 @@
 Parent module responsible currently for installing child modules from applications package.json fearDependencies property. 
 If no parent application is present then installing fear-core will scaffold a recommended (but then configurable) application with some default tasks. **_Please note scaffold functionality is under development and currently is for demonstration purposes only._**
 
-###**Package.json**
+### **Package.json**
 Package.json could contain the following for example:
 
 ```
@@ -31,7 +31,7 @@ Package.json could contain the following for example:
 }
 ```
 
-###**Installation**
+### **Installation**
 Modules can be installed from the command line like this
 
 ```bash
@@ -64,7 +64,7 @@ app/common
 .gitignore
 ```
 
-###**Runtime**
+### **Runtime**
 This then dynamically creates the application gulp file so that the correct tasks are made available. So ```npm install --fear=dev``` would create the following gulpfile.js in the application root:
 
 ```javascript
@@ -82,7 +82,7 @@ require('./tasks/serve')();
 
 This means that it is possible to have CI load only the module that contains the tasks it needs to run and can run these independently making these processes run as fast as possible.
 
-###**Available modules**
+### **Available modules**
 
 * [fear-core-app](https://digitalinnovation.github.io/fear-core-app)
 * [fear-core-ui](https://digitalinnovation.github.io/fear-core-ui)
@@ -92,7 +92,7 @@ This means that it is possible to have CI load only the module that contains the
 * [fear-core-aut](https://digitalinnovation.github.io/fear-core-aut)
 * [fear-core-docker](https://digitalinnovation.github.io/fear-core-docker) *(installed by default as part of fear-core-aut)*
 
-###**Further reading**
+### **Further reading**
 
 * [Website](http://digitalinnovation.github.io/fear-core)
 * [Technical documentation](http://digitalinnovation.github.io/fear-core/docs/)
