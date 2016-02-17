@@ -2,6 +2,7 @@
 
 var exec       = require('child_process').exec;
 var concurrent = require('./concurrent');
+var path = require('path');
 var install;
 
 module.exports = install = {
@@ -36,7 +37,7 @@ module.exports = install = {
             }
         }
 
-        install.npmInstall(dependencies);
+        this.npmInstall(dependencies);
     },
 
     /**
@@ -46,8 +47,6 @@ module.exports = install = {
     npmInstall : function (dependencies) {
 
         var installPath = path.normalize(path.join(__dirname, '../../'));
-
-        console.log(installPath);
 
         process.chdir(installPath);
 
