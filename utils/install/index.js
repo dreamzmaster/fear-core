@@ -47,6 +47,8 @@ module.exports = install = {
 
         var installPath = path.normalize(path.join(__dirname, '../../'));
 
+        console.log(installPath);
+
         process.chdir(installPath);
 
         install.messages.start();
