@@ -34,6 +34,7 @@ fs.exists(packagePath, function (parentModuleExists) {
                     ), true);
                     utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
                     utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
+                    utils.fs.copy('./defaults/preinstall.js', path.join(appRoot.path, 'preinstall.js'), false);
 
                     //temp untill scss used in hub is part of core-ui
                     utils.fs.folder.create(path.join(appRoot.path, paths.app.base, 'common/scripts'));
