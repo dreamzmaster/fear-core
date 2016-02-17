@@ -1,12 +1,11 @@
 'use strict';
 
 var fs = require('fs-extra');
-var utils;
 
 /**
  * @module utils/fs
  */
-module.exports = utils = {
+module.exports = {
 
     /**
      * user messages
@@ -26,12 +25,12 @@ module.exports = utils = {
         try {
             // clobber: false means fs-extra will throw an error if the dst exists
             fs.copySync(source, destination, {clobber : replace});
-            utils.messages.copyOk(destination);
+            this.messages.copyOk(destination);
         } catch (err) {
             if (err.message === 'EEXIST') {
-                utils.messages.fileSkipped(destination);
+                this.messages.fileSkipped(destination);
             } else {
-                utils.messages.copyError(destination, err);
+                this.messages.copyError(destination, err);
             }
         }
     },
@@ -45,15 +44,17 @@ module.exports = utils = {
      */
     write : function (content, destination, replace) {
 
+        var _self = this;
+
         function _write (content, destination) {
             try {
                 fs.writeFileSync(destination, content);
-                utils.messages.copyOk(destination);
+                _self.messages.copyOk(destination);
             } catch (err) {
                 if (err.message === 'EEXIST') {
-                    utils.messages.fileSkipped(destination);
+                    _self.messages.fileSkipped(destination);
                 } else {
-                    utils.messages.copyError(destination, err);
+                    _self.messages.copyError(destination, err);
                 }
             }
         }
@@ -87,7 +88,7 @@ module.exports = utils = {
 
         /**
          * create folder (and structure if doesn't exist)
-         * @param path
+         * @param folderPath
          */
         create : function (folderPath) {
             return fs.ensureDirSync(folderPath);

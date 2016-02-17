@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @module tasks/mocks/copy-mocks
+ * @module tasks/mock/copy
  */
 
 /**

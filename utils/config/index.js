@@ -351,4 +351,7 @@ function getConfig(defaults) {
     return new Config(loader, cli, defaults);
 }
 
+/**
+ * @module utils/config
+ */
 module.exports = getConfig;

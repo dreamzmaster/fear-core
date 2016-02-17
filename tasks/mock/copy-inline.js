@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @module tasks/copy-inline-mocks
+ * @module tasks/mock/copy-inline
  */
 
 /**

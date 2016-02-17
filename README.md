@@ -30,6 +30,7 @@ Package.json could contain the following for example:
   }
 }
 ```
+
 ###**Installation**
 Modules can be installed from the command line like this
 
@@ -38,6 +39,31 @@ npm install
 npm install --fear=dev
 npm install --fear=dev,build
 ```
+
+The following files will always be copied and overwrite the existing files to the parent application:
+
+```
+config/development/pages/core.js
+preinstall.js
+app/common/scripts/jspm.conf.js
+test/jspm.conf.js
+config/integrated/jspm.conf.js
+gulpfile.js
+```
+
+The following will be copied to the parent application only if they don't already exist (i.e a new application is being created):
+
+```
+config
+tasks
+mock
+app/common
+.editorconfig
+.eslintrc
+.eslintignore
+.gitignore
+```
+
 ###**Runtime**
 This then dynamically creates the application gulp file so that the correct tasks are made available. So ```npm install --fear=dev``` would create the following gulpfile.js in the application root:
 
@@ -53,16 +79,18 @@ require('./tasks/dev')();
 require('./tasks/core')();
 require('./tasks/serve')();
 ```
+
 This means that it is possible to have CI load only the module that contains the tasks it needs to run and can run these independently making these processes run as fast as possible.
 
 ###**Available modules**
 
 * [fear-core-app](https://digitalinnovation.github.io/fear-core-app)
 * [fear-core-ui](https://digitalinnovation.github.io/fear-core-ui)
-* [fear-core-serve](https://digitalinnovation.github.io/fear-core-serve) *(currently installed by default as part of fear-core)*
+* [fear-core-serve](https://digitalinnovation.github.io/fear-core-serve) *(installed by default as part of fear-core)*
 * [fear-core-build](https://digitalinnovation.github.io/fear-core-build)
 * [fear-core-dev](https://digitalinnovation.github.io/fear-core-dev)
 * [fear-core-aut](https://digitalinnovation.github.io/fear-core-aut)
+* [fear-core-docker](https://digitalinnovation.github.io/fear-core-docker) *(installed by default as part of fear-core-aut)*
 
 ###**Further reading**
 

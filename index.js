@@ -21,6 +21,10 @@ for (var d in fearAvailableModules) {
 module.exports.serve = require('fear-core-serve');
 
 /**
+ * @module fear-core
+ */
+
+/**
  * tasks
  * @see module:tasks
  */

@@ -10,7 +10,7 @@
     "pretest": "npm run eslint",
     "watch:test": "onchange test/**/*.js tasks/**/*.js -- npm run test -s",
     "dev": "npm run watch:test -s",
-    "docs": "./node_modules/.bin/jsdoc ./tasks index.js --recurse --destination _gh_pages/docs --readme README.md",
+    "docs": "./node_modules/.bin/jsdoc ./tasks ./utils index.js --recurse --destination _gh_pages/docs --readme README.md",
     "prepublish": "npm test",
     "postpublish": "node postpublish"
   },

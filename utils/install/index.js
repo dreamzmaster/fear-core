@@ -3,9 +3,11 @@
 var exec       = require('child_process').exec;
 var concurrent = require('./concurrent');
 var path = require('path');
-var install;
 
-module.exports = install = {
+/**
+ * @module utils/install
+ */
+module.exports = {
 
     /**
      * user messages
@@ -15,6 +17,7 @@ module.exports = install = {
 
     /**
      * Install Fear core versioned modules
+     * @param fearDeps
      * @param toInstall
      * @returns {boolean}
      */
@@ -46,20 +49,23 @@ module.exports = install = {
      */
     npmInstall : function (dependencies) {
 
-        var installPath = path.normalize(path.join(__dirname, '../../'));
+        var _self = this;
+        var installPath;
 
+        _self.messages.start();
+
+        //ensure we are in correct directory to install
+        installPath = path.normalize(path.join(__dirname, '../../'));
         process.chdir(installPath);
-
-        install.messages.start();
 
         function installDependencies(cmd, packages) {
             concurrent(packages, function (module) {
                 exec(cmd + module, function () {
-                    install.messages.module(module);
+                    _self.messages.module(module);
                 });
             }, function (error) {
                 if (error) {
-                    install.messages.error(error);
+                    _self.messages.error(error);
                 }
             });
         }
@@ -72,7 +78,7 @@ module.exports = install = {
      * @description workout which modules can be installed  based on command line flags.
      * @param fearDeps {Object}
      * @param requestedModules {String}
-     * @returns fearAvailableModules {Object|Boolean}
+     * @returns {Object|Boolean}
      */
     getAvailableFearModules : function (fearDeps, requestedModules) {
 

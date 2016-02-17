@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * @module tasks
+ */
 module.exports = {
 
     /**
@@ -10,4 +13,4 @@ module.exports = {
         copy: require('./mock/copy'),
         copyInline: require('./mock/copy-inline')
     }
-}
+};
