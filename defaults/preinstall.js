@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * currently this script is experimental
+ */
+
 function isCoreInstalled () {
     try {
         require('fear-core');
@@ -16,8 +20,11 @@ function isCoreDependencyInstalled (moduleName) {
 if(isCoreInstalled()) {
 
     var fearDeps = require('./package.json').fear;
+    var requestedModulesArray = [];
 
-    var requestedModulesArray = process.env.npm_config_fear.split(',');
+    if (process.env.npm_config_fear) {
+        requestedModulesArray = process.env.npm_config_fear.split(',');
+    }
 
     for (var d in requestedModulesArray) {
         if(!isCoreDependencyInstalled(requestedModulesArray[d])) {
