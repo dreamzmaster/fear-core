@@ -2,6 +2,9 @@
 ## **Changelog**
 
 #### **1.3.0**
+- **experimental release - do not use**
+
+#### **1.3.0**
 - implemented dynamic module loading based on cli args
 - implemented dynamic gulpfile based on cli args
 - added mock data tasks
