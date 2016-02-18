@@ -18,9 +18,15 @@ System.config({
         "views/*": "/base/app/views/*"
     },
     shim: {
-        'chai' : {'exports' : 'chai'},
-        'sinon' : {'exports' : 'sinon'},
-        'sinon-chai' : {'exports' : 'sinon-chai'},
+        'chai': {
+            'exports': 'chai'
+        },
+        'sinon': {
+            'exports': 'sinon'
+        },
+        'sinon-chai': {
+            'exports': 'sinon-chai'
+        },
         "angular": {
             "exports": "angular"
         },
@@ -107,7 +113,7 @@ System.config({
         "babel": "npm:babel-core@5.8.33",
         "babel-runtime": "npm:babel-runtime@5.8.29",
         "core-js": "npm:core-js@1.2.5",
-    	"es6-promise": "npm:es6-promise@3.1.2",
+        "es6-promise": "npm:es6-promise@3.1.2",
         "fastclick": "github:ftlabs/fastclick@1.0.3",
         "fear-core-app": "github:DigitalInnovation/fear-core-app@<%= appVersion %>",
         "moment": "github:moment/moment@2.10.6",
@@ -119,7 +125,7 @@ System.config({
         "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
         "underscore": "github:jashkenas/underscore@1.8.2",
         "usertiming": "github:nicjansma/usertiming.js@0.1.6",
-    	"xhttp": "github:Mitranim/xhttp@0.0.9",
+        "xhttp": "github:Mitranim/xhttp@0.0.9",
         "github:angular/bower-angular-animate@1.4.8": {
             "angular": "github:angular/bower-angular@1.4.8"
         },
@@ -162,9 +168,9 @@ System.config({
             "process": "github:jspm/nodelibs-process@0.1.2",
             "systemjs-json": "github:systemjs/plugin-json@0.1.0"
         },
-    "npm:es6-promise@3.1.2": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
+        "npm:es6-promise@3.1.2": {
+            "process": "github:jspm/nodelibs-process@0.1.2"
+        },
         "npm:inherits@2.0.1": {
             "util": "github:jspm/nodelibs-util@0.1.0"
         },
