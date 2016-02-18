@@ -3,6 +3,8 @@
 var exec       = require('child_process').exec;
 var concurrent = require('./concurrent');
 var path = require('path');
+var fs = require('../fs');
+var moduleRoot = process.cwd();
 
 /**
  * @module utils/install
@@ -103,5 +105,43 @@ module.exports = {
         }
 
         return fearAvailableModules;
+    },
+
+    /**
+     * getInstalledModulesArray
+     * @returns {Array}
+     */
+    getInstalledModules : function () {
+
+        var files = fs.readdirSync('./node_modules/fear-core/node_modules/');
+
+        var existingModules = [];
+
+        for (var f in files) {
+            if (files.hasOwnProperty(f)) {
+                if (files[f].match(new RegExp('fear-core-.*'))) {
+                    var parts = files[f].split('-');
+                    if (fearDeps.dependencies[parts[parts.length -1]]) {
+                        existingModules.push(parts[parts.length -1]);
+                    }
+                }
+            }
+        }
+
+        return existingModules;
+    },
+
+    /**
+     * createGulpFile
+     * @param modules
+     */
+    createGulpFile : function (modules) {
+        fs.write(
+            fs.template(moduleRoot + '/defaults/gulpfile.tpl', {
+                'modules' : modules,
+                'each' : require('lodash/collection/each')
+            }),
+            path.join(appRoot.path, 'gulpfile.js')
+        )
     }
 };

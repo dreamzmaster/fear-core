@@ -69,13 +69,7 @@ fs.exists(packagePath, function (parentModuleExists) {
                     utils.fs.template(moduleRoot + '/defaults/jspm.conf.prod.js', templateData),
                     path.join(appRoot.path, 'config/integrated/jspm.conf.js')
                 ),
-                utils.fs.write(
-                    utils.fs.template(moduleRoot + '/defaults/gulpfile.tpl', {
-                        'modules' : fearAvailableModules,
-                        'each' : require('lodash/collection/each')
-                    }),
-                    path.join(appRoot.path, 'gulpfile.js')
-                )
+                utils.install.createGulpFile(fearAvailableModules)
             ]).then(function () {
                 utils.install.installFearDependencies(fearDeps, fearAvailableModules);
             });
