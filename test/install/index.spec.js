@@ -71,12 +71,12 @@ describe('application install utilities', function () {
     });
 
     it('should return empty object if fear dependencies is empty object', function() {
-        utils.appDependencies = {};
+        utils.setAppDependencies({});
         expect(utils.getModuleInstallationConfig(null)).to.deep.equal({});
     });
 
     it('should return false if no dependencies specified', function() {
-        utils.appDependencies = null;
+        utils.setAppDependencies(null);
         expect(utils.getModuleInstallationConfig(null)).to.equal(false);
     });
 });

@@ -4,7 +4,7 @@ var appRoot = require('app-root-path');
 var path = require('path');
 
 /**
- * @module application
+ * @module utils/application
  */
 module.exports = {
 
@@ -18,20 +18,25 @@ module.exports = {
         return require(this.packagePath).fear;
     },
 
+    /**
+     * isFileNameCoreModule
+     * @param fileName
+     * @returns {*}
+     */
     isFileNameCoreModule: function (fileName) {
         return fileName.match(new RegExp('fear-core-.*'));
     },
 
     /**
      * getInstalledModulesArray
-     * @returns {Array}
+     * Inspects the fear-core node_modules folder and returns an array of module names that are installed and
+     * also exist in the fear section of the applications package.json
+     * @returns {Array} e.g ['build', 'dev']
      */
     getInstalledModules: function () {
 
         var fs = require('fs');
-
         var files = fs.readdirSync('./node_modules');
-
         var installedModules = [];
 
         for (var f in files) {

@@ -1,7 +1,7 @@
 'use strict';
 
 var path = require('path');
-var loader  = require('./configLoader');
+var loader  = require('./loader');
 var cli     = require('./cli');
 
 var merge = require('lodash/object/merge');
@@ -326,7 +326,7 @@ Config.prototype = {
     },
 
     /**
-     * @param  {string} Type
+     * @param  {string} type
      * @returns {string} Filepath to the requested config file
      */
     path: function (type) {
@@ -347,6 +347,7 @@ Config.prototype = {
 };
 
 getConfig.Config = Config;
+
 function getConfig(defaults) {
     return new Config(loader, cli, defaults);
 }

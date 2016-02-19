@@ -7,6 +7,11 @@ var appRoot = require('app-root-path');
 
 /**
  * @module utils/install
+ * @description custom installation of module listed in fear section of parent applications package.json. This
+ * provides finer control of what modules are installed instead of the (at time of writing) restricting --production
+ * flag that is built into npm that will only differentiate between installation of all or production only dependencies.
+ * This is insufficient for an SDK where tools provided are for different parts of the development or CI lifecycle
+ * and hence will want be installed and used independently of each other
  */
 module.exports = {
 
@@ -23,6 +28,7 @@ module.exports = {
     /**
      * setAppDependencies
      * @param dependencies
+     * @returns {void}
      */
     setAppDependencies : function (dependencies) {
         this.appDependencies = dependencies;
@@ -38,6 +44,7 @@ module.exports = {
 
     /**
      * setInstallPath
+     * @returns {void}
      */
     setInstallPath : function () {
         this.installPath = path.normalize(path.join(__dirname, '../../'));
@@ -54,9 +61,10 @@ module.exports = {
 
     /**
      * installFearDependencies
-     * @description Install Fear core versioned modules
+     * @description Install specified versions Fear core modules. The latest version will be installed if
+     * 'latest' is the value specified in package.json
      * @param toInstall
-     * @returns {boolean}
+     * @returns {void}
      */
     installFearDependencies : function (toInstall) {
 
@@ -84,6 +92,7 @@ module.exports = {
     /**
      * npmInstall
      * @param dependencies {Array}
+     * @returns {void}
      */
     npmInstall : function (dependencies) {
 
@@ -109,7 +118,8 @@ module.exports = {
 
     /**
      * getModuleInstallationConfig
-     * @description workout which modules can be installed  based on command line flags.
+     * @description Decorate the fear dependencies object in application package.json with flag to say if each module
+     * should be installed or not based on supplied argument of comma delimited module names.
      * @param requestedModules {String}
      * @returns {Object|Boolean}
      */
@@ -142,6 +152,7 @@ module.exports = {
     /**
      * createGulpFile
      * @param modules
+     * @returns {void}
      */
     createGulpFile : function (modules) {
 
