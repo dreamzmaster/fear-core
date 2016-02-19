@@ -1,6 +1,9 @@
 
 ## **Changelog**
 
+#### **1.3.3**
+- bugfix to set correct fear-core dependency install path
+
 #### **1.3.2**
 - application preinstall script added
     - allows for greater control when installing modules when fear-core already installed

@@ -42,6 +42,8 @@ if(isCoreInstalled()) {
         }
     }
 
+    utils.install.setInstallPath();
+
     //combine already installed modules and newly installed modules
     var allDeps = utils.application.getInstalledModules().concat(newModules);
 
