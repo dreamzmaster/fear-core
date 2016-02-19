@@ -42,12 +42,12 @@ if(isCoreInstalled()) {
         }
     }
 
-    //install modules from array created above
-    utils.install.installFearDependencies(utils.install.getModuleInstallationConfig(newModules.join(',')));
-
     //combine already installed modules and newly installed modules
     var allDeps = utils.application.getInstalledModules().concat(newModules);
 
     //generate gulpfile from combined modules above
     utils.install.createGulpFile(utils.install.getModuleInstallationConfig(allDeps.join(',')));
+
+    //install modules from array created above
+    utils.install.installFearDependencies(utils.install.getModuleInstallationConfig(newModules.join(',')));
 }
