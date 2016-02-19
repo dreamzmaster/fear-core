@@ -29,7 +29,7 @@ describe('application install utilities', function () {
 
     it('should return object of modules to install', function() {
 
-        expect(utils.getAvailableFearModules(fearDeps, 'build,dev')).to.deep.equal({
+        expect(utils.getModuleInstallationConfig(fearDeps, 'build,dev')).to.deep.equal({
             'aut' : {
                 'install' : false,
                 'tasks': true
@@ -44,7 +44,7 @@ describe('application install utilities', function () {
             }
         });
 
-        expect(utils.getAvailableFearModules(fearDeps, 'build')).to.deep.equal({
+        expect(utils.getModuleInstallationConfig(fearDeps, 'build')).to.deep.equal({
             'aut' : {
                 'install' : false,
                 'tasks': true
@@ -59,7 +59,7 @@ describe('application install utilities', function () {
             }
         });
 
-        expect(utils.getAvailableFearModules(fearDeps, null)).to.deep.equal({
+        expect(utils.getModuleInstallationConfig(fearDeps, null)).to.deep.equal({
             'aut' : {
                 'install' : true,
                 'tasks': true
@@ -77,10 +77,10 @@ describe('application install utilities', function () {
 
     it('should return empty object if fear dependencies is empty object', function() {
         fearDeps.dependencies = {};
-        expect(utils.getAvailableFearModules(fearDeps, null)).to.deep.equal({});
+        expect(utils.getModuleInstallationConfig(fearDeps, null)).to.deep.equal({});
     });
 
     it('should return false if no dependencies specified', function() {
-        expect(utils.getAvailableFearModules(null, null)).to.equal(false);
+        expect(utils.getModuleInstallationConfig(null, null)).to.equal(false);
     });
 });

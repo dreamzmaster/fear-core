@@ -23,5 +23,10 @@ module.exports = {
     /**
      * @see module:utils/install
      */
-    install: require('./install')
+    install: require('./install'),
+
+    /**
+     * @see module:utils/application
+     */
+    application: require('./application')
 };

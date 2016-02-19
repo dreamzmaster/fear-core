@@ -2,16 +2,14 @@
 
 var fs = require('fs');
 var appRoot = require('app-root-path');
-var packagePath = appRoot.path + '/package.json';
 
 fs.exists(packagePath, function (parentModuleExists) {
 
     var moduleRoot = process.cwd();
     var path = require('path');
     var utils = require('./utils');
-    var fearDeps = require(packagePath).fear;
 
-    var fearAvailableModules = utils.install.getAvailableFearModules(fearDeps, process.env.npm_config_fear);
+    var fearAvailableModules = utils.install.getModuleInstallationConfig(process.env.npm_config_fear);
 
     /**
      * load paths configuration
@@ -31,7 +29,7 @@ fs.exists(packagePath, function (parentModuleExists) {
                     utils.fs.copy(
                         './defaults/config/development/pages/core.js',
                         path.join(appRoot.path, 'config/development/pages/core.js'
-                    ), true);
+                        ), true);
                     utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
                     utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
                     utils.fs.copy('./defaults/preinstall.js', path.join(appRoot.path, 'preinstall.js'), true);
@@ -52,7 +50,7 @@ fs.exists(packagePath, function (parentModuleExists) {
      */
     if (parentModuleExists) {
 
-        var templateData = {appVersion: fearDeps.jspm.app};
+        var templateData = {appVersion: utils.application.getApplicationDependencies().jspm.app};
 
         createApp().then(function () {
 
@@ -71,7 +69,7 @@ fs.exists(packagePath, function (parentModuleExists) {
                 ),
                 utils.install.createGulpFile(fearAvailableModules)
             ]).then(function () {
-                utils.install.installFearDependencies(fearDeps, fearAvailableModules);
+                utils.install.installFearDependencies(fearAvailableModules);
             });
 
         });

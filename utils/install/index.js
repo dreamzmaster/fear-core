@@ -3,8 +3,8 @@
 var exec       = require('child_process').exec;
 var concurrent = require('./concurrent');
 var path = require('path');
-var fs = require('../fs');
-var moduleRoot = process.cwd();
+var appRoot = require('app-root-path');
+var application = require('../application');
 
 /**
  * @module utils/install
@@ -17,15 +17,33 @@ module.exports = {
      */
     messages: require('./messages'),
 
+    installPath : '',
+
+    /**
+     * setInstallPath
+     */
+    setInstallPath : function () {
+        this.installPath = path.normalize(path.join(__dirname, '../../'));
+        process.chdir(this.installPath);
+    },
+
+    /**
+     * getInstallPath
+     * @returns {string}
+     */
+    getInstallPath : function () {
+        return this.installPath;
+    },
+
     /**
      * Install Fear core versioned modules
-     * @param fearDeps
      * @param toInstall
      * @returns {boolean}
      */
-    installFearDependencies : function (fearDeps, toInstall) {
+    installFearDependencies : function (toInstall) {
 
         var dependencies = [];
+        var fearDeps = application.getApplicationDependencies();
 
         if (!toInstall) {
             return false;
@@ -46,19 +64,15 @@ module.exports = {
     },
 
     /**
-     * npm
+     * npmInstall
      * @param dependencies {Array}
      */
     npmInstall : function (dependencies) {
 
+        this.messages.start();
+        this.setInstallPath();
+
         var _self = this;
-        var installPath;
-
-        _self.messages.start();
-
-        //ensure we are in correct directory to install
-        installPath = path.normalize(path.join(__dirname, '../../'));
-        process.chdir(installPath);
 
         function installDependencies(cmd, packages) {
             concurrent(packages, function (module) {
@@ -76,16 +90,16 @@ module.exports = {
     },
 
     /**
-     * getAvailableFearModules
+     * getModuleInstallationConfig
      * @description workout which modules can be installed  based on command line flags.
-     * @param fearDeps {Object}
      * @param requestedModules {String}
      * @returns {Object|Boolean}
      */
-    getAvailableFearModules : function (fearDeps, requestedModules) {
+    getModuleInstallationConfig : function (requestedModules) {
 
         var requestedModulesArray = [];
         var fearAvailableModules = {};
+        var fearDeps = application.getApplicationDependencies();
 
         if (!fearDeps) {
             return false;
@@ -108,36 +122,17 @@ module.exports = {
     },
 
     /**
-     * getInstalledModulesArray
-     * @returns {Array}
-     */
-    getInstalledModules : function () {
-
-        var files = fs.readdirSync('./node_modules/fear-core/node_modules/');
-
-        var existingModules = [];
-
-        for (var f in files) {
-            if (files.hasOwnProperty(f)) {
-                if (files[f].match(new RegExp('fear-core-.*'))) {
-                    var parts = files[f].split('-');
-                    if (fearDeps.dependencies[parts[parts.length -1]]) {
-                        existingModules.push(parts[parts.length -1]);
-                    }
-                }
-            }
-        }
-
-        return existingModules;
-    },
-
-    /**
      * createGulpFile
      * @param modules
      */
     createGulpFile : function (modules) {
+
+        this.setInstallPath();
+
+        var fs = require('../fs');
+
         fs.write(
-            fs.template(moduleRoot + '/defaults/gulpfile.tpl', {
+            fs.template(path.join(this.getInstallPath, 'defaults/gulpfile.tpl'), {
                 'modules' : modules,
                 'each' : require('lodash/collection/each')
             }),
