@@ -1,10 +1,10 @@
 'use strict';
 
-var fs = require('fs');
-
 /**
  * currently this script is experimental
  */
+
+var utils = require('fear-core').utils;
 
 function isCoreInstalled () {
     try {
@@ -21,11 +21,8 @@ function isCoreDependencyInstalled (moduleName) {
 
 if(isCoreInstalled()) {
 
-    var coreModule = require('fear-core');
-
     var requestedModulesArray = [];
     var newModules = [];
-    var moduleObject;
 
     if (process.env.npm_config_fear) {
         requestedModulesArray = process.env.npm_config_fear.split(',');
@@ -34,17 +31,17 @@ if(isCoreInstalled()) {
     for (var d in requestedModulesArray) {
         if(requestedModulesArray.hasOwnProperty(d) && !isCoreDependencyInstalled(requestedModulesArray[d])) {
 
-            moduleObject = coreModule.utils.install.getModuleInstallationConfig(requestedModulesArray[d]);
-
-            coreModule.utils.install.installFearDependencies(moduleObject);
+            utils.install.installFearDependencies(
+                utils.install.getModuleInstallationConfig(requestedModulesArray[d])
+            );
 
             newModules.push(requestedModulesArray[d]);
         }
     }
 
-    var existingModules = coreModule.utils.install.getInstalledModules(fearDeps);
+    var existingModules = utils.application.getInstalledModules();
 
     var allDeps = newModules.concat(existingModules);
 
-    coreModule.utils.install.createGulpFile(coreModule.utils.install.getModuleInstallationConfig(allDeps.join(',')));
+    utils.install.createGulpFile(utils.install.getModuleInstallationConfig(allDeps.join(',')));
 }

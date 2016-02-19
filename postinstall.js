@@ -2,12 +2,14 @@
 
 var fs = require('fs');
 var appRoot = require('app-root-path');
+var utils = require('./utils');
 
-fs.exists(packagePath, function (parentModuleExists) {
+utils.install.setAppDependencies(utils.application.getApplicationDependencies().dependencies);
+
+fs.exists(utils.application.packagePath, function (parentModuleExists) {
 
     var moduleRoot = process.cwd();
     var path = require('path');
-    var utils = require('./utils');
 
     var fearAvailableModules = utils.install.getModuleInstallationConfig(process.env.npm_config_fear);
 

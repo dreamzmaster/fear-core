@@ -4,7 +4,6 @@ var exec       = require('child_process').exec;
 var concurrent = require('./concurrent');
 var path = require('path');
 var appRoot = require('app-root-path');
-var application = require('../application');
 
 /**
  * @module utils/install
@@ -18,6 +17,24 @@ module.exports = {
     messages: require('./messages'),
 
     installPath : '',
+
+    appDependencies : {},
+
+    /**
+     * setAppDependencies
+     * @param dependencies
+     */
+    setAppDependencies : function (dependencies) {
+        this.appDependencies = dependencies;
+    },
+
+    /**
+     * getAppDependencies
+     * @returns {Object}
+     */
+    getAppDependencies : function () {
+        return this.appDependencies;
+    },
 
     /**
      * setInstallPath
@@ -36,24 +53,25 @@ module.exports = {
     },
 
     /**
-     * Install Fear core versioned modules
+     * installFearDependencies
+     * @description Install Fear core versioned modules
      * @param toInstall
      * @returns {boolean}
      */
     installFearDependencies : function (toInstall) {
 
         var dependencies = [];
-        var fearDeps = application.getApplicationDependencies();
+        var appDependencies = this.getAppDependencies();
 
         if (!toInstall) {
             return false;
         }
 
-        for (var d in fearDeps.dependencies) {
-            if (fearDeps.dependencies.hasOwnProperty(d) && toInstall[d].install) {
+        for (var d in appDependencies) {
+            if (appDependencies.hasOwnProperty(d) && toInstall[d].install) {
                 dependencies.push(
-                    'fear-core-' + d + (fearDeps.dependencies[d].version !== 'latest'
-                            ? '@' + fearDeps.dependencies[d].version
+                    'fear-core-' + d + (appDependencies[d].version !== 'latest'
+                            ? '@' + appDependencies[d].version
                             : ''
                     )
                 );
@@ -99,9 +117,9 @@ module.exports = {
 
         var requestedModulesArray = [];
         var fearAvailableModules = {};
-        var fearDeps = application.getApplicationDependencies();
+        var appDependencies = this.getAppDependencies();
 
-        if (!fearDeps) {
+        if (!appDependencies) {
             return false;
         }
 
@@ -109,11 +127,11 @@ module.exports = {
             requestedModulesArray = requestedModules.split(',');
         }
 
-        for (var d in fearDeps.dependencies) {
-            if (fearDeps.dependencies.hasOwnProperty(d)) {
+        for (var d in appDependencies) {
+            if (appDependencies.hasOwnProperty(d)) {
                 fearAvailableModules[d] = {
                     'install' : requestedModulesArray.indexOf(d) > -1 || !requestedModules,
-                    'tasks': fearDeps.dependencies[d].tasks
+                    'tasks': appDependencies[d].tasks
                 };
             }
         }
@@ -132,11 +150,11 @@ module.exports = {
         var fs = require('../fs');
 
         fs.write(
-            fs.template(path.join(this.getInstallPath, 'defaults/gulpfile.tpl'), {
+            fs.template(path.join(this.getInstallPath(), 'defaults/gulpfile.tpl'), {
                 'modules' : modules,
                 'each' : require('lodash/collection/each')
             }),
             path.join(appRoot.path, 'gulpfile.js')
-        )
+        );
     }
 };
