@@ -1,6 +1,11 @@
 
 ## **Changelog**
 
+#### **1.3.2**
+- application preinstall script added
+    - allows for greater control when installing modules when fear-core already installed
+    - gulpfile is generated for every npm install including when fear-core already installed
+
 #### **1.3.1**
 - **experimental release - do not use**
 
