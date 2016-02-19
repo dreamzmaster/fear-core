@@ -29,8 +29,6 @@ if(isCoreInstalled()) {
     var requestedModulesArray = [];
     var newModules = [];
 
-    utils.install.setAppDependencies(utils.application.getApplicationDependencies().dependencies);
-
     if (process.env.npm_config_fear) {
         requestedModulesArray = process.env.npm_config_fear.split(',');
     }

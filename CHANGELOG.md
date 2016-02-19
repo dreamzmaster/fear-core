@@ -1,16 +1,10 @@
 
 ## **Changelog**
 
-#### **1.3.3**
-- bugfix to set correct fear-core dependency install path
-
-#### **1.3.2**
+#### **1.3.4**
 - application preinstall script added
     - allows for greater control when installing modules when fear-core already installed
     - gulpfile is generated for every npm install including when fear-core already installed
-
-#### **1.3.1**
-- **experimental release - do not use**
 
 #### **1.3.0**
 - implemented dynamic module loading based on cli args

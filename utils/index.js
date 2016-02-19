@@ -30,3 +30,7 @@ module.exports = {
      */
     application: require('./application')
 };
+
+module.exports.utils.install.setAppDependencies(
+    module.exports.utils.application.getApplicationDependencies().dependencies
+);

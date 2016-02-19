@@ -4,8 +4,6 @@ var fs = require('fs');
 var appRoot = require('app-root-path');
 var utils = require('./utils');
 
-utils.install.setAppDependencies(utils.application.getApplicationDependencies().dependencies);
-
 fs.exists(utils.application.packagePath, function (parentModuleExists) {
 
     var moduleRoot = process.cwd();
