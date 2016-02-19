@@ -26,30 +26,28 @@ function isCoreDependencyInstalled (moduleName) {
 if(isCoreInstalled()) {
 
     var utils = require('fear-core').utils;
-
-    utils.install.setAppDependencies(utils.application.getApplicationDependencies().dependencies);
-
     var requestedModulesArray = [];
     var newModules = [];
+
+    utils.install.setAppDependencies(utils.application.getApplicationDependencies().dependencies);
 
     if (process.env.npm_config_fear) {
         requestedModulesArray = process.env.npm_config_fear.split(',');
     }
 
-    //install newly requested modules
+    //create array of any requested modules that are not yet installed
     for (var d in requestedModulesArray) {
         if(requestedModulesArray.hasOwnProperty(d) && !isCoreDependencyInstalled(requestedModulesArray[d])) {
-
-            utils.install.installFearDependencies(
-                utils.install.getModuleInstallationConfig(requestedModulesArray[d])
-            );
-
             newModules.push(requestedModulesArray[d]);
         }
     }
 
-    //combine already installed modules and newly installed to generate gulpfile
+    //install modules from array created above
+    utils.install.installFearDependencies(utils.install.getModuleInstallationConfig(newModules.join(',')));
+
+    //combine already installed modules and newly installed modules
     var allDeps = utils.application.getInstalledModules().concat(newModules);
 
+    //generate gulpfile from combined modules above
     utils.install.createGulpFile(utils.install.getModuleInstallationConfig(allDeps.join(',')));
 }
