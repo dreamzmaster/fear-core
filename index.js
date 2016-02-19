@@ -32,4 +32,4 @@ module.exports.tasks = require('./tasks');
  * utils
  * @see module:utils
  */
-module.exports.utils = require('./utils');
+module.exports.utils = require('./utils')();
