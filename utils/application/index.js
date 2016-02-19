@@ -29,7 +29,7 @@ module.exports = {
 
     /**
      * getInstalledModulesArray
-     * Inspects the fear-core node_modules folder and returns an array of module names that are installed and
+     * @description Inspects the fear-core node_modules folder and returns an array of module names that are installed and
      * also exist in the fear section of the applications package.json
      * @returns {Array} e.g ['build', 'dev']
      */
