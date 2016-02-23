@@ -1,9 +1,6 @@
 'use strict';
 
-/**
- * @module utils
- */
-module.exports = {
+module.exports = function () {
 
     /**
      * @see module:utils/config

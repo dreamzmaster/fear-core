@@ -32,7 +32,7 @@
     "chalk": "1.1.1",
     "eslint-config-fear-core": "git+https://github.com/digitalinnovation/fear-core-eslint-config",
     "fs-extra": "0.24.0",
-    "fear-core-serve" : "^1.1.4",
+    "fear-core-serve" : "DigitalInnovation/fear-core-serve#develop",
     "gulp-flatten": "0.0.4",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.3",

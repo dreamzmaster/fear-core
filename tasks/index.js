@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * @module tasks
- */
 module.exports = {
 
     /**

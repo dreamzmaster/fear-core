@@ -3,5 +3,6 @@ node_modules
 *.iml
 *.sublime-*
 *.log
+*.orig
 
 _gh_pages
