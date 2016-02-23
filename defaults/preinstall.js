@@ -29,8 +29,6 @@ if(isCoreInstalled()) {
     var requestedModulesArray = [];
     var newModules = [];
 
-    utils.install.setAppDependencies(utils.application.getApplicationDependencies().dependencies);
-
     if (process.env.npm_config_fear) {
         requestedModulesArray = process.env.npm_config_fear.split(',');
     }
@@ -41,6 +39,8 @@ if(isCoreInstalled()) {
             newModules.push(requestedModulesArray[d]);
         }
     }
+
+    utils.install.setInstallPath();
 
     //combine already installed modules and newly installed modules
     var allDeps = utils.application.getInstalledModules().concat(newModules);

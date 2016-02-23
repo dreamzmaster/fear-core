@@ -1,6 +1,6 @@
 'use strict';
 
-var utils = require('./utils');
+var utils = require('./utils')();
 
 var fearAvailableModules = utils.install.getModuleInstallationConfig(process.env.npm_config_fear);
 
@@ -32,4 +32,4 @@ module.exports.tasks = require('./tasks');
  * utils
  * @see module:utils
  */
-module.exports.utils = require('./utils');
+module.exports.utils = utils;

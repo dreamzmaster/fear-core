@@ -4,13 +4,10 @@
 - Updated jspm.conf.js to add xhttp module
 - Synchronized jspm.conf.test.js with jspm.conf.js
 
-#### **1.3.2**
+#### **1.3.7**
 - application preinstall script added
     - allows for greater control when installing modules when fear-core already installed
     - gulpfile is generated for every npm install including when fear-core already installed
-
-#### **1.3.1**
-- **experimental release - do not use**
 
 #### **1.3.0**
 - implemented dynamic module loading based on cli args
