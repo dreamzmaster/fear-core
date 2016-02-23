@@ -1,5 +1,8 @@
 
 ## **Changelog**
+#### **1.3.1**
+- Updated jspm.conf.js to add xhttp module
+- Synchronized jspm.conf.test.js with jspm.conf.js
 
 #### **1.3.2**
 - application preinstall script added
