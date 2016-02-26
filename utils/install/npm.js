@@ -15,15 +15,15 @@ module.exports = {
      */
     messages: require('./messages'),
 
-    installPath : '',
+    installPath: '',
 
-    COMMAND_LINE_KEY : 'npm_config_fear',
+    COMMAND_LINE_KEY: 'npm_config_fear',
 
     /**
      * setInstallPath
      * @returns {void}
      */
-    setInstallPath : function () {
+    setInstallPath: function () {
         this.installPath = path.normalize(path.join(__dirname, '../../'));
         process.chdir(this.installPath);
     },
@@ -32,7 +32,7 @@ module.exports = {
      * getInstallPath
      * @returns {string}
      */
-    getInstallPath : function () {
+    getInstallPath: function () {
         return this.installPath;
     },
 
@@ -43,7 +43,7 @@ module.exports = {
      * @param action {String}
      * @returns {void}
      */
-    execute : function (command, dependencies, action) {
+    execute: function (command, dependencies, action) {
 
         this.messages.start(action, dependencies);
         this.setInstallPath();
@@ -65,7 +65,7 @@ module.exports = {
         _npm('npm ' + command + ' ', dependencies);
     },
 
-    getFearCliArguments : function () {
+    getFearCliArguments: function () {
         return process.env[this.COMMAND_LINE_KEY];
     },
 
@@ -73,15 +73,15 @@ module.exports = {
      * updateCalled
      * @returns {boolean}
      */
-    updateCalled : function () {
-        return process.env.npm_config_argv.original[0] === 'update';
+    updateCalled: function () {
+        return JSON.parse(process.env.npm_config_argv).original[0] === 'update';
     },
 
     /**
      * installCalled
      * @returns {boolean}
      */
-    installCalled : function () {
-        return process.env.npm_config_argv.original[0] === 'update';
+    installCalled: function () {
+        return JSON.parse(process.env.npm_config_argv).original[0] === 'install';
     }
 };
