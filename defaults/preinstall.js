@@ -10,8 +10,6 @@
  * @TODO this script and fear-core module can be further updated to take versioning into account.
  */
 
-var utils = require('fear-core').utils;
-
 function isCoreInstalled () {
     try {
         require('fear-core');
@@ -29,6 +27,7 @@ function getModulesToInstall () {
 
     var newModules = [];
     var requestedModulesArray = [];
+    var utils = require('fear-core').utils;
 
     if (utils.install.npm.getFearCliArguments()) {
         requestedModulesArray = utils.install.npm.getFearCliArguments().split(',');
@@ -46,25 +45,26 @@ function getModulesToInstall () {
 
 if(isCoreInstalled()) {
 
-    var installedDeps;
+    var utils = require('fear-core').utils;
+    var installedModules;
     var newModules;
-    var allDeps;
+    var allModules;
 
     utils.install.npm.setInstallPath();
 
-    installedDeps = utils.application.getInstalledModules();
+    installedModules = utils.application.getInstalledModules();
 
     newModules = getModulesToInstall();
 
     //combine already installed modules and newly installed modules
-    allDeps = installedDeps.concat(newModules);
+    allModules = installedModules.concat(newModules);
 
     //generate gulpfile from combined modules above
-    utils.install.createGulpFile(utils.install.decorateInstallationConfig(allDeps.join(',')));
+    utils.install.createGulpFile(utils.install.decorateInstallationConfig(allModules.join(',')));
 
     //update dependencies already installed
     if (utils.install.npm.updateCalled()) {
-        utils.install.updateFearDependencies(utils.install.decorateInstallationConfig(installedDeps.join(',')));
+        utils.install.updateFearDependencies(utils.install.decorateInstallationConfig(installedModules.join(',')));
     }
 
     //install modules from array created above
