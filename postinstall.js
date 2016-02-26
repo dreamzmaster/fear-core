@@ -9,7 +9,7 @@ fs.exists(utils.application.packagePath, function (parentModuleExists) {
     var moduleRoot = process.cwd();
     var path = require('path');
 
-    var fearAvailableModules = utils.install.getModuleInstallationConfig(utils.install.npm.getFearCliArguments());
+    var fearAvailableModules = utils.install.decorateInstallationConfig(utils.install.npm.getFearCliArguments());
 
     /**
      * load paths configuration
