@@ -4,16 +4,21 @@ var chalk = require('chalk');
 var notify = require('../notify');
 
 /**
- * @module utils/fs/messages
+ * @module utils/install/messages
  */
 module.exports = {
 
     /**
      * start
+     * @param action {String}
+     * @param dependencies {Array}
      * @returns {void}
      */
-    start : function () {
-        notify.log(chalk.cyan('\nInstalling FEAR NPM dependencies:\n\n'));
+    start : function (action, dependencies) {
+
+        var message = action.charAt(0).toUpperCase() + action.slice(1) + ': ' + dependencies.join(',');
+
+        notify.log(chalk.cyan('\n' + message + ' FEAR NPM dependencies:\n\n'));
     },
 
     /**

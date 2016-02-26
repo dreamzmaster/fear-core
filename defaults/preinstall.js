@@ -10,6 +10,8 @@
  * @TODO this script and fear-core module can be further updated to take versioning into account.
  */
 
+var utils = require('fear-core').utils;
+
 function isCoreInstalled () {
     try {
         require('fear-core');
@@ -23,31 +25,50 @@ function isCoreDependencyInstalled (moduleName) {
     return !!require('fear-core')[moduleName];
 }
 
-if(isCoreInstalled()) {
+function getModulesToInstall () {
 
-    var utils = require('fear-core').utils;
-    var requestedModulesArray = [];
     var newModules = [];
+    var requestedModulesArray = [];
 
-    if (process.env.npm_config_fear) {
-        requestedModulesArray = process.env.npm_config_fear.split(',');
-    }
+    if (utils.install.npm.getFearCliArguments()) {
+        requestedModulesArray = utils.install.npm.getFearCliArguments().split(',');
 
-    //create array of any requested modules that are not yet installed
-    for (var d in requestedModulesArray) {
-        if(requestedModulesArray.hasOwnProperty(d) && !isCoreDependencyInstalled(requestedModulesArray[d])) {
-            newModules.push(requestedModulesArray[d]);
+        //create array of any requested modules that are not yet installed
+        for (var d in requestedModulesArray) {
+            if (requestedModulesArray.hasOwnProperty(d) && !isCoreDependencyInstalled(requestedModulesArray[d])) {
+                newModules.push(requestedModulesArray[d]);
+            }
         }
     }
 
-    utils.install.setInstallPath();
+    return newModules;
+}
+
+if(isCoreInstalled()) {
+
+    var installedDeps;
+    var newModules;
+    var allDeps;
+
+    utils.install.npm.setInstallPath();
+
+    installedDeps = utils.application.getInstalledModules();
+
+    newModules = getModulesToInstall();
 
     //combine already installed modules and newly installed modules
-    var allDeps = utils.application.getInstalledModules().concat(newModules);
+    allDeps = installedDeps.concat(newModules);
 
     //generate gulpfile from combined modules above
-    utils.install.createGulpFile(utils.install.getModuleInstallationConfig(allDeps.join(',')));
+    utils.install.createGulpFile(utils.install.decorateInstallationConfig(allDeps.join(',')));
+
+    //update dependencies already installed
+    if (utils.install.npm.updateCalled()) {
+        utils.install.updateFearDependencies(utils.install.decorateInstallationConfig(installedDeps.join(',')));
+    }
 
     //install modules from array created above
-    utils.install.installFearDependencies(utils.install.getModuleInstallationConfig(newModules.join(',')));
+    if (utils.install.npm.installCalled()) {
+        utils.install.installFearDependencies(utils.install.decorateInstallationConfig(newModules.join(',')));
+    }
 }

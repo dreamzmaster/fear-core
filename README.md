@@ -32,12 +32,11 @@ Package.json could contain the following for example:
 ```
 
 ### **Installation**
-Modules can be installed from the command line like this
+Modules can be installed from the command line. For fear modules npm install or npm update perform the same action - install module if not present or a newer version is specified in fear section of package.json and an older version is currently installed.
 
 ```bash
-npm install
-npm install --fear=dev
-npm install --fear=dev,build
+npm install/update --fear=dev
+npm install/update --fear=dev,build
 ```
 
 The following files will always be copied and overwrite the existing files to the parent application:
