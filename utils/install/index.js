@@ -43,7 +43,7 @@ module.exports = {
     /**
      * installFearDependencies
      * @description get config to install specified versions Fear core modules. The latest version will
-     * be installed if 'latest' is the value specified in package.json
+     * be marked to install if 'latest' is the value specified in package.json
      * @param modules {Object}
      * @param condition {Function}
      * @returns {Array}

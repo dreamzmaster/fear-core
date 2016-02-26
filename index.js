@@ -2,7 +2,7 @@
 
 var utils = require('./utils')();
 
-var fearAvailableModules = utils.install.getModuleInstallationConfig(process.env.npm_config_fear);
+var fearAvailableModules = utils.install.decorateInstallationConfig(utils.install.npm.getFearCliArguments());
 
 //make modules available i.e require('fear-core').build works
 for (var d in fearAvailableModules) {
