@@ -1,6 +1,10 @@
 
 ## **Changelog**
 
+#### **1.3.8**
+- improved installation procedure and architecture
+- allow for update of fear-core dependencies
+
 #### **1.3.7**
 - application preinstall script added
     - allows for greater control when installing modules when fear-core already installed
