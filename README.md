@@ -83,7 +83,7 @@ This means that it is possible to have CI load only the module that contains the
 
 ### **Available modules**
 
-* [fear-core-app](https://digitalinnovation.github.io/fear-core-app)
+* [fear-core-app](https://github.com/DigitalInnovation/fear-core-app)
 * [fear-core-ui](https://digitalinnovation.github.io/fear-core-ui)
 * [fear-core-serve](https://digitalinnovation.github.io/fear-core-serve) *(installed by default as part of fear-core)*
 * [fear-core-build](https://digitalinnovation.github.io/fear-core-build)
