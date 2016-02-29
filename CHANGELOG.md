@@ -1,7 +1,7 @@
 
 ## **Changelog**
 
-#### **1.3.8**
+#### **1.3.9**
 - improved installation procedure and architecture
 - allow for update of fear-core dependencies
 

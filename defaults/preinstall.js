@@ -62,8 +62,8 @@ if(isCoreInstalled()) {
     //generate gulpfile from combined modules above
     utils.install.createGulpFile(utils.install.decorateInstallationConfig(allModules.join(',')));
 
-    //update dependencies already installed
-    if (utils.install.npm.updateCalled()) {
+    //update dependencies already installed - npm has no pre update hook
+    if (utils.install.npm.installCalled()) {
         utils.install.updateFearDependencies(utils.install.decorateInstallationConfig(installedModules.join(',')));
     }
 
