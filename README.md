@@ -32,12 +32,11 @@ Package.json could contain the following for example:
 ```
 
 ### **Installation**
-Modules can be installed from the command line like this
+Modules can be installed from the command line. For fear modules npm install or npm update perform the same action - install module if not present or a newer version is specified in fear section of package.json and an older version is currently installed.
 
 ```bash
-npm install
-npm install --fear=dev
-npm install --fear=dev,build
+npm install/update --fear=dev
+npm install/update --fear=dev,build
 ```
 
 The following files will always be copied and overwrite the existing files to the parent application:
@@ -84,7 +83,7 @@ This means that it is possible to have CI load only the module that contains the
 
 ### **Available modules**
 
-* [fear-core-app](https://digitalinnovation.github.io/fear-core-app)
+* [fear-core-app](https://github.com/DigitalInnovation/fear-core-app)
 * [fear-core-ui](https://digitalinnovation.github.io/fear-core-ui)
 * [fear-core-serve](https://digitalinnovation.github.io/fear-core-serve) *(installed by default as part of fear-core)*
 * [fear-core-build](https://digitalinnovation.github.io/fear-core-build)

@@ -4,6 +4,10 @@
 - Updated jspm.conf.js to add xhttp module
 - Synchronized jspm.conf.test.js with jspm.conf.js
 
+#### **1.3.9**
+- improved installation procedure and architecture
+- allow for update of fear-core dependencies
+
 #### **1.3.7**
 - application preinstall script added
     - allows for greater control when installing modules when fear-core already installed

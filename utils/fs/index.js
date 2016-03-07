@@ -15,6 +15,7 @@ module.exports = {
 
     /**
      * copy
+     * copy file or folder to given destination. if replace true then replace existing file
      * @param source {String}
      * @param destination {String}
      * @param replace {Boolean}
@@ -37,6 +38,7 @@ module.exports = {
 
     /**
      * write
+     * write string to file at given destination. if replace true then replace existing file
      * @param content {String}
      * @param destination {String}
      * @param replace {Boolean}
@@ -97,6 +99,8 @@ module.exports = {
 
     /**
      * template
+     * read souce file and template in values from templateVars object. templateVars = {key:value} will replace
+     * <%= key %> with value in template.
      * @param source {String}
      * @param templateVars {Object}
      * @returns {String}

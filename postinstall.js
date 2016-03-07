@@ -9,7 +9,7 @@ fs.exists(utils.application.packagePath, function (parentModuleExists) {
     var moduleRoot = process.cwd();
     var path = require('path');
 
-    var fearAvailableModules = utils.install.getModuleInstallationConfig(process.env.npm_config_fear);
+    var fearAvailableModules = utils.install.decorateInstallationConfig(utils.install.npm.getFearCliArguments());
 
     /**
      * load paths configuration
@@ -32,7 +32,7 @@ fs.exists(utils.application.packagePath, function (parentModuleExists) {
                         ), true);
                     utils.fs.copy('./defaults/tasks', path.join(appRoot.path, 'tasks'), false);
                     utils.fs.copy('./defaults/mock', path.join(appRoot.path, 'mock'), false);
-                    utils.fs.copy('./defaults/preinstall.js', path.join(appRoot.path, 'preinstall.js'), true);
+                    utils.fs.copy('./defaults/preinstall.js', path.join(appRoot.path, 'fear.js'), true);
 
                     //temp untill scss used in hub is part of core-ui
                     utils.fs.folder.create(path.join(appRoot.path, paths.app.base, 'common/scripts'));
